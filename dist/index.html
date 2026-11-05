@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000"><meta name="description" content="Discover your next favorite meal. Fresh ingredients, exact portions, and recipes made for your kitchen.">
+<title>Cookly — A little inspiration for dinner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+// Apply the saved appearance before paint to avoid a light flash on dark screens.
+(()=>{let choice='dark';try{choice=localStorage.getItem('cookly-theme')||'dark'}catch{}document.documentElement.dataset.theme=choice==='dark'||(choice==='system'&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'})();
+</script>
+<script>
+(()=>{const palettes=['classic','winter-whisper','prismatic','steel-emulsion','azure-scale','cotton-candy','matcha-garden','golden-hour'];let choice='classic';try{choice=localStorage.getItem('cookly-palette')||'classic'}catch{}document.documentElement.dataset.palette=palettes.includes(choice)?choice:'classic'})();
+</script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="rice-options.css">
+<link rel="stylesheet" href="themes.css">
+</head>
+<body>
+<div class="phone-app">
+<header class="topbar"><button class="brand" data-nav="home" aria-label="Cookly home"><!-- Place the final Cookly logo at dist/assets/cookly-logo.png. Text stays visible until it loads. -->
+<img src="assets/cookly-logo.png" alt="Cookly" class="brand-logo" hidden><span class="brand-fallback" aria-hidden="true">Cookly</span></button><div class="header-actions"><button class="icon-button" data-action="search" aria-label="Search recipes" id="headerSearch"></button><button class="avatar" data-nav="profile" aria-label="Your profile"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Your profile"></button></div></header>
+<main id="main"></main>
+<nav class="bottom-nav" id="navigation" aria-label="Main navigation"></nav>
+</div>
+<dialog id="recipeDialog" aria-labelledby="detailTitle"><div id="detailContent"></div></dialog>
+<dialog id="preferencesDialog" aria-labelledby="preferencesTitle"><div id="preferencesContent"></div></dialog>
+<dialog id="checkoutDialog" aria-labelledby="checkoutTitle"><div id="checkoutContent"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+<script src="rice-options.js"></script>
+<script src="themes.js"></script>
+</body>
+</html>
