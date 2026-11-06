@@ -68,13 +68,15 @@
 
   function setRiceNote(picker, amountText) {
     const note = picker.querySelector('.rice-choice-note');
+    let message;
     if (!source) {
-      note.textContent = 'Choose a rice supplier before adding this dish.';
+      message = 'Choose a rice supplier before adding this dish.';
     } else if (source === 'own') {
-      note.textContent = `Bring ${amountText} of your own ${riceType}; it won’t be included in the box.`;
+      message = `Bring ${amountText} of your own ${riceType}; it won’t be included in the box.`;
     } else {
-      note.textContent = `Cookly will include ${amountText} of ${riceType} in your box.`;
+      message = `Cookly will include ${amountText} of ${riceType} in your box.`;
     }
+    if (note.textContent !== message) note.textContent = message;
   }
 
   function updateIngredients(detail, recipe) {
@@ -105,7 +107,8 @@
       const paceNote = detail.querySelector('.guide-pace-note');
       if (paceNote) paceNote.insertAdjacentHTML('afterend', '<p class="rice-guide-note"></p>');
     }
-    if (source === 'own' && guideNote) guideNote.textContent = `Use your own ${riceType}; it was not included in your meal kit.`;
+    const guideMessage = `Use your own ${riceType}; it was not included in your meal kit.`;
+    if (source === 'own' && guideNote && guideNote.textContent !== guideMessage) guideNote.textContent = guideMessage;
     if (source !== 'own') guideNote?.remove();
   }
 
@@ -161,7 +164,7 @@
         note.className = 'rice-box-note';
         container.append(note);
       }
-      note.textContent = text;
+      if (note.textContent !== text) note.textContent = text;
     });
 
     document.querySelectorAll('#checkoutContent .checkout-kit').forEach((element, index) => {
@@ -180,7 +183,7 @@
         note.className = 'rice-box-note';
         container.append(note);
       }
-      note.textContent = text;
+      if (note.textContent !== text) note.textContent = text;
     });
   }
 
