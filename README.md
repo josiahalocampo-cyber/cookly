@@ -4,6 +4,8 @@ Cookly is a static recipe app served from `dist/`. Cloudflare Pages hosts the
 site, its Pages Function provides the public Supabase client configuration,
 and Supabase Auth and Postgres sync each signed-in user's preferences, saved
 recipes, meal box, and cooking journal.
+The recipe app renders before optional cloud sync loads, so a slow sync service
+does not hold the first screen or block local browsing.
 
 ## Set up Supabase
 
