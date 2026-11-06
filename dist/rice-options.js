@@ -32,7 +32,7 @@
     if (!recipe || recipe.id === activeRecipeId) return;
     activeRecipeId = recipe.id;
     const existing = riceIngredient(recipe) && savedChoice(recipe);
-    source = existing?.riceSource || (existing ? 'cookly' : '');
+    source = existing?.riceSource === 'own' ? 'own' : 'cookly';
     riceType = existing?.riceType || defaultRice(recipe);
     if (!riceChoices.includes(riceType)) riceType = defaultRice(recipe);
   }
@@ -122,10 +122,16 @@
 
     let picker = detail.querySelector('.rice-choice');
     if (!picker && !app.guide) {
-      const ingredientsTitle = [...detail.querySelectorAll('h2')].find(item => item.textContent === 'Inside your Cookly box');
-      if (ingredientsTitle) {
-        ingredientsTitle.insertAdjacentHTML('beforebegin', ricePickerMarkup(recipe));
+      const addButton = detail.querySelector('[data-action="add"]');
+      if (addButton) {
+        addButton.insertAdjacentHTML('beforebegin', ricePickerMarkup(recipe));
         picker = detail.querySelector('.rice-choice');
+      } else {
+        const ingredientsTitle = [...detail.querySelectorAll('h2')].find(item => item.textContent === 'Inside your Cookly box');
+        if (ingredientsTitle) {
+          ingredientsTitle.insertAdjacentHTML('beforebegin', ricePickerMarkup(recipe));
+          picker = detail.querySelector('.rice-choice');
+        }
       }
     }
     if (picker) {
