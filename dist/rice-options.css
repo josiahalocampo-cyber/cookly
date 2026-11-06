@@ -17,3 +17,11 @@
 .rice-pending{font-size:11px;color:var(--muted)}
 .rice-box-note{font-size:10px!important;line-height:1.5;color:var(--muted)!important}
 .rice-guide-note{margin:10px 0 18px;padding:11px 12px;border:1px solid var(--border);border-radius:12px;background:var(--surface);font-size:11px;line-height:1.5;color:var(--muted)}
+.steak-doneness{margin:22px 0;padding:16px;border:1px solid var(--border);border-radius:16px;background:var(--surface);min-width:0}
+.steak-doneness>label{display:block;font-size:12px;font-weight:600}
+.steak-doneness select{display:block;width:100%;min-height:48px;margin-top:9px;padding:10px 12px;border:1px solid var(--border);border-radius:11px;background:var(--paper);color:var(--text);font:14px 'Inter',sans-serif}
+.steak-doneness-note,.steak-safety-note{font-size:11px;line-height:1.6;color:var(--muted)}
+.steak-doneness-note{margin:10px 0 0}
+.steak-safety-note{margin:10px 0 0;padding-top:10px;border-top:1px solid var(--border)}
+.box-grand-total{padding-top:14px;border-top:1px solid var(--border);font-size:15px}
+.box-total>.primary{line-height:1.4}

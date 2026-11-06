@@ -18,6 +18,8 @@ recipes, meal box, and cooking journal.
 
 The table has row-level security enabled. Each account can read and change
 only its own row. Delivery addresses and demo checkout purchases are not synced.
+Checkout is a local prototype flow: it does not collect payment or create a real
+delivery. Cooking guides unlock after confirming a demo order.
 
 ## Set up Cloudflare Pages
 
