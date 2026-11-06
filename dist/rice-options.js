@@ -100,7 +100,9 @@
     if (!app.guide) return;
     const originalRice = defaultRice(recipe);
     detail.querySelectorAll('.step-instructions p,.step-ingredients li span,.guide-box-reference li span').forEach(element => {
-      element.textContent = element.textContent.replace(new RegExp(originalRice.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), riceType);
+      const text = element.textContent.replace(new RegExp(originalRice.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), riceType);
+      // This runs inside a subtree observer: unchanged writes trigger another callback.
+      if (element.textContent !== text) element.textContent = text;
     });
     const guideNote = detail.querySelector('.rice-guide-note');
     if (source === 'own' && !guideNote) {
