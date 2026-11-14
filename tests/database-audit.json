@@ -21,6 +21,12 @@
   "redirectURLs": [
     "https://cookly.pages.dev"
   ],
-  "customSMTP": false,
-  "browserConfirmedAccountTest": "pending"
+  "customSMTP": true,
+  "browserConfirmedAccountTest": "PASS: signup, confirmation, profile/onboarding, refresh persistence, profile edit, logout and returning login",
+  "smtpProvider": "Gmail",
+  "smtpHost": "smtp.gmail.com",
+  "smtpPort": 465,
+  "smtpSenderName": "Cookly",
+  "smtpSavedVerified": true,
+  "smtpDeliveryTest": "PASS: actual signup confirmation delivered and account confirmed"
 }

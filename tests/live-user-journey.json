@@ -1,0 +1,38 @@
+{
+  "deployment": "https://cookly.pages.dev",
+  "date": "2026-11-14",
+  "method": "Computer use in owner-authorized Chrome profile, actual Supabase backend, no mocked authentication",
+  "checks": {
+    "smtpSaved": "PASS",
+    "signupConfirmationDelivered": "PASS",
+    "emailConfirmedSession": "PASS",
+    "profileAndOnboardingCompletedByUser": "PASS",
+    "refreshRetainsAccountAndSkipsOnboarding": "PASS",
+    "savedRecipeRetainsAfterRefresh": "PASS",
+    "cartRetainsThreeServingsAfterRefresh": "PASS",
+    "profileEditRetainsAfterRefresh": "PASS",
+    "originalProfileRestored": "PASS",
+    "demoCheckout": "PASS",
+    "guideUnlocked": "PASS",
+    "logoutLocksApp": "PASS",
+    "returningLoginSkipsOnboarding": "PASS",
+    "originalProfileLoadedAfterLogin": "PASS"
+  },
+  "cartPriceExample": {
+    "Calamansi Cream Pasta, 3 servings": 434,
+    "Smoky Chicken Tacos, 2 servings": 349,
+    "total": 783
+  },
+  "cleanup": {
+    "cart": "empty",
+    "savedRecipes": "restored to original empty state",
+    "profile": "restored to original values",
+    "demoGuideRecords": "two demo meal records remain in device History"
+  },
+  "remaining": [
+    "Authoritative food-photo/content approval",
+    "Gmail delivery limits and transactional deliverability",
+    "Actual cooking video and branded icon assets",
+    "Exhaustive cross-browser, multi-device concurrency, map pin and timer combination coverage"
+  ]
+}
