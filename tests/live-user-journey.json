@@ -16,7 +16,8 @@
     "guideUnlocked": "PASS",
     "logoutLocksApp": "PASS",
     "returningLoginSkipsOnboarding": "PASS",
-    "originalProfileLoadedAfterLogin": "PASS"
+    "originalProfileLoadedAfterLogin": "PASS",
+    "correctedGuideWordingOnProduction": "PASS"
   },
   "cartPriceExample": {
     "Calamansi Cream Pasta, 3 servings": 434,
@@ -34,5 +35,9 @@
     "Gmail delivery limits and transactional deliverability",
     "Actual cooking video and branded icon assets",
     "Exhaustive cross-browser, multi-device concurrency, map pin and timer combination coverage"
-  ]
+  ],
+  "finalSourceCommit": "79804b5",
+  "productionAppSHA256": "bc8cbf7dfac432fe7a806d48726009fd7e3df387823d3b99c87a712b091f8fd0",
+  "productionSourceMatchesLocal": true,
+  "finalBrowserState": "Signed in on Home"
 }
