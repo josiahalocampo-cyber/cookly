@@ -61,7 +61,7 @@
 
   function renderPalettePicker() {
     const profileCard = document.querySelector('.profile-card');
-    if (!profileCard || profileCard.querySelector('.palette-picker')) return;
+    if (!profileCard || !profileCard.querySelector('.profile-links') || profileCard.querySelector('.palette-picker')) return;
     const profileLinks = profileCard.querySelector('.profile-links');
     if (profileLinks) profileLinks.insertAdjacentHTML('beforebegin', paletteMarkup());
     else profileCard.insertAdjacentHTML('beforeend', paletteMarkup());

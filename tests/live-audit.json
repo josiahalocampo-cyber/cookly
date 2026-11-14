@@ -1,0 +1,79 @@
+{
+  "deployment": "https://cookly.pages.dev",
+  "checkedAt": "2026-11-14T13:27:09.018749+00:00",
+  "checks": [
+    {
+      "name": "Auth health",
+      "status": 200,
+      "body": {
+        "version": "v2.197.0",
+        "name": "GoTrue",
+        "description": "GoTrue is a user registration and authentication API"
+      }
+    },
+    {
+      "name": "Public auth settings",
+      "status": 200,
+      "body": {
+        "external": {
+          "anonymous_users": false,
+          "apple": false,
+          "azure": false,
+          "bitbucket": false,
+          "discord": false,
+          "facebook": false,
+          "snapchat": false,
+          "figma": false,
+          "fly": false,
+          "github": false,
+          "gitlab": false,
+          "google": false,
+          "keycloak": false,
+          "kakao": false,
+          "linkedin": false,
+          "linkedin_oidc": false,
+          "notion": false,
+          "spotify": false,
+          "slack": false,
+          "slack_oidc": false,
+          "workos": false,
+          "twitch": false,
+          "twitter": false,
+          "email": true,
+          "phone": false,
+          "zoom": false
+        },
+        "disable_signup": false,
+        "mailer_autoconfirm": false,
+        "phone_autoconfirm": false,
+        "sms_provider": "twilio",
+        "saml_enabled": false,
+        "saml_private_key_next_configured": true,
+        "passkeys_enabled": false
+      }
+    },
+    {
+      "name": "Anonymous data read",
+      "status": 200,
+      "body": []
+    },
+    {
+      "name": "Invalid login",
+      "status": 400,
+      "body": {
+        "code": 400,
+        "error_code": "invalid_credentials",
+        "msg": "Invalid login credentials"
+      }
+    },
+    {
+      "name": "Test registration",
+      "status": 400,
+      "body": {
+        "code": 400,
+        "error_code": "email_address_invalid",
+        "msg": "Email address \"cookly-audit-1794662831@example.com\" is invalid"
+      }
+    }
+  ]
+}

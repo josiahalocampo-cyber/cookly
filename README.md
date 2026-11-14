@@ -4,8 +4,10 @@ Cookly is a static recipe app served from `dist/`. Cloudflare Pages hosts the
 site, its Pages Function provides the public Supabase client configuration,
 and Supabase Auth and Postgres sync each signed-in user's preferences, saved
 recipes, meal box, and cooking journal.
-The recipe app renders before optional cloud sync loads, so a slow sync service
-does not hold the first screen or block local browsing.
+Cookly requires Supabase sign-in before browsing. New accounts complete the
+existing personal profile step, then the existing cooking questionnaire.
+Incomplete onboarding remains locked and resumes from its saved step.
+If authentication or the initial account load fails, the main app stays locked.
 
 ## Set up Supabase
 
@@ -37,8 +39,8 @@ confirmation screen or History. Recipe details do not show a paid-only
    variables for both Production and Preview:
    - `SUPABASE_URL` — the Supabase project URL.
    - `SUPABASE_ANON_KEY` — the Supabase publishable/anon key.
-4. Redeploy after adding the variables. Open the deployed site and go to
-   **Profile → Cloud sync** to create an account or sign in.
+4. Redeploy after adding the variables. Open the deployed site to
+   create an account or sign in on the welcome screen.
 5. Add the final Cloudflare Pages URL to Supabase's Site URL and Redirect URLs.
 
 The Supabase publishable/anon key is intended for browser use; access is
@@ -48,7 +50,31 @@ the Git repository.
 
 ## Local development
 
-GitHub Pages remains available as a static fallback. To run the Supabase
+A static-only host cannot provide `/api/config`; account access stays locked
+until this endpoint is available. GitHub Pages alone is insufficient. To run the Supabase
 function locally, use Wrangler Pages dev with `dist` as the output directory
 and provide `SUPABASE_URL` and `SUPABASE_ANON_KEY` as local Wrangler variables.
 Keep local secrets in the ignored `.dev.vars` file.
+
+## Verification
+
+Run `node tests/rice-guide.cjs` for the cooking observer regression.
+The browser audit needs Playwright and Chrome:
+
+```sh
+npm install --prefix /tmp/cookly-audit playwright
+PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+node tests/images.cjs
+```
+
+Set `CHROME_PATH` if Chrome is installed elsewhere. The browser suite serves
+local files through Playwright routing and uses a deterministic Supabase test
+double; it does not test a live database. The image script accesses existing
+remote photo URLs. Detailed findings are in [AUDIT_REPORT.md](AUDIT_REPORT.md).
+
+Account caches are namespaced by authenticated user ID. Old unscoped prototype
+data is retained on disk but is never automatically imported into an account.
+Unsynced changes remain in an account-specific pending cache and are retried
+after login; the newer pending snapshot wins over an older cloud snapshot.
+This is snapshot synchronization, not conflict-free simultaneous editing.
+Demo purchases and saved addresses remain device-only, scoped to the account.
