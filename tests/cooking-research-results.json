@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-14T14:34:57.258Z",
+  "deployment": "https://cookly.pages.dev/",
+  "implementationCommit": "c2db69e",
+  "recipes": 65,
+  "guideSteps": 276,
+  "distinctSources": 42,
+  "liveSourceMatchesLocal": true,
+  "appSha256": "6e84bfbcc45e14f7789788b68198791cebbcaa19ec444d68e2b84247d0da7ab0",
+  "checks": [
+    "Full local Chrome audit: all 65 foods and 276 guide steps; Supabase test double",
+    "Celsius/Fahrenheit with 1/2/6 servings; timers do not multiply",
+    "Original ingredient quantities, prices, names, images and tags preserved",
+    "Every recipe has linked sources and kit assumptions",
+    "All steak selectors; basting counted within second-side cooking",
+    "Source links and checkpoint timer controls in local browser",
+    "Recipe dialog widths 320/390/768/1440",
+    "Rice guide and pasta-water regressions",
+    "Live production smoke and exact deployed source match"
+  ],
+  "limitations": [
+    "No physical kitchen testing",
+    "Published recipes supply techniques adapted to the existing kit, not identical formulas",
+    "Preparation estimates depend on packet instructions, actual cuts, equipment and batch size"
+  ]
+}

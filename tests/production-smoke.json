@@ -1,6 +1,6 @@
 {
   "deployment": "https://cookly.pages.dev/",
-  "checkedAt": "2026-11-14T13:31:37.959Z",
+  "checkedAt": "2026-11-14T14:34:29.447Z",
   "result": "PASS",
   "checks": [
     "Live welcome screen",
