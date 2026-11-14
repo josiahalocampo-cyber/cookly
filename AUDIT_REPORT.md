@@ -2,7 +2,11 @@
 
 ## Production follow-up — 14 November 2026
 
-Supabase startup completed during the follow-up. Live auth health and public auth settings now return HTTP 200; invalid login returns HTTP 400 `invalid_credentials`; anonymous account reads return an empty array. Test registration with the reserved example.com address was rejected as `email_address_invalid`, so no live test account was created. The historical DNS blocker below is resolved; authenticated account persistence, cross-account RLS tests and confirmation redirects still require an authenticated Supabase connection and confirmed test accounts. No administrative database change has yet been applied. Commit `443139e` was pushed to `main` and Cloudflare deployed it: the live `app.js` SHA-256 matches the local file (`fafae39dab435780f324991f34b266704f2a7225f4cb6083b1e63ff80a13e375`).
+Supabase is healthy. The production dashboard was accessed through the owner's signed-in Chrome profile. The existing table and all three owner-only policies were verified, with row-level security enabled. The deployed table had overly broad grants (anonymous SELECT/INSERT/UPDATE/DELETE and authenticated DELETE); those were corrected to match `supabase/schema.sql`: anonymous access revoked, authenticated SELECT/INSERT/UPDATE only. The dashboard query confirmed exactly those three grants afterward.
+
+A live PostgreSQL transaction tested saving an authenticated owner's profile, saved IDs and cart, updating and reading its profile, hiding the other account's record, blocking its update, and rejecting a cross-account insert. All assertions passed, and the transaction rolled back all fixtures. See `tests/database-ownership.sql`. This verifies real database ownership rules, while browser signup/confirmation/login still needs a real account test.
+
+Both the Site URL and allowed redirect already point to `https://cookly.pages.dev`. **Custom SMTP is off**; public signup email delivery is the outstanding service configuration. Email confirmation was kept enabled. The reviewed application is deployed (commit `443139e`); its app.js hash matches the local implementation.
 
 The live browser smoke test also passed: real Supabase client initialization, mandatory login gate, blocked direct navigation, required-email validation, a real invalid-login response, responsive welcome screen and no uncaught page errors. Evidence: `tests/production-smoke.json`.
 
@@ -50,7 +54,7 @@ Existing layout, branding, colors, palettes, recipes, ingredient values, prices 
 2. **Two Steak Rice Bowl records:** `menu-steak-rice-bowl` is ₱459 and `butter-steak` is ₱499, with different ingredients/instructions. Each record is internally consistent across details/cart, but the identical display name is ambiguous. Confirm whether these are separate products and how they should be labeled; neither price/name was changed.
 3. **Live backend (historical finding, resolved after project startup):** the public deployment at https://cookly.pages.dev returns a Supabase URL, but `vyktgqrfqwlfcsyirzes.supabase.co` did not resolve from this environment (independently checked with Node, Python and curl). Confirm/restore the Supabase project or supply its current public configuration. No database architecture migration was performed.
 4. **Real cooking videos, logo and app icons:** these assets are absent. Guides honestly label the existing animated mock previews. Provide final branded assets and verified step videos if desired; no replacement branding was fabricated.
-5. **Production deployment:** completed for commit `443139e`; the live app.js hash matches the reviewed local implementation. Authenticated database verification remains pending.
+5. **Production deployment:** completed for commit `443139e`; the live app.js hash matches the reviewed local implementation. Live database ownership tests passed and table grants were corrected; confirmed-account browser verification remains pending.
 
 ## D. Food-by-food verification
 
@@ -128,7 +132,7 @@ For **every row**, configured name, description, category, positive price, nonem
 
 - **Historical initial test:** live authentication/persistence was blocked, not passed. See the production follow-up above for recovered API results. Health, auth settings, anonymous reads, invalid login and test registration all failed before reaching Supabase because its configured hostname did not resolve. No live test account was created, and no real order was submitted. Evidence: `tests/live-audit.json`.
 - Actual confirmation emails, real duplicate-account behavior, session refresh/expiry and real account recovery remain unverified. Password recovery was not an existing feature and was not added.
-- Existing SQL enables owner-only SELECT/INSERT/UPDATE policies. This was inspected, but deployment of that schema, unauthorized cross-account database queries and actual RLS enforcement could not be tested against the unreachable backend. Local UI gates do not replace database security.
+- Live row-level security and own/cross-account SQL operations now pass the transaction tests described above. Confirmed-account browser signup/login and email delivery remain to be completed. The SQL tests use a database role and JWT subject setting, not an actual Supabase browser token.
 - Saved addresses and demo guide unlocks remain device-only, now account-scoped, as in the existing architecture. They do not follow users onto another device. Unsynced snapshot recovery is last-write comparison, not simultaneous multi-device merging. Private data is not encrypted in browser localStorage.
 - Static recipe data, sample community ratings, mocked cooking previews and lack of live inventory remain product limitations. All menu facts require an authoritative owner-provided source before being certified accurate. No nutrition or allergen safety claims were invented.
 - Mapping/geocoding success, dragging and confirming real pins, real slow-network behavior, all timer durations, every rice variety/doneness combination, denied browser storage and every browser/device combination are not exhaustively tested. The demo checkout was tested with a written address and unavailable external map services.
@@ -137,6 +141,6 @@ For **every row**, configured name, description, category, positive price, nonem
 
 ## F. Final application status
 
-**Partially functional; not production complete.** The local application flow and all 65 food interactions passed the documented browser integration checks, with image identity issues explicitly left unresolved. The production backend now responds and the reviewed changes are deployed. Actual confirmed-account and cross-account RLS tests, plus approved food imagery/data, are still needed before claiming a complete production application.
+**Partially functional; not production complete.** The local application flow and all 65 food interactions passed the documented browser integration checks, with image identity issues explicitly left unresolved. The production backend now responds and the reviewed changes are deployed. Actual confirmed-account browser tests, production email delivery, and approved food imagery/data are still needed before claiming a complete production application.
 
 Reproduce with the commands in README.md. `tests/audit.cjs` uses a Supabase test double and local-file routing. `tests/food-audit.json` records individual food interaction results; `tests/image-audit.json` records real photo HTTP results. The browser test's downloaded-image previews live in `/tmp/cookly-audit` and are not required for behavior assertions. No passwords, auth tokens or Supabase keys are stored in the reports.

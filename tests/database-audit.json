@@ -1,0 +1,26 @@
+{
+  "project": "cookly",
+  "verificationMethod": "Supabase dashboard SQL Editor via computer use",
+  "rlsEnabled": true,
+  "policies": [
+    "Owner-only SELECT",
+    "Owner-only INSERT",
+    "Owner-only UPDATE"
+  ],
+  "grantsAfterFix": {
+    "anon": [],
+    "authenticated": [
+      "INSERT",
+      "SELECT",
+      "UPDATE"
+    ]
+  },
+  "transactionTests": "PASS",
+  "fixturesRolledBack": true,
+  "siteURL": "https://cookly.pages.dev",
+  "redirectURLs": [
+    "https://cookly.pages.dev"
+  ],
+  "customSMTP": false,
+  "browserConfirmedAccountTest": "pending"
+}
