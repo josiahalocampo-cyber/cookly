@@ -1,5 +1,16 @@
 # Cookly functionality audit — 14 November 2026
 
+## Cooking-method revision — 14 November 2026
+
+All 65 kit recipes now have explicit, researched methods (276 guide steps), linked technique references and visible assumptions under “Cooking notes & sources.” See [COOKING_RESEARCH.md](COOKING_RESEARCH.md) for every dish. Instructions adapt the existing prepared sauces and kit ingredients; they do not reproduce the linked recipes or add their missing ingredients. Names, prices, images, ingredient quantities and dietary tags were preserved. Total times were revised as estimates for two servings; pressing and inasal marinating are identified separately.
+
+The universal four-minutes-per-side medium steak rule was removed. For a roughly 2–2.5 cm boneless steak the guide starts with a two-minute browning check, flips, then begins butter basting after about one minute. Basting counts within second-side cooking, rather than being added to two full side timers. Selected temperature, thickness and actual heat determine completion. The conservative medium default remains 63°C with at least three minutes rest; rare/medium-rare remain identified as below the cited safety minimum. All timed stages now say what to check rather than promising doneness on expiry.
+
+Other corrections include poultry and ground-meat temperature checks, opaque shrimp, a temperature endpoint for salmon, longer pork braising, root vegetables before quick proteins, raw salad/taco toppings, pesto and citrus cream finishing off heat, gentle prepared-sauce heating, cooked-legume assumptions, and packet-led grain/noodle preparation.
+
+Verification passed: full Chrome audit of all 65 foods and every guide step (Supabase test double); 276-step checks at 1/2/6 servings in Celsius/Fahrenheit; retained kit data; all steak options, source links, checkpoint timer controls, and dialog layout at 320/390/768/1440 widths; rice-guide and pasta-water regressions; JavaScript syntax and diff checks. No physical kitchen validation was performed. Prepared-sauce labels, actual cut dimensions, and equipment still govern real cooking; this revision does not certify nutrition, allergens, prices or kit availability.
+
+
 ## Production follow-up — 14 November 2026
 
 Supabase is healthy. The production dashboard was accessed through the owner's signed-in Chrome profile. The existing table and all three owner-only policies were verified, with row-level security enabled. The deployed table had overly broad grants (anonymous SELECT/INSERT/UPDATE/DELETE and authenticated DELETE); those were corrected to match `supabase/schema.sql`: anonymous access revoked, authenticated SELECT/INSERT/UPDATE only. The dashboard query confirmed exactly those three grants afterward.

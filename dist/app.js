@@ -10,72 +10,6213 @@
 // to any recipe to replace its animated mock walkthrough with your actual cooking clips.
 const photo = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=800&q=75`;
 const recipes = [
- {"id":"menu-steak-rice-bowl","name":"Steak Rice Bowl","featured":false,"cuisine":"American","category":"Rice bowls","tags":["Quick Meals","Steak"],"image":"https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=85","time":35,"difficulty":"Easy","price":459,"description":"Seared ribeye or striploin over fluffy white rice, with savory soy-oyster sauce, herb butter, crisp corn, a fried egg, and furikake.","ingredients":[{"name":"Ribeye or striploin steak","amount":200,"unit":"g"},{"name":"Steak seasoning blend (salt, four-spice pepper, garlic powder, prime rib seasoning)","amount":1,"unit":"packet"},{"name":"Herb butter","amount":20,"unit":"g"},{"name":"Garlic cloves for steak","amount":2,"unit":"cloves"},{"name":"White rice","amount":1,"unit":"cup"},{"name":"Soy sauce","amount":3,"unit":"tbsp"},{"name":"Oyster sauce","amount":1.5,"unit":"tbsp"},{"name":"Sugar","amount":2,"unit":"tbsp"},{"name":"Black pepper","amount":1,"unit":"packet"},{"name":"Sesame oil","amount":1,"unit":"tsp"},{"name":"Shredded corn","amount":1,"unit":"packet"},{"name":"Egg (optional)","amount":2,"unit":"pieces"},{"name":"Furikake","amount":1,"unit":"packet"},{"name":"Chopped garlic","amount":2,"unit":"cloves"},{"name":"Chopped onion","amount":0.5,"unit":"piece"},{"name":"Chopped green onion","amount":2,"unit":"stalks"}],"steps":["Rinse the white rice until the water runs mostly clear, then cook according to its packet. Mince the steak garlic and chopped garlic; dice the onion and slice the green onion. Whisk together the soy sauce, oyster sauce, sugar, black pepper, and sesame oil.","Pat the steak dry and coat with the steak seasoning blend. Sear in a hot pan with a little oil until browned, turning as needed. Add the herb butter and steak garlic and baste. Cook whole cuts to at least 63°C, then rest for 3 minutes before slicing.","Warm the shredded corn and sauté the chopped garlic and onion until fragrant. Fry the eggs if using. Spoon the sauce over the rice, add sliced steak and corn, then finish with furikake, green onion, and egg."]},
- {id:'butter-steak',stepVideos:[],featured:true,cuisine:'American',rating:4.9,name:'Steak Rice Bowl',category:'Rice bowls',tags:['Quick Meals','Steak'],image:photo('photo-1546833999-b9f581a1996d'),time:35,difficulty:'Beginner',price:499,description:'Pan-seared steak over savory onion-garlic rice with sauce and corn, finished with butter and garlic.',ingredients:[{name:'Beef steak',amount:300,unit:'g'},{name:'Steak seasoning packets',amount:1,unit:'set'},{name:'White rice',amount:1,unit:'cup'},{name:'Cooking oil',amount:1,unit:'tbsp'},{name:'Chopped onion',amount:0.5,unit:'piece'},{name:'Chopped garlic for rice',amount:2,unit:'cloves'},{name:'Rice bowl sauce',amount:1,unit:'packet'},{name:'Corn',amount:1,unit:'packet'},{name:'Butter',amount:20,unit:'g'},{name:'Garlic for steak',amount:2,unit:'cloves'}],steps:['Heat a little oil in a pan over medium heat. Add the onion and garlic and sweat for 2–3 minutes, stirring occasionally.','Add the rice and mix until evenly combined.','Add the sauce and mix until the rice is evenly coated.','Add the corn and mix. Keep the rice warm while you cook the steak.','Heat a separate pan over high heat for 3–4 minutes until very hot.','Pat the steak dry with paper towels, then season both sides using the seasoning packets.','Sear the steak for 3 minutes 30 seconds on the first side, flip, then sear for 3 minutes 30 seconds on the second side. Check that the center reaches at least 63°C; timing can vary with steak thickness.','Reduce the heat to medium. Add the butter and garlic, then baste the steak for 1 minute.','Transfer the steak to a plate and let it rest for 3 minutes.','Cut the steak into slices and layer it on top of the rice.'],guideSteps:[{title:'Sweat the onion and garlic',timerSeconds:150,timerNote:'Set for 2:30; the onions should soften without browning.',ingredientIndexes:[3,4,5]},{title:'Add the rice',ingredientIndexes:[2]},{title:'Mix in the sauce',ingredientIndexes:[6]},{title:'Add the corn',ingredientIndexes:[7]},{title:'Preheat the steak pan',timerSeconds:210,timerNote:'Heat the separate pan on high for 3–4 minutes.',ingredientIndexes:[0]},{title:'Dry and season the steak',ingredientIndexes:[0,1]},{title:'Sear both sides',timerSeconds:210,timerNote:'Sear 3:30 per side. Restart the timer after flipping; use a thermometer to check doneness.',ingredientIndexes:[0]},{title:'Butter-baste the steak',timerSeconds:60,timerNote:'Baste for 1:00 over medium heat.',ingredientIndexes:[8,9]},{title:'Rest the steak',timerSeconds:180,timerNote:'Rest for 3 minutes before slicing.',ingredientIndexes:[0]},{title:'Slice and serve',ingredientIndexes:[2,0,7]}]},
- {id:'calamansi-pasta',featured:true,cuisine:'Italian-inspired',rating:4.8,name:'Calamansi Cream Pasta',category:'Pasta',tags:['Quick Meals','Vegetarian'],image:photo('photo-1563379926898-05f4575a45d8'),time:20,difficulty:'Beginner',price:289,description:'Silky cream, a bright squeeze of calamansi, and golden garlic crumbs. Your new weeknight ritual.',ingredients:[{name:'Pasta',amount:200,unit:'g'},{name:'Fresh cream',amount:150,unit:'ml'},{name:'Calamansi juice',amount:20,unit:'ml'},{name:'Garlic crumbs',amount:30,unit:'g'},{name:'Parsley',amount:10,unit:'g'}],steps:['Bring salted water to a boil. Chop the parsley and set aside a cup for pasta water.','Cook pasta according to the package. Warm cream gently in a separate pan, then stir in calamansi juice.','Toss pasta with sauce, loosening with pasta water. Finish with garlic crumbs and parsley.']},
- {id:'beef-salpicao',featured:true,cuisine:'Filipino',rating:4.9,name:'Garlic Beef Salpicao',category:'Filipino',tags:['Steak','Quick Meals'],image:photo('photo-1544025162-d76694265947'),time:20,difficulty:'Easy',price:429,description:'Juicy beef bites with toasted garlic and a rich soy-butter sauce, spooned over warm jasmine rice.',ingredients:[{name:'Beef cubes',amount:300,unit:'g'},{name:'Garlic',amount:30,unit:'g'},{name:'Soy-butter sauce',amount:50,unit:'ml'},{name:'Mushrooms',amount:100,unit:'g'},{name:'Jasmine rice',amount:150,unit:'g'}],steps:['Rinse the rice and cook according to the packet. Slice mushrooms and garlic; pat the beef dry.','Toast garlic in a little oil and set aside. Sear beef in batches, then sauté the mushrooms.','Return beef and garlic to the pan. Toss with soy-butter sauce until the beef reaches your preferred doneness and serve over rice.']},
- {id:'tofu-sisig',featured:true,cuisine:'Filipino',rating:4.7,name:'Crispy Tofu Sisig',category:'Filipino',tags:['Quick Meals','Vegetarian'],image:photo('photo-1515823064-d6e0c04616a7'),time:25,difficulty:'Beginner',price:269,description:'Crisp tofu and sweet red onion with a creamy calamansi dressing, served with warm jasmine rice. All the sizzle, entirely plant based.',ingredients:[{name:'Firm tofu',amount:400,unit:'g'},{name:'Red onion',amount:100,unit:'g'},{name:'Chili',amount:10,unit:'g'},{name:'Vegan calamansi mayo',amount:60,unit:'g'},{name:'Spring onion',amount:20,unit:'g'},{name:'Jasmine rice',amount:150,unit:'g'}],steps:['Rinse and cook the rice according to the packet. Drain and pat tofu dry, then cut into small cubes. Chop onion, chili, and spring onion.','Pan-fry tofu in a little oil until crisp on all sides. Add red onion and chili and sauté briefly.','Lower the heat and fold in calamansi mayo. Scatter spring onion over the sizzling tofu and serve with warm rice.']},
- {id:'miso-salmon',featured:true,cuisine:'Japanese-inspired',rating:4.9,name:'Miso-Glazed Salmon',category:'Healthy',tags:['Quick Meals'],image:photo('photo-1467003909585-2f8a72700288'),time:25,difficulty:'Easy',price:449,description:'Caramelized miso salmon, sesame greens, and fluffy rice. A feel-good dinner with a little extra glow.',ingredients:[{name:'Salmon fillet',amount:300,unit:'g'},{name:'Miso glaze',amount:60,unit:'g'},{name:'Bok choy',amount:200,unit:'g'},{name:'Sesame seeds',amount:10,unit:'g'},{name:'Jasmine rice',amount:150,unit:'g'}],steps:['Heat the oven to 200°C. Rinse and cook the rice according to the packet.','Brush salmon with miso glaze and bake until the center reaches 63°C, checking from 12 minutes.','Steam bok choy until tender. Serve salmon over rice with greens and a sprinkle of sesame.']},
- {id:'chicken-adobo',featured:true,cuisine:'Filipino',rating:4.8,name:'Chicken Adobo',category:'Filipino',tags:[],image:photo('photo-1604908176997-125f25cc6f3d'),time:35,difficulty:'Easy',price:349,description:'The comforting classic: tender chicken, fragrant bay, and a glossy vinegar-soy sauce made for rice.',ingredients:[{name:'Chicken thigh',amount:400,unit:'g'},{name:'Cane vinegar',amount:60,unit:'ml'},{name:'Soy sauce',amount:50,unit:'ml'},{name:'Bay leaves',amount:2,unit:'leaves'},{name:'Peppercorns',amount:3,unit:'g'},{name:'Jasmine rice',amount:150,unit:'g'}],steps:['Rinse and cook rice according to the packet. Place chicken, vinegar, soy sauce, bay leaves, and peppercorns in a pot.','Add 100 ml water per two servings. Bring to a boil, then cover and simmer until chicken is tender and reaches 74°C internally.','Uncover and reduce the sauce until glossy, turning the chicken to coat. Serve with rice.']},
-{"id": "vegetable-kare-kare", "featured": false, "cuisine": "Filipino", "name": "Vegetable Kare-Kare", "category": "Filipino", "tags": ["Vegetarian", "Healthy"], "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 319, "description": "A colorful vegetable bowl with creamy peanut sauce and warm rice.", "ingredients": [{"name": "Eggplant", "amount": 200, "unit": "g"}, {"name": "Bok choy", "amount": 150, "unit": "g"}, {"name": "Green beans", "amount": 150, "unit": "g"}, {"name": "Peanut sauce", "amount": 120, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}], "steps": ["Rinse and cook rice according to the packet. Slice the eggplant and trim the greens.", "Simmer eggplant and green beans in peanut sauce with a splash of water until tender.", "Add bok choy and cook until wilted. Spoon the vegetables and sauce over rice."]},
-{"id": "tomato-basil-pasta", "featured": false, "cuisine": "Italian-inspired", "name": "Tomato Basil Pasta", "category": "Pasta", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85", "time": 20, "difficulty": "Beginner", "price": 259, "description": "A simple tomato and basil pasta with garlic and a generous finish of parmesan.", "ingredients": [{"name": "Pasta", "amount": 200, "unit": "g"}, {"name": "Tomato sauce", "amount": 250, "unit": "g"}, {"name": "Fresh basil", "amount": 15, "unit": "g"}, {"name": "Garlic", "amount": 20, "unit": "g"}, {"name": "Vegetarian parmesan", "amount": 30, "unit": "g"}], "steps": ["Bring salted water to a boil. Chop garlic and tear the basil leaves.", "Cook pasta according to the packet. Gently sauté garlic in oil, then add tomato sauce and simmer.", "Toss pasta with the sauce and a splash of pasta water. Finish with basil and parmesan."]},
-{"id": "lemon-chicken", "featured": false, "cuisine": "Mediterranean-inspired", "name": "Lemon Herb Chicken", "category": "Healthy", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Easy", "price": 359, "description": "Golden chicken with a bright lemon dressing and crisp seasonal greens.", "ingredients": [{"name": "Chicken breast", "amount": 350, "unit": "g"}, {"name": "Lemon herb dressing", "amount": 60, "unit": "ml"}, {"name": "Mixed greens", "amount": 150, "unit": "g"}, {"name": "Cherry tomatoes", "amount": 100, "unit": "g"}, {"name": "Couscous", "amount": 150, "unit": "g"}], "steps": ["Pat chicken dry and coat with half the lemon herb dressing. Rinse greens and halve the tomatoes.", "Pan-sear chicken, turning until golden and cooked to 74°C internally. Prepare couscous according to the packet.", "Rest and slice the chicken. Serve with couscous, greens, tomatoes, and the remaining dressing."]},
-{"id": "korean-beef-bowl", "name": "Korean Beef Bowl", "cuisine": "Korean-inspired", "category": "Rice bowls", "featured": true, "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 399, "description": "Sweet, savory, and a little spicy. A comforting bowl made for your weeknight table.", "ingredients": [{"name": "Beef strips", "amount": 300, "unit": "g"}, {"name": "Soy sesame sauce", "amount": 60, "unit": "ml"}, {"name": "Carrot", "amount": 100, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Sesame seeds", "amount": 10, "unit": "g"}], "steps": ["Cook the rice according to the packet. Slice the carrot and pat the beef dry.", "Stir-fry the carrot, then sear the beef in batches. Add the soy sesame sauce and toss to coat.", "Serve beef and carrots over rice, finished with sesame seeds."], "rating": 4.8},
-{"id": "thai-coconut-curry", "name": "Thai Coconut Curry", "cuisine": "Thai-inspired", "category": "Curry", "featured": true, "tags": ["Quick Meals", "Vegetarian"], "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 319, "description": "Fragrant herbs, bright citrus, and generous flavor in every bite.", "ingredients": [{"name": "Firm tofu", "amount": 300, "unit": "g"}, {"name": "Coconut milk", "amount": 200, "unit": "ml"}, {"name": "Vegetarian Thai curry paste", "amount": 35, "unit": "g"}, {"name": "Mixed vegetables", "amount": 250, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}], "steps": ["Cook the rice according to the packet. Cube tofu and chop vegetables.", "Warm curry paste in a little oil, then add coconut milk and vegetables. Simmer until tender.", "Add tofu and heat through. Serve the coconut curry with rice."], "rating": 4.8},
-{"id": "chicken-tacos", "name": "Smoky Chicken Tacos", "cuisine": "Mexican-inspired", "category": "Tacos", "featured": true, "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 349, "description": "Big flavor and colorful toppings, ready to share around the table.", "ingredients": [{"name": "Chicken strips", "amount": 300, "unit": "g"}, {"name": "Corn tortillas", "amount": 6, "unit": "pieces"}, {"name": "Smoky spice mix", "amount": 15, "unit": "g"}, {"name": "Tomato salsa", "amount": 100, "unit": "g"}, {"name": "Shredded cabbage", "amount": 100, "unit": "g"}], "steps": ["Toss the chicken with the spice mix and a little oil. Prepare cabbage and salsa.", "Saut\u00e9 chicken until golden and its center reaches 74\u00b0C. Warm the tortillas in a dry pan.", "Fill tortillas with chicken, cabbage, and salsa. Serve while warm."], "rating": 4.8},
-{"id": "chickpea-masala", "name": "Creamy Chickpea Masala", "cuisine": "Indian-inspired", "category": "Curry", "featured": true, "tags": ["Quick Meals", "Vegetarian"], "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 299, "description": "Warm spices and a comforting sauce, with everything portioned for you.", "ingredients": [{"name": "Cooked chickpeas", "amount": 350, "unit": "g"}, {"name": "Tomato masala sauce", "amount": 200, "unit": "g"}, {"name": "Coconut cream", "amount": 100, "unit": "ml"}, {"name": "Spinach", "amount": 100, "unit": "g"}, {"name": "Basmati rice", "amount": 150, "unit": "g"}], "steps": ["Cook basmati rice according to the packet. Drain chickpeas and rinse spinach.", "Simmer chickpeas in tomato masala sauce and coconut cream for 12 minutes.", "Fold in spinach until wilted and serve with the rice."], "rating": 4.8},
-{"id": "sesame-tofu-bowl", "name": "Sesame Tofu Bowl", "cuisine": "Korean-inspired", "category": "Rice bowls", "featured": false, "tags": ["Quick Meals", "Vegetarian"], "image": "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=1000&q=85", "time": 20, "difficulty": "Beginner", "price": 289, "description": "Sweet, savory, and a little spicy. A comforting bowl made for your weeknight table.", "ingredients": [{"name": "Firm tofu", "amount": 350, "unit": "g"}, {"name": "Sesame soy dressing", "amount": 50, "unit": "ml"}, {"name": "Cucumber", "amount": 100, "unit": "g"}, {"name": "Carrot", "amount": 100, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}], "steps": ["Cook rice according to the packet. Pat tofu dry and cut into cubes. Slice the vegetables.", "Pan-fry tofu in a little oil until crisp, then toss with half the sesame dressing.", "Arrange tofu and vegetables over rice and finish with the remaining dressing."]},
-{"id": "thai-basil-chicken", "name": "Thai Basil Chicken", "cuisine": "Thai-inspired", "category": "Rice bowls", "featured": false, "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1000&q=85", "time": 20, "difficulty": "Beginner", "price": 329, "description": "Fragrant herbs, bright citrus, and generous flavor in every bite.", "ingredients": [{"name": "Ground chicken", "amount": 300, "unit": "g"}, {"name": "Basil leaves", "amount": 20, "unit": "g"}, {"name": "Garlic chili sauce", "amount": 50, "unit": "ml"}, {"name": "Green beans", "amount": 150, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}], "steps": ["Cook rice according to the packet. Trim and slice the beans.", "Stir-fry chicken with garlic chili sauce, breaking it up until it reaches 74\u00b0C. Add beans and cook until tender.", "Fold in basil just before serving and spoon over warm rice."]},
-{"id": "black-bean-tacos", "name": "Black Bean Tacos", "cuisine": "Mexican-inspired", "category": "Tacos", "featured": false, "tags": ["Quick Meals", "Vegetarian"], "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1000&q=85", "time": 20, "difficulty": "Beginner", "price": 269, "description": "Big flavor and colorful toppings, ready to share around the table.", "ingredients": [{"name": "Cooked black beans", "amount": 300, "unit": "g"}, {"name": "Corn tortillas", "amount": 6, "unit": "pieces"}, {"name": "Tomato salsa", "amount": 100, "unit": "g"}, {"name": "Sweetcorn", "amount": 100, "unit": "g"}, {"name": "Shredded cabbage", "amount": 100, "unit": "g"}], "steps": ["Drain black beans and sweetcorn. Prepare the cabbage and salsa.", "Warm beans and sweetcorn with a little oil, salt, and pepper. Heat tortillas in a dry pan.", "Fill tortillas with beans, corn, cabbage, and salsa."]},
-{"id": "butter-chicken", "name": "Butter Chicken", "cuisine": "Indian-inspired", "category": "Curry", "featured": false, "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1000&q=85", "time": 30, "difficulty": "Beginner", "price": 379, "description": "Warm spices and a comforting sauce, with everything portioned for you.", "ingredients": [{"name": "Chicken thigh", "amount": 350, "unit": "g"}, {"name": "Butter masala sauce", "amount": 200, "unit": "g"}, {"name": "Fresh cream", "amount": 80, "unit": "ml"}, {"name": "Basmati rice", "amount": 150, "unit": "g"}, {"name": "Fresh coriander", "amount": 10, "unit": "g"}], "steps": ["Cook basmati rice according to the packet. Cut chicken into bite-sized pieces.", "Sear the chicken in a little oil. Add masala sauce and simmer until chicken reaches 74\u00b0C.", "Stir in cream, warm gently, and serve over rice with coriander."]},
-// Menu-only prototype dishes. Photos are illustrative; replace them with dish-specific assets as available.
-{"id": "menu-bbq-chicken-rice-bowl", "name": "BBQ Chicken Rice Bowl", "featured": false, "cuisine": "American", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken breast with bbq sauce, sweetcorn, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "BBQ sauce", "amount": 60, "unit": "g"}, {"name": "Sweetcorn", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the sweetcorn into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and sweetcorn, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the bbq sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-creamy-mushroom-chicken", "name": "Creamy Mushroom Chicken", "featured": false, "cuisine": "American", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken breast with mushroom cream sauce, green beans, and mashed potato mix. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Mashed potato mix", "amount": 150, "unit": "g"}, {"name": "Mushroom cream sauce", "amount": 60, "unit": "g"}, {"name": "Green beans", "amount": 200, "unit": "g"}], "steps": ["Prepare the mashed potato mix according to its packet and keep warm. Cut the green beans into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and green beans, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the mushroom cream sauce, adding a little water to loosen. Serve with the mashed potato mix."]},
-{"id": "menu-cajun-shrimp-rice", "name": "Cajun Shrimp Rice", "featured": false, "cuisine": "American", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Peeled shrimp with cajun tomato sauce, bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Peeled shrimp", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Cajun tomato sauce", "amount": 60, "unit": "g"}, {"name": "Bell pepper", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the bell pepper into small pieces and prepare the peeled shrimp.", "Heat a little oil in a pan. Add the peeled shrimp and bell pepper, then cook until the vegetables soften. Cook shrimp to 63\u00b0C internally.", "Toss with the cajun tomato sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-cheddar-mac-and-cheese", "name": "Cheddar Mac & Cheese", "featured": false, "cuisine": "American", "category": "Pasta", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Broccoli with cheddar cheese sauce, sweetcorn, and macaroni. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Broccoli", "amount": 300, "unit": "g"}, {"name": "Macaroni", "amount": 200, "unit": "g"}, {"name": "Cheddar cheese sauce", "amount": 60, "unit": "g"}, {"name": "Sweetcorn", "amount": 200, "unit": "g"}], "steps": ["Prepare the macaroni according to its packet and keep warm. Cut the sweetcorn into small pieces and prepare the broccoli.", "Heat a little oil in a pan. Add the broccoli and sweetcorn, then cook until the vegetables soften.", "Toss with the cheddar cheese sauce, adding a little water to loosen. Toss with the cooked macaroni and serve warm."]},
-{"id": "menu-honey-mustard-chicken", "name": "Honey Mustard Chicken", "featured": false, "cuisine": "American", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken breast with honey mustard sauce, carrot, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Honey mustard sauce", "amount": 60, "unit": "g"}, {"name": "Carrot", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the carrot into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and carrot, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the honey mustard sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-smoky-beef-rice-bowl", "name": "Smoky Beef Rice Bowl", "featured": false, "cuisine": "American", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Ground beef with smoky tomato sauce, bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Ground beef", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Smoky tomato sauce", "amount": 60, "unit": "g"}, {"name": "Bell pepper", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the bell pepper into small pieces and prepare the ground beef.", "Heat a little oil in a pan. Add the ground beef and bell pepper, then cook until the vegetables soften. Cook ground beef to 71\u00b0C internally.", "Toss with the smoky tomato sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-chicken-inasal-bowl", "name": "Chicken Inasal Bowl", "featured": false, "cuisine": "Filipino", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken thigh with inasal marinade, cucumber, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken thigh", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Inasal marinade", "amount": 60, "unit": "g"}, {"name": "Cucumber", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the cucumber into small pieces and prepare the chicken thigh.", "Heat a little oil in a pan. Add the chicken thigh and cucumber, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the inasal marinade, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-beef-bistek", "name": "Beef Bistek", "featured": false, "cuisine": "Filipino", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Beef strips with calamansi soy sauce, onion, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Beef strips", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Calamansi soy sauce", "amount": 60, "unit": "g"}, {"name": "Onion", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the onion into small pieces and prepare the beef strips.", "Heat a little oil in a pan. Add the beef strips and onion, then cook until the vegetables soften.", "Toss with the calamansi soy sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-chicken-afritada", "name": "Chicken Afritada", "featured": false, "cuisine": "Filipino", "category": "Curry", "tags": [], "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 329, "description": "Chicken thigh with tomato afritada sauce, potato and carrot, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken thigh", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Tomato afritada sauce", "amount": 160, "unit": "g"}, {"name": "Potato and carrot", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the potato and carrot into small pieces and prepare the chicken thigh.", "Heat a little oil in a pan. Add the chicken thigh and potato and carrot, then cook until the vegetables soften. Add the tomato afritada sauce and simmer until everything is tender. Cook chicken to 74\u00b0C internally.", "Stir gently, taste, and adjust the seasoning. Serve with the jasmine rice."]},
-{"id": "menu-pork-menudo", "name": "Pork Menudo", "featured": false, "cuisine": "Filipino", "category": "Curry", "tags": [], "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 329, "description": "Pork cubes with menudo tomato sauce, potato and bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Pork cubes", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Menudo tomato sauce", "amount": 160, "unit": "g"}, {"name": "Potato and bell pepper", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the potato and bell pepper into small pieces and prepare the pork cubes.", "Heat a little oil in a pan. Add the pork cubes and potato and bell pepper, then cook until the vegetables soften. Add the menudo tomato sauce and simmer until everything is tender. Cook pork to 63\u00b0C internally, then rest for 3 minutes.", "Stir gently, taste, and adjust the seasoning. Serve with the jasmine rice."]},
-{"id": "menu-ginisang-monggo", "name": "Ginisang Monggo", "featured": false, "cuisine": "Filipino", "category": "Curry", "tags": ["Vegetarian"], "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 279, "description": "Cooked mung beans with garlic ginger broth, spinach, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Cooked mung beans", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Garlic ginger broth", "amount": 160, "unit": "g"}, {"name": "Spinach", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the spinach into small pieces and prepare the cooked mung beans.", "Heat a little oil in a pan. Add the cooked mung beans and spinach, then cook until the vegetables soften. Add the garlic ginger broth and simmer until everything is tender.", "Stir gently, taste, and adjust the seasoning. Serve with the jasmine rice."]},
-{"id": "menu-pesto-chicken-pasta", "name": "Pesto Chicken Pasta", "featured": false, "cuisine": "Italian-inspired", "category": "Pasta", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken breast with basil pesto, cherry tomatoes, and pasta. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Pasta", "amount": 200, "unit": "g"}, {"name": "Basil pesto", "amount": 60, "unit": "g"}, {"name": "Cherry tomatoes", "amount": 200, "unit": "g"}], "steps": ["Prepare the pasta according to its packet and keep warm. Cut the cherry tomatoes into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and cherry tomatoes, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the basil pesto, adding a little water to loosen. Toss with the cooked pasta and serve warm."]},
-{"id": "menu-creamy-mushroom-penne", "name": "Creamy Mushroom Penne", "featured": false, "cuisine": "Italian-inspired", "category": "Pasta", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Mushrooms with parmesan cream sauce, spinach, and penne. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Mushrooms", "amount": 300, "unit": "g"}, {"name": "Penne", "amount": 200, "unit": "g"}, {"name": "Parmesan cream sauce", "amount": 60, "unit": "g"}, {"name": "Spinach", "amount": 200, "unit": "g"}], "steps": ["Prepare the penne according to its packet and keep warm. Cut the spinach into small pieces and prepare the mushrooms.", "Heat a little oil in a pan. Add the mushrooms and spinach, then cook until the vegetables soften.", "Toss with the parmesan cream sauce, adding a little water to loosen. Toss with the cooked penne and serve warm."]},
-{"id": "menu-garlic-shrimp-linguine", "name": "Garlic Shrimp Linguine", "featured": false, "cuisine": "Italian-inspired", "category": "Pasta", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Peeled shrimp with garlic lemon butter, cherry tomatoes, and linguine. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Peeled shrimp", "amount": 300, "unit": "g"}, {"name": "Linguine", "amount": 200, "unit": "g"}, {"name": "Garlic lemon butter", "amount": 60, "unit": "g"}, {"name": "Cherry tomatoes", "amount": 200, "unit": "g"}], "steps": ["Prepare the linguine according to its packet and keep warm. Cut the cherry tomatoes into small pieces and prepare the peeled shrimp.", "Heat a little oil in a pan. Add the peeled shrimp and cherry tomatoes, then cook until the vegetables soften. Cook shrimp to 63\u00b0C internally.", "Toss with the garlic lemon butter, adding a little water to loosen. Toss with the cooked linguine and serve warm."]},
-{"id": "menu-beef-ragu-pasta", "name": "Beef Ragu Pasta", "featured": false, "cuisine": "Italian-inspired", "category": "Pasta", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Ground beef with tomato ragu sauce, carrot, and pasta. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Ground beef", "amount": 300, "unit": "g"}, {"name": "Pasta", "amount": 200, "unit": "g"}, {"name": "Tomato ragu sauce", "amount": 60, "unit": "g"}, {"name": "Carrot", "amount": 200, "unit": "g"}], "steps": ["Prepare the pasta according to its packet and keep warm. Cut the carrot into small pieces and prepare the ground beef.", "Heat a little oil in a pan. Add the ground beef and carrot, then cook until the vegetables soften. Cook ground beef to 71\u00b0C internally.", "Toss with the tomato ragu sauce, adding a little water to loosen. Toss with the cooked pasta and serve warm."]},
-{"id": "menu-spinach-cream-fusilli", "name": "Spinach Cream Fusilli", "featured": false, "cuisine": "Italian-inspired", "category": "Pasta", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Chickpeas with parmesan cream sauce, spinach, and fusilli. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chickpeas", "amount": 300, "unit": "g"}, {"name": "Fusilli", "amount": 200, "unit": "g"}, {"name": "Parmesan cream sauce", "amount": 60, "unit": "g"}, {"name": "Spinach", "amount": 200, "unit": "g"}], "steps": ["Prepare the fusilli according to its packet and keep warm. Cut the spinach into small pieces and prepare the chickpeas.", "Heat a little oil in a pan. Add the chickpeas and spinach, then cook until the vegetables soften.", "Toss with the parmesan cream sauce, adding a little water to loosen. Toss with the cooked fusilli and serve warm."]},
-{"id": "menu-chicken-teriyaki-bowl", "name": "Chicken Teriyaki Bowl", "featured": false, "cuisine": "Japanese-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken thigh with teriyaki sauce, broccoli, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken thigh", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Teriyaki sauce", "amount": 60, "unit": "g"}, {"name": "Broccoli", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the broccoli into small pieces and prepare the chicken thigh.", "Heat a little oil in a pan. Add the chicken thigh and broccoli, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the teriyaki sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-beef-yakiniku-bowl", "name": "Beef Yakiniku Bowl", "featured": false, "cuisine": "Japanese-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Beef strips with yakiniku sauce, onion, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Beef strips", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Yakiniku sauce", "amount": 60, "unit": "g"}, {"name": "Onion", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the onion into small pieces and prepare the beef strips.", "Heat a little oil in a pan. Add the beef strips and onion, then cook until the vegetables soften.", "Toss with the yakiniku sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-ginger-tofu-rice-bowl", "name": "Ginger Tofu Rice Bowl", "featured": false, "cuisine": "Japanese-inspired", "category": "Rice bowls", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Firm tofu with ginger soy sauce, bok choy, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Firm tofu", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Ginger soy sauce", "amount": 60, "unit": "g"}, {"name": "Bok choy", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the bok choy into small pieces and prepare the firm tofu.", "Heat a little oil in a pan. Add the firm tofu and bok choy, then cook until the vegetables soften.", "Toss with the ginger soy sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-japanese-chicken-curry", "name": "Japanese Chicken Curry", "featured": false, "cuisine": "Japanese-inspired", "category": "Curry", "tags": [], "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 329, "description": "Chicken thigh with japanese curry sauce, potato and carrot, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken thigh", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Japanese curry sauce", "amount": 160, "unit": "g"}, {"name": "Potato and carrot", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the potato and carrot into small pieces and prepare the chicken thigh.", "Heat a little oil in a pan. Add the chicken thigh and potato and carrot, then cook until the vegetables soften. Add the japanese curry sauce and simmer until everything is tender. Cook chicken to 74\u00b0C internally.", "Stir gently, taste, and adjust the seasoning. Serve with the jasmine rice."]},
-{"id": "menu-sesame-mushroom-udon", "name": "Sesame Mushroom Udon", "featured": false, "cuisine": "Japanese-inspired", "category": "Noodles", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Mushrooms with sesame soy sauce, bok choy, and udon noodles. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Mushrooms", "amount": 300, "unit": "g"}, {"name": "Udon noodles", "amount": 150, "unit": "g"}, {"name": "Sesame soy sauce", "amount": 60, "unit": "g"}, {"name": "Bok choy", "amount": 200, "unit": "g"}], "steps": ["Prepare the udon noodles according to its packet and keep warm. Cut the bok choy into small pieces and prepare the mushrooms.", "Heat a little oil in a pan. Add the mushrooms and bok choy, then cook until the vegetables soften.", "Toss with the sesame soy sauce, adding a little water to loosen. Toss with the cooked udon noodles and serve warm."]},
-{"id": "menu-miso-butter-shrimp", "name": "Miso Butter Shrimp", "featured": false, "cuisine": "Japanese-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Peeled shrimp with miso butter sauce, broccoli, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Peeled shrimp", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Miso butter sauce", "amount": 60, "unit": "g"}, {"name": "Broccoli", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the broccoli into small pieces and prepare the peeled shrimp.", "Heat a little oil in a pan. Add the peeled shrimp and broccoli, then cook until the vegetables soften. Cook shrimp to 63\u00b0C internally.", "Toss with the miso butter sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-greek-chicken-bowl", "name": "Greek Chicken Bowl", "featured": false, "cuisine": "Mediterranean-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken breast with lemon oregano dressing, tomato and cucumber, and couscous. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Couscous", "amount": 150, "unit": "g"}, {"name": "Lemon oregano dressing", "amount": 60, "unit": "g"}, {"name": "Tomato and cucumber", "amount": 200, "unit": "g"}], "steps": ["Prepare the couscous according to its packet and keep warm. Cut the tomato and cucumber into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and tomato and cucumber, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the lemon oregano dressing, adding a little water to loosen. Serve with the couscous."]},
-{"id": "menu-lemon-chickpea-couscous", "name": "Lemon Chickpea Couscous", "featured": false, "cuisine": "Mediterranean-inspired", "category": "Rice bowls", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Chickpeas with lemon herb dressing, zucchini, and couscous. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chickpeas", "amount": 300, "unit": "g"}, {"name": "Couscous", "amount": 150, "unit": "g"}, {"name": "Lemon herb dressing", "amount": 60, "unit": "g"}, {"name": "Zucchini", "amount": 200, "unit": "g"}], "steps": ["Prepare the couscous according to its packet and keep warm. Cut the zucchini into small pieces and prepare the chickpeas.", "Heat a little oil in a pan. Add the chickpeas and zucchini, then cook until the vegetables soften.", "Toss with the lemon herb dressing, adding a little water to loosen. Serve with the couscous."]},
-{"id": "menu-garlic-shrimp-couscous", "name": "Garlic Shrimp Couscous", "featured": false, "cuisine": "Mediterranean-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Peeled shrimp with garlic lemon butter, cherry tomatoes, and couscous. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Peeled shrimp", "amount": 300, "unit": "g"}, {"name": "Couscous", "amount": 150, "unit": "g"}, {"name": "Garlic lemon butter", "amount": 60, "unit": "g"}, {"name": "Cherry tomatoes", "amount": 200, "unit": "g"}], "steps": ["Prepare the couscous according to its packet and keep warm. Cut the cherry tomatoes into small pieces and prepare the peeled shrimp.", "Heat a little oil in a pan. Add the peeled shrimp and cherry tomatoes, then cook until the vegetables soften. Cook shrimp to 63\u00b0C internally.", "Toss with the garlic lemon butter, adding a little water to loosen. Serve with the couscous."]},
-{"id": "menu-harissa-chicken-bowl", "name": "Harissa Chicken Bowl", "featured": false, "cuisine": "Mediterranean-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken breast with harissa tomato sauce, bell pepper, and couscous. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Couscous", "amount": 150, "unit": "g"}, {"name": "Harissa tomato sauce", "amount": 60, "unit": "g"}, {"name": "Bell pepper", "amount": 200, "unit": "g"}], "steps": ["Prepare the couscous according to its packet and keep warm. Cut the bell pepper into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and bell pepper, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the harissa tomato sauce, adding a little water to loosen. Serve with the couscous."]},
-{"id": "menu-herbed-mushroom-couscous", "name": "Herbed Mushroom Couscous", "featured": false, "cuisine": "Mediterranean-inspired", "category": "Rice bowls", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Mushrooms with lemon herb dressing, spinach, and couscous. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Mushrooms", "amount": 300, "unit": "g"}, {"name": "Couscous", "amount": 150, "unit": "g"}, {"name": "Lemon herb dressing", "amount": 60, "unit": "g"}, {"name": "Spinach", "amount": 200, "unit": "g"}], "steps": ["Prepare the couscous according to its packet and keep warm. Cut the spinach into small pieces and prepare the mushrooms.", "Heat a little oil in a pan. Add the mushrooms and spinach, then cook until the vegetables soften.", "Toss with the lemon herb dressing, adding a little water to loosen. Serve with the couscous."]},
-{"id": "menu-gochujang-chicken-bowl", "name": "Gochujang Chicken Bowl", "featured": false, "cuisine": "Korean-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken breast with gochujang sauce, carrot, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Gochujang sauce", "amount": 60, "unit": "g"}, {"name": "Carrot", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the carrot into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and carrot, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the gochujang sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-korean-mushroom-rice", "name": "Korean Mushroom Rice", "featured": false, "cuisine": "Korean-inspired", "category": "Rice bowls", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Mushrooms with sesame soy sauce, spinach, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Mushrooms", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Sesame soy sauce", "amount": 60, "unit": "g"}, {"name": "Spinach", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the spinach into small pieces and prepare the mushrooms.", "Heat a little oil in a pan. Add the mushrooms and spinach, then cook until the vegetables soften.", "Toss with the sesame soy sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-spicy-pork-bulgogi", "name": "Spicy Pork Bulgogi", "featured": false, "cuisine": "Korean-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Pork strips with spicy bulgogi sauce, onion, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Pork strips", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Spicy bulgogi sauce", "amount": 60, "unit": "g"}, {"name": "Onion", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the onion into small pieces and prepare the pork strips.", "Heat a little oil in a pan. Add the pork strips and onion, then cook until the vegetables soften. Cook pork to 63\u00b0C internally, then rest for 3 minutes.", "Toss with the spicy bulgogi sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-kimchi-tofu-rice", "name": "Kimchi Tofu Rice", "featured": false, "cuisine": "Korean-inspired", "category": "Rice bowls", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Firm tofu with vegetarian kimchi sauce, carrot, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Firm tofu", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Vegetarian kimchi sauce", "amount": 60, "unit": "g"}, {"name": "Carrot", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the carrot into small pieces and prepare the firm tofu.", "Heat a little oil in a pan. Add the firm tofu and carrot, then cook until the vegetables soften.", "Toss with the vegetarian kimchi sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-sesame-beef-noodles", "name": "Sesame Beef Noodles", "featured": false, "cuisine": "Korean-inspired", "category": "Noodles", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Beef strips with sesame soy sauce, bok choy, and wheat noodles. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Beef strips", "amount": 300, "unit": "g"}, {"name": "Wheat noodles", "amount": 150, "unit": "g"}, {"name": "Sesame soy sauce", "amount": 60, "unit": "g"}, {"name": "Bok choy", "amount": 200, "unit": "g"}], "steps": ["Prepare the wheat noodles according to its packet and keep warm. Cut the bok choy into small pieces and prepare the beef strips.", "Heat a little oil in a pan. Add the beef strips and bok choy, then cook until the vegetables soften.", "Toss with the sesame soy sauce, adding a little water to loosen. Toss with the cooked wheat noodles and serve warm."]},
-{"id": "menu-thai-peanut-noodles", "name": "Thai Peanut Noodles", "featured": false, "cuisine": "Thai-inspired", "category": "Noodles", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Firm tofu with peanut lime sauce, carrot, and rice noodles. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Firm tofu", "amount": 300, "unit": "g"}, {"name": "Rice noodles", "amount": 150, "unit": "g"}, {"name": "Peanut lime sauce", "amount": 60, "unit": "g"}, {"name": "Carrot", "amount": 200, "unit": "g"}], "steps": ["Prepare the rice noodles according to its packet and keep warm. Cut the carrot into small pieces and prepare the firm tofu.", "Heat a little oil in a pan. Add the firm tofu and carrot, then cook until the vegetables soften.", "Toss with the peanut lime sauce, adding a little water to loosen. Toss with the cooked rice noodles and serve warm."]},
-{"id": "menu-red-curry-chicken", "name": "Red Curry Chicken", "featured": false, "cuisine": "Thai-inspired", "category": "Curry", "tags": [], "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 329, "description": "Chicken breast with red coconut curry sauce, bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Red coconut curry sauce", "amount": 160, "unit": "g"}, {"name": "Bell pepper", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the bell pepper into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and bell pepper, then cook until the vegetables soften. Add the red coconut curry sauce and simmer until everything is tender. Cook chicken to 74\u00b0C internally.", "Stir gently, taste, and adjust the seasoning. Serve with the jasmine rice."]},
-{"id": "menu-thai-garlic-shrimp", "name": "Thai Garlic Shrimp", "featured": false, "cuisine": "Thai-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Peeled shrimp with garlic pepper sauce, green beans, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Peeled shrimp", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Garlic pepper sauce", "amount": 60, "unit": "g"}, {"name": "Green beans", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the green beans into small pieces and prepare the peeled shrimp.", "Heat a little oil in a pan. Add the peeled shrimp and green beans, then cook until the vegetables soften. Cook shrimp to 63\u00b0C internally.", "Toss with the garlic pepper sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-green-curry-tofu", "name": "Green Curry Tofu", "featured": false, "cuisine": "Thai-inspired", "category": "Curry", "tags": ["Vegetarian"], "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 279, "description": "Firm tofu with vegetarian green curry sauce, zucchini, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Firm tofu", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Vegetarian green curry sauce", "amount": 160, "unit": "g"}, {"name": "Zucchini", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the zucchini into small pieces and prepare the firm tofu.", "Heat a little oil in a pan. Add the firm tofu and zucchini, then cook until the vegetables soften. Add the vegetarian green curry sauce and simmer until everything is tender.", "Stir gently, taste, and adjust the seasoning. Serve with the jasmine rice."]},
-{"id": "menu-sweet-chili-chicken", "name": "Sweet Chili Chicken", "featured": false, "cuisine": "Thai-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken breast with sweet chili sauce, bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Sweet chili sauce", "amount": 60, "unit": "g"}, {"name": "Bell pepper", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the bell pepper into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and bell pepper, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the sweet chili sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-chicken-fajita-bowl", "name": "Chicken Fajita Bowl", "featured": false, "cuisine": "Mexican-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken breast with fajita tomato sauce, bell pepper and onion, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Fajita tomato sauce", "amount": 60, "unit": "g"}, {"name": "Bell pepper and onion", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the bell pepper and onion into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and bell pepper and onion, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the fajita tomato sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-chipotle-beef-bowl", "name": "Chipotle Beef Bowl", "featured": false, "cuisine": "Mexican-inspired", "category": "Rice bowls", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Ground beef with chipotle sauce, sweetcorn, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Ground beef", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Chipotle sauce", "amount": 60, "unit": "g"}, {"name": "Sweetcorn", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the sweetcorn into small pieces and prepare the ground beef.", "Heat a little oil in a pan. Add the ground beef and sweetcorn, then cook until the vegetables soften. Cook ground beef to 71\u00b0C internally.", "Toss with the chipotle sauce, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-smoky-bean-rice-bowl", "name": "Smoky Bean Rice Bowl", "featured": false, "cuisine": "Mexican-inspired", "category": "Rice bowls", "tags": ["Vegetarian", "Quick Meals"], "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 279, "description": "Black beans with smoky tomato salsa, bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Black beans", "amount": 300, "unit": "g"}, {"name": "Jasmine rice", "amount": 150, "unit": "g"}, {"name": "Smoky tomato salsa", "amount": 60, "unit": "g"}, {"name": "Bell pepper", "amount": 200, "unit": "g"}], "steps": ["Prepare the jasmine rice according to its packet and keep warm. Cut the bell pepper into small pieces and prepare the black beans.", "Heat a little oil in a pan. Add the black beans and bell pepper, then cook until the vegetables soften.", "Toss with the smoky tomato salsa, adding a little water to loosen. Serve with the jasmine rice."]},
-{"id": "menu-lime-shrimp-tacos", "name": "Lime Shrimp Tacos", "featured": false, "cuisine": "Mexican-inspired", "category": "Tacos", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 359, "description": "Peeled shrimp with lime crema, shredded cabbage, and corn tortillas. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Peeled shrimp", "amount": 300, "unit": "g"}, {"name": "Corn tortillas", "amount": 6, "unit": "pieces"}, {"name": "Lime crema", "amount": 60, "unit": "g"}, {"name": "Shredded cabbage", "amount": 200, "unit": "g"}], "steps": ["Prepare the corn tortillas according to its packet. Warm the tortillas just before serving. Cut the shredded cabbage into small pieces and prepare the peeled shrimp.", "Heat a little oil in a pan. Add the peeled shrimp and shredded cabbage, then cook until the vegetables soften. Cook shrimp to 63\u00b0C internally.", "Toss with the lime crema, adding a little water to loosen. Fill the tortillas with the mixture and serve warm."]},
-{"id": "menu-chicken-tinga-tacos", "name": "Chicken Tinga Tacos", "featured": false, "cuisine": "Mexican-inspired", "category": "Tacos", "tags": ["Quick Meals"], "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1000&q=85", "time": 25, "difficulty": "Beginner", "price": 329, "description": "Chicken breast with tinga tomato sauce, shredded cabbage, and corn tortillas. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Corn tortillas", "amount": 6, "unit": "pieces"}, {"name": "Tinga tomato sauce", "amount": 60, "unit": "g"}, {"name": "Shredded cabbage", "amount": 200, "unit": "g"}], "steps": ["Prepare the corn tortillas according to its packet. Warm the tortillas just before serving. Cut the shredded cabbage into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and shredded cabbage, then cook until the vegetables soften. Cook chicken to 74\u00b0C internally.", "Toss with the tinga tomato sauce, adding a little water to loosen. Fill the tortillas with the mixture and serve warm."]},
-{"id": "menu-palak-paneer", "name": "Palak Paneer", "featured": false, "cuisine": "Indian-inspired", "category": "Curry", "tags": ["Vegetarian"], "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 279, "description": "Paneer with spinach masala sauce, tomato, and basmati rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Paneer", "amount": 300, "unit": "g"}, {"name": "Basmati rice", "amount": 150, "unit": "g"}, {"name": "Spinach masala sauce", "amount": 160, "unit": "g"}, {"name": "Tomato", "amount": 200, "unit": "g"}], "steps": ["Prepare the basmati rice according to its packet and keep warm. Cut the tomato into small pieces and prepare the paneer.", "Heat a little oil in a pan. Add the paneer and tomato, then cook until the vegetables soften. Add the spinach masala sauce and simmer until everything is tender.", "Stir gently, taste, and adjust the seasoning. Serve with the basmati rice."]},
-{"id": "menu-chickpea-tikka-masala", "name": "Chickpea Tikka Masala", "featured": false, "cuisine": "Indian-inspired", "category": "Curry", "tags": ["Vegetarian"], "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 279, "description": "Chickpeas with tikka masala sauce, spinach, and basmati rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chickpeas", "amount": 300, "unit": "g"}, {"name": "Basmati rice", "amount": 150, "unit": "g"}, {"name": "Tikka masala sauce", "amount": 160, "unit": "g"}, {"name": "Spinach", "amount": 200, "unit": "g"}], "steps": ["Prepare the basmati rice according to its packet and keep warm. Cut the spinach into small pieces and prepare the chickpeas.", "Heat a little oil in a pan. Add the chickpeas and spinach, then cook until the vegetables soften. Add the tikka masala sauce and simmer until everything is tender.", "Stir gently, taste, and adjust the seasoning. Serve with the basmati rice."]},
-{"id": "menu-chicken-korma", "name": "Chicken Korma", "featured": false, "cuisine": "Indian-inspired", "category": "Curry", "tags": [], "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 329, "description": "Chicken breast with korma sauce, green beans, and basmati rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chicken breast", "amount": 300, "unit": "g"}, {"name": "Basmati rice", "amount": 150, "unit": "g"}, {"name": "Korma sauce", "amount": 160, "unit": "g"}, {"name": "Green beans", "amount": 200, "unit": "g"}], "steps": ["Prepare the basmati rice according to its packet and keep warm. Cut the green beans into small pieces and prepare the chicken breast.", "Heat a little oil in a pan. Add the chicken breast and green beans, then cook until the vegetables soften. Add the korma sauce and simmer until everything is tender. Cook chicken to 74\u00b0C internally.", "Stir gently, taste, and adjust the seasoning. Serve with the basmati rice."]},
-{"id": "menu-coconut-dal", "name": "Coconut Dal", "featured": false, "cuisine": "Indian-inspired", "category": "Curry", "tags": ["Vegetarian"], "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 279, "description": "Cooked lentils with coconut curry sauce, spinach, and basmati rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Cooked lentils", "amount": 300, "unit": "g"}, {"name": "Basmati rice", "amount": 150, "unit": "g"}, {"name": "Coconut curry sauce", "amount": 160, "unit": "g"}, {"name": "Spinach", "amount": 200, "unit": "g"}], "steps": ["Prepare the basmati rice according to its packet and keep warm. Cut the spinach into small pieces and prepare the cooked lentils.", "Heat a little oil in a pan. Add the cooked lentils and spinach, then cook until the vegetables soften. Add the coconut curry sauce and simmer until everything is tender.", "Stir gently, taste, and adjust the seasoning. Serve with the basmati rice."]},
-{"id": "menu-aloo-chana", "name": "Aloo Chana", "featured": false, "cuisine": "Indian-inspired", "category": "Curry", "tags": ["Vegetarian"], "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1000&q=85", "time": 35, "difficulty": "Easy", "price": 279, "description": "Chickpeas with tomato masala sauce, potato, and basmati rice. A comforting Cookly meal kit, portioned for two.", "ingredients": [{"name": "Chickpeas", "amount": 300, "unit": "g"}, {"name": "Basmati rice", "amount": 150, "unit": "g"}, {"name": "Tomato masala sauce", "amount": 160, "unit": "g"}, {"name": "Potato", "amount": 200, "unit": "g"}], "steps": ["Prepare the basmati rice according to its packet and keep warm. Cut the potato into small pieces and prepare the chickpeas.", "Heat a little oil in a pan. Add the chickpeas and potato, then cook until the vegetables soften. Add the tomato masala sauce and simmer until everything is tender.", "Stir gently, taste, and adjust the seasoning. Serve with the basmati rice."]}
+ {
+  "id": "menu-steak-rice-bowl",
+  "name": "Steak Rice Bowl",
+  "featured": false,
+  "cuisine": "American",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals",
+   "Steak"
+  ],
+  "image": "https://images.unsplash.com/photo-1682566509605-b5bb1ef7eac2?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Easy",
+  "price": 459,
+  "description": "Seared ribeye or striploin over fluffy white rice, with savory soy-oyster sauce, herb butter, crisp corn, a fried egg, and furikake.",
+  "ingredients": [
+   {
+    "name": "Ribeye or striploin steak",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Steak seasoning blend (salt, four-spice pepper, garlic powder, prime rib seasoning)",
+    "amount": 1,
+    "unit": "packet"
+   },
+   {
+    "name": "Herb butter",
+    "amount": 20,
+    "unit": "g"
+   },
+   {
+    "name": "Garlic cloves for steak",
+    "amount": 2,
+    "unit": "cloves"
+   },
+   {
+    "name": "White rice",
+    "amount": 1,
+    "unit": "cup"
+   },
+   {
+    "name": "Soy sauce",
+    "amount": 3,
+    "unit": "tbsp"
+   },
+   {
+    "name": "Oyster sauce",
+    "amount": 1.5,
+    "unit": "tbsp"
+   },
+   {
+    "name": "Sugar",
+    "amount": 2,
+    "unit": "tbsp"
+   },
+   {
+    "name": "Black pepper",
+    "amount": 1,
+    "unit": "packet"
+   },
+   {
+    "name": "Sesame oil",
+    "amount": 1,
+    "unit": "tsp"
+   },
+   {
+    "name": "Shredded corn",
+    "amount": 1,
+    "unit": "packet"
+   },
+   {
+    "name": "Egg (optional)",
+    "amount": 2,
+    "unit": "pieces"
+   },
+   {
+    "name": "Furikake",
+    "amount": 1,
+    "unit": "packet"
+   },
+   {
+    "name": "Chopped garlic",
+    "amount": 2,
+    "unit": "cloves"
+   },
+   {
+    "name": "Chopped onion",
+    "amount": 0.5,
+    "unit": "piece"
+   },
+   {
+    "name": "Chopped green onion",
+    "amount": 2,
+    "unit": "stalks"
+   }
+  ],
+  "steps": [
+   "Start the white rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Keep the steak butter and steak garlic separate from the rice ingredients.",
+   "Pat the steak dry and season with the supplied steak seasoning. These pan instructions assume a boneless steak about 2–2.5 cm thick. Heat a heavy pan with a little oil over medium-high heat until shimmering; avoid burning oil. Thicker steaks need a gentler finish and more time.",
+   "Lay the steak away from you. Leave it to develop a brown crust; begin checking after about 2 minutes for a 2–2.5 cm steak, earlier for thinner cuts. Flip once the crust releases. This is a browning checkpoint, not a promise of medium doneness.",
+   "After flipping, cook for about 1 minute, then lower the heat and add the butter and steak garlic. Tilt and spoon foaming butter over the steak, checking temperature frequently. Basting is part of this second-side cooking time, not an extra full sear. Do not let the butter blacken. Continue only as needed for the selected temperature.",
+   "For the food-safety recommendation, reach at least 63°C before removing from heat and rest at least 3 minutes. Rest about 5 minutes for this bowl before slicing; temperature can rise during resting. Do not use carryover cooking to skip the minimum temperature.",
+   "Whisk soy sauce, oyster sauce, sugar, pepper and sesame oil. Cook the chopped onion in a little oil until soft, add chopped garlic briefly, then warm corn and the mixed sauce. Spoon over cooked rice. If using eggs, cook until whites and yolks are firm. Finish with furikake and green onion.",
+   "Slice rested steak across the grain and arrange over the hot rice. Spoon over the resting juices. Use a clean board and utensils for the cooked food."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the white rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Keep the steak butter and steak garlic separate from the rice ingredients.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   {
+    "title": "Dry, season and heat the pan",
+    "text": "Pat the steak dry and season with the supplied steak seasoning. These pan instructions assume a boneless steak about 2–2.5 cm thick. Heat a heavy pan with a little oil over medium-high heat until shimmering; avoid burning oil. Thicker steaks need a gentler finish and more time.",
+    "ingredientIndexes": [
+     0,
+     1
+    ]
+   },
+   {
+    "title": "Sear the first side",
+    "text": "Lay the steak away from you. Leave it to develop a brown crust; begin checking after about 2 minutes for a 2–2.5 cm steak, earlier for thinner cuts. Flip once the crust releases. This is a browning checkpoint, not a promise of medium doneness.",
+    "timerSeconds": 120,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Flip, baste and measure",
+    "text": "After flipping, cook for about 1 minute, then lower the heat and add the butter and steak garlic. Tilt and spoon foaming butter over the steak, checking temperature frequently. Basting is part of this second-side cooking time, not an extra full sear. Do not let the butter blacken. Continue only as needed for the selected temperature.",
+    "steakPhase": "baste",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Rest the steak",
+    "text": "For the food-safety recommendation, reach at least 63°C before removing from heat and rest at least 3 minutes. Rest about 5 minutes for this bowl before slicing; temperature can rise during resting. Do not use carryover cooking to skip the minimum temperature.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Finish the rice bowl",
+    "text": "Whisk soy sauce, oyster sauce, sugar, pepper and sesame oil. Cook the chopped onion in a little oil until soft, add chopped garlic briefly, then warm corn and the mixed sauce. Spoon over cooked rice. If using eggs, cook until whites and yolks are firm. Finish with furikake and green onion.",
+    "ingredientIndexes": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   {
+    "title": "Slice and serve",
+    "text": "Slice rested steak across the grain and arrange over the hot rice. Spoon over the resting juices. Use a clean board and utensils for the cooked food.",
+    "ingredientIndexes": [
+     0
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Steak temperatures describe approximate culinary preferences, not guaranteed timing. A thin steak may need much less time. Resting and basting are included in the method.",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — pan-seared steak and basting",
+    "url": "https://www.recipetineats.com/how-to-cook-steak/"
+   },
+   {
+    "title": "ThermoWorks — medium steak temperature",
+    "url": "https://blog.thermoworks.com/what-temperature-is-medium/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "butter-steak",
+  "stepVideos": [],
+  "featured": true,
+  "cuisine": "American",
+  "rating": 4.9,
+  "name": "Steak Rice Bowl",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals",
+   "Steak"
+  ],
+  "image": "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 499,
+  "description": "Pan-seared steak over savory onion-garlic rice with sauce and corn, finished with butter and garlic.",
+  "ingredients": [
+   {
+    "name": "Beef steak",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Steak seasoning packets",
+    "amount": 1,
+    "unit": "set"
+   },
+   {
+    "name": "White rice",
+    "amount": 1,
+    "unit": "cup"
+   },
+   {
+    "name": "Cooking oil",
+    "amount": 1,
+    "unit": "tbsp"
+   },
+   {
+    "name": "Chopped onion",
+    "amount": 0.5,
+    "unit": "piece"
+   },
+   {
+    "name": "Chopped garlic for rice",
+    "amount": 2,
+    "unit": "cloves"
+   },
+   {
+    "name": "Rice bowl sauce",
+    "amount": 1,
+    "unit": "packet"
+   },
+   {
+    "name": "Corn",
+    "amount": 1,
+    "unit": "packet"
+   },
+   {
+    "name": "Butter",
+    "amount": 20,
+    "unit": "g"
+   },
+   {
+    "name": "Garlic for steak",
+    "amount": 2,
+    "unit": "cloves"
+   }
+  ],
+  "steps": [
+   "Start the white rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Keep the steak butter and steak garlic separate from the rice ingredients.",
+   "Pat the steak dry and season with the supplied steak seasoning. These pan instructions assume a boneless steak about 2–2.5 cm thick. Heat a heavy pan with a little oil over medium-high heat until shimmering; avoid burning oil. Thicker steaks need a gentler finish and more time.",
+   "Lay the steak away from you. Leave it to develop a brown crust; begin checking after about 2 minutes for a 2–2.5 cm steak, earlier for thinner cuts. Flip once the crust releases. This is a browning checkpoint, not a promise of medium doneness.",
+   "After flipping, cook for about 1 minute, then lower the heat and add the butter and steak garlic. Tilt and spoon foaming butter over the steak, checking temperature frequently. Basting is part of this second-side cooking time, not an extra full sear. Do not let the butter blacken. Continue only as needed for the selected temperature.",
+   "For the food-safety recommendation, reach at least 63°C before removing from heat and rest at least 3 minutes. Rest about 5 minutes for this bowl before slicing; temperature can rise during resting. Do not use carryover cooking to skip the minimum temperature.",
+   "Cook the chopped onion in the cooking oil until soft, add the rice garlic briefly, then warm corn and the rice bowl sauce. Fold in the already cooked rice; never add dry rice at this stage.",
+   "Slice rested steak across the grain and arrange over the hot rice. Spoon over the resting juices. Use a clean board and utensils for the cooked food."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the white rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Keep the steak butter and steak garlic separate from the rice ingredients.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   {
+    "title": "Dry, season and heat the pan",
+    "text": "Pat the steak dry and season with the supplied steak seasoning. These pan instructions assume a boneless steak about 2–2.5 cm thick. Heat a heavy pan with a little oil over medium-high heat until shimmering; avoid burning oil. Thicker steaks need a gentler finish and more time.",
+    "ingredientIndexes": [
+     0,
+     1
+    ]
+   },
+   {
+    "title": "Sear the first side",
+    "text": "Lay the steak away from you. Leave it to develop a brown crust; begin checking after about 2 minutes for a 2–2.5 cm steak, earlier for thinner cuts. Flip once the crust releases. This is a browning checkpoint, not a promise of medium doneness.",
+    "timerSeconds": 120,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Flip, baste and measure",
+    "text": "After flipping, cook for about 1 minute, then lower the heat and add the butter and steak garlic. Tilt and spoon foaming butter over the steak, checking temperature frequently. Basting is part of this second-side cooking time, not an extra full sear. Do not let the butter blacken. Continue only as needed for the selected temperature.",
+    "steakPhase": "baste",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     8,
+     9
+    ]
+   },
+   {
+    "title": "Rest the steak",
+    "text": "For the food-safety recommendation, reach at least 63°C before removing from heat and rest at least 3 minutes. Rest about 5 minutes for this bowl before slicing; temperature can rise during resting. Do not use carryover cooking to skip the minimum temperature.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Finish the rice bowl",
+    "text": "Cook the chopped onion in the cooking oil until soft, add the rice garlic briefly, then warm corn and the rice bowl sauce. Fold in the already cooked rice; never add dry rice at this stage.",
+    "ingredientIndexes": [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   {
+    "title": "Slice and serve",
+    "text": "Slice rested steak across the grain and arrange over the hot rice. Spoon over the resting juices. Use a clean board and utensils for the cooked food.",
+    "ingredientIndexes": [
+     0
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Steak temperatures describe approximate culinary preferences, not guaranteed timing. A thin steak may need much less time. Resting and basting are included in the method.",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — pan-seared steak and basting",
+    "url": "https://www.recipetineats.com/how-to-cook-steak/"
+   },
+   {
+    "title": "ThermoWorks — medium steak temperature",
+    "url": "https://blog.thermoworks.com/what-temperature-is-medium/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "calamansi-pasta",
+  "featured": true,
+  "cuisine": "Italian-inspired",
+  "rating": 4.8,
+  "name": "Calamansi Cream Pasta",
+  "category": "Pasta",
+  "tags": [
+   "Quick Meals",
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=800&q=75",
+  "time": 20,
+  "difficulty": "Beginner",
+  "price": 289,
+  "description": "Silky cream, a bright squeeze of calamansi, and golden garlic crumbs. Your new weeknight ritual.",
+  "ingredients": [
+   {
+    "name": "Pasta",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Fresh cream",
+    "amount": 150,
+    "unit": "ml"
+   },
+   {
+    "name": "Calamansi juice",
+    "amount": 20,
+    "unit": "ml"
+   },
+   {
+    "name": "Garlic crumbs",
+    "amount": 30,
+    "unit": "g"
+   },
+   {
+    "name": "Parsley",
+    "amount": 10,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the pasta separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. ",
+   "Warm the cream gently in a wide pan over low heat; do not boil hard. Loosen with a little reserved pasta water.",
+   "Take the pan off the heat. Toss in drained pasta, then add calamansi juice gradually while tossing. Acid and high heat can split dairy. Add a little more pasta water if needed for a coating sauce.",
+   "Fold through parsley and scatter the garlic crumbs over each serving at the end so they stay crisp. Serve immediately."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the pasta separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. ",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Warm the cream",
+    "text": "Warm the cream gently in a wide pan over low heat; do not boil hard. Loosen with a little reserved pasta water.",
+    "timerSeconds": 120,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Add citrus off the heat",
+    "text": "Take the pan off the heat. Toss in drained pasta, then add calamansi juice gradually while tossing. Acid and high heat can split dairy. Add a little more pasta water if needed for a coating sauce.",
+    "ingredientIndexes": [
+     0,
+     2
+    ]
+   },
+   {
+    "title": "Finish with crumbs",
+    "text": "Fold through parsley and scatter the garlic crumbs over each serving at the end so they stay crisp. Serve immediately.",
+    "ingredientIndexes": [
+     3,
+     4
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Good Food — lemon pasta technique",
+    "url": "https://www.bbcgoodfood.com/recipes/lemon-green-bean-pasta"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "beef-salpicao",
+  "featured": true,
+  "cuisine": "Filipino",
+  "rating": 4.9,
+  "name": "Garlic Beef Salpicao",
+  "category": "Filipino",
+  "tags": [
+   "Steak",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1760504526069-ff0f8bf6e4ca?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Easy",
+  "price": 429,
+  "description": "Juicy beef bites with toasted garlic and a rich soy-butter sauce, spooned over warm jasmine rice.",
+  "ingredients": [
+   {
+    "name": "Beef cubes",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Garlic",
+    "amount": 30,
+    "unit": "g"
+   },
+   {
+    "name": "Soy-butter sauce",
+    "amount": 50,
+    "unit": "ml"
+   },
+   {
+    "name": "Mushrooms",
+    "amount": 100,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Dry the beef; cut into even bite-size pieces. Slice mushrooms.",
+   "Gently cook sliced garlic in a little oil until pale gold, then remove it before it burns. Raise heat and brown the mushrooms; set aside.",
+   "Sear beef in a single uncrowded layer, turning to brown each side. Start checking after 2 minutes; the cut and cube size control the actual cooking time.",
+   "Lower heat and toss beef with soy-butter sauce and mushrooms until hot. For whole-cut beef, check the thickest pieces reach 63°C and rest at least 3 minutes before eating. Small strips may finish sooner than the timer.",
+   "Serve over cooked rice with the reserved garlic. Do not continue simmering the tender beef just to thicken the sauce."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Dry the beef; cut into even bite-size pieces. Slice mushrooms.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Toast garlic, then brown mushrooms",
+    "text": "Gently cook sliced garlic in a little oil until pale gold, then remove it before it burns. Raise heat and brown the mushrooms; set aside.",
+    "timerSeconds": 240,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     1,
+     3
+    ]
+   },
+   {
+    "title": "Sear in batches",
+    "text": "Sear beef in a single uncrowded layer, turning to brown each side. Start checking after 2 minutes; the cut and cube size control the actual cooking time.",
+    "timerSeconds": 120,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Sauce and check",
+    "text": "Lower heat and toss beef with soy-butter sauce and mushrooms until hot. For whole-cut beef, check the thickest pieces reach 63°C and rest at least 3 minutes before eating. Small strips may finish sooner than the timer.",
+    "ingredientIndexes": [
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Plate",
+    "text": "Serve over cooked rice with the reserved garlic. Do not continue simmering the tender beef just to thicken the sauce.",
+    "ingredientIndexes": [
+     1
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Panlasang Pinoy — beef salpicao",
+    "url": "https://panlasangpinoy.com/easy-beef-salpicao-recipe/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "tofu-sisig",
+  "featured": true,
+  "cuisine": "Filipino",
+  "rating": 4.7,
+  "name": "Crispy Tofu Sisig",
+  "category": "Filipino",
+  "tags": [
+   "Quick Meals",
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1762305194201-077e7e23ccf2?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 269,
+  "description": "Crisp tofu and sweet red onion with a creamy calamansi dressing, served with warm jasmine rice. All the sizzle, entirely plant based.",
+  "ingredients": [
+   {
+    "name": "Firm tofu",
+    "amount": 400,
+    "unit": "g"
+   },
+   {
+    "name": "Red onion",
+    "amount": 100,
+    "unit": "g"
+   },
+   {
+    "name": "Chili",
+    "amount": 10,
+    "unit": "g"
+   },
+   {
+    "name": "Vegan calamansi mayo",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Spring onion",
+    "amount": 20,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain and press tofu for 15–20 minutes if time allows, then blot thoroughly and cut into even cubes. This passive pressing time is additional.",
+   "Pan-fry tofu in a single layer with oil over medium-high heat, turning as the surfaces become golden. Check after 8 minutes; allow roughly 8–12 minutes depending on moisture.",
+   "Lower heat and add finely chopped onion and chili; stir until the onion softens slightly.",
+   "Switch off the heat and fold through vegan calamansi mayo and spring onion. Serve immediately with hot rice; prolonged cooking softens the crisp tofu."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain and press tofu for 15–20 minutes if time allows, then blot thoroughly and cut into even cubes. This passive pressing time is additional.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "title": "Crisp tofu",
+    "text": "Pan-fry tofu in a single layer with oil over medium-high heat, turning as the surfaces become golden. Check after 8 minutes; allow roughly 8–12 minutes depending on moisture.",
+    "timerSeconds": 480,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Warm aromatics",
+    "text": "Lower heat and add finely chopped onion and chili; stir until the onion softens slightly.",
+    "timerSeconds": 120,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Dress at the end",
+    "text": "Switch off the heat and fold through vegan calamansi mayo and spring onion. Serve immediately with hot rice; prolonged cooking softens the crisp tofu.",
+    "ingredientIndexes": [
+     3,
+     4
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Panlasang Pinoy — crispy tofu sisig",
+    "url": "https://panlasangpinoy.com/crispy-tofu-sisig-vegan-recipe/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "miso-salmon",
+  "featured": true,
+  "cuisine": "Japanese-inspired",
+  "rating": 4.9,
+  "name": "Miso-Glazed Salmon",
+  "category": "Healthy",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1523218689796-d4c2ef4f3d72?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Easy",
+  "price": 449,
+  "description": "Caramelized miso salmon, sesame greens, and fluffy rice. A feel-good dinner with a little extra glow.",
+  "ingredients": [
+   {
+    "name": "Salmon fillet",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Miso glaze",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Bok choy",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Sesame seeds",
+    "amount": 10,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Preheat oven to 220°C. Pat salmon dry; spread miso glaze in a thin layer.",
+   "Roast salmon on a lined tray, skin side down if skin-on. Start checking around 10 minutes for a roughly 2 cm fillet. The thickest centre must reach 63°C. Continue as necessary; tent loosely if the sugary glaze darkens too quickly.",
+   "Slice bok choy; cook the stems in a little oil and water until nearly tender, then add the leaves and wilt. Do this while the fish cooks.",
+   "Serve salmon and bok choy with cooked rice and sesame seeds. Time alone or a browned glaze does not establish fish doneness."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Preheat oven to 220°C. Pat salmon dry; spread miso glaze in a thin layer.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Roast and check the centre",
+    "text": "Roast salmon on a lined tray, skin side down if skin-on. Start checking around 10 minutes for a roughly 2 cm fillet. The thickest centre must reach 63°C. Continue as necessary; tent loosely if the sugary glaze darkens too quickly.",
+    "timerSeconds": 600,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Cook bok choy separately",
+    "text": "Slice bok choy; cook the stems in a little oil and water until nearly tender, then add the leaves and wilt. Do this while the fish cooks.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve salmon and bok choy with cooked rice and sesame seeds. Time alone or a browned glaze does not establish fish doneness.",
+    "ingredientIndexes": [
+     2,
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Just One Cookbook — miso salmon",
+    "url": "https://www.justonecookbook.com/miso-salmon/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "chicken-adobo",
+  "featured": true,
+  "cuisine": "Filipino",
+  "rating": 4.8,
+  "name": "Chicken Adobo",
+  "category": "Filipino",
+  "tags": [],
+  "image": "https://images.unsplash.com/photo-1596699917234-1c93c61a1083?auto=format&fit=crop&w=800&q=75",
+  "time": 45,
+  "difficulty": "Easy",
+  "price": 349,
+  "description": "The comforting classic: tender chicken, fragrant bay, and a glossy vinegar-soy sauce made for rice.",
+  "ingredients": [
+   {
+    "name": "Chicken thigh",
+    "amount": 400,
+    "unit": "g"
+   },
+   {
+    "name": "Cane vinegar",
+    "amount": 60,
+    "unit": "ml"
+   },
+   {
+    "name": "Soy sauce",
+    "amount": 50,
+    "unit": "ml"
+   },
+   {
+    "name": "Bay leaves",
+    "amount": 2,
+    "unit": "leaves"
+   },
+   {
+    "name": "Peppercorns",
+    "amount": 3,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Keep raw chicken separate from ready-to-eat foods. Leave thighs whole; bone-in thighs take longer than boneless.",
+   "Brown chicken in a little oil over medium-high heat, turning to colour both sides; this does not cook it through.",
+   "Add soy sauce, vinegar, bay leaves and peppercorns plus enough water to prevent drying. Bring to a simmer, then cover loosely and cook gently. Begin checking boneless thighs after 20 minutes; bone-in may need 30–40 minutes or longer. Add water if needed.",
+   "Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Once cooked, uncover and reduce sauce briefly to taste without drying the chicken. Serve over rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Keep raw chicken separate from ready-to-eat foods. Leave thighs whole; bone-in thighs take longer than boneless.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "title": "Brown chicken",
+    "text": "Brown chicken in a little oil over medium-high heat, turning to colour both sides; this does not cook it through.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Braise gently",
+    "text": "Add soy sauce, vinegar, bay leaves and peppercorns plus enough water to prevent drying. Bring to a simmer, then cover loosely and cook gently. Begin checking boneless thighs after 20 minutes; bone-in may need 30–40 minutes or longer. Add water if needed.",
+    "timerSeconds": 1200,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Check and reduce",
+    "text": "Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Once cooked, uncover and reduce sauce briefly to taste without drying the chicken. Serve over rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Bone-in thighs may extend the estimate beyond 45 minutes; check temperature rather than using a fixed endpoint.",
+  "cookingSources": [
+   {
+    "title": "Panlasang Pinoy — chicken adobo",
+    "url": "https://panlasangpinoy.com/filipino-chicken-adobo-recipe/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "vegetable-kare-kare",
+  "featured": false,
+  "cuisine": "Filipino",
+  "name": "Vegetable Kare-Kare",
+  "category": "Filipino",
+  "tags": [
+   "Vegetarian",
+   "Healthy"
+  ],
+  "image": "https://images.unsplash.com/photo-1559561723-c3f4195835db?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Easy",
+  "price": 319,
+  "description": "A colorful vegetable bowl with creamy peanut sauce and warm rice.",
+  "ingredients": [
+   {
+    "name": "Eggplant",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Bok choy",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Green beans",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Peanut sauce",
+    "amount": 120,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut eggplant into even pieces; trim green beans and separate bok choy stems and leaves.",
+   "Cook eggplant in a little oil until beginning to soften. Add green beans, bok choy stems and a splash of water; cover and cook until crisp-tender, checking after 5 minutes.",
+   "Stir in the prepared peanut sauce, thinning with water if needed. Simmer gently until eggplant and beans are tender.",
+   "Fold in bok choy leaves just until wilted. Serve over cooked rice. The kit uses ready-made peanut sauce; no long meat braise is required."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut eggplant into even pieces; trim green beans and separate bok choy stems and leaves.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Tenderise vegetables",
+    "text": "Cook eggplant in a little oil until beginning to soften. Add green beans, bok choy stems and a splash of water; cover and cook until crisp-tender, checking after 5 minutes.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2
+    ]
+   },
+   {
+    "title": "Warm peanut sauce",
+    "text": "Stir in the prepared peanut sauce, thinning with water if needed. Simmer gently until eggplant and beans are tender.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     3
+    ]
+   },
+   {
+    "title": "Finish greens",
+    "text": "Fold in bok choy leaves just until wilted. Serve over cooked rice. The kit uses ready-made peanut sauce; no long meat braise is required.",
+    "ingredientIndexes": [
+     1,
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Panlasang Pinoy — kare-kare vegetable sequence",
+    "url": "https://panlasangpinoy.com/kare-kare-recipe/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "tomato-basil-pasta",
+  "featured": false,
+  "cuisine": "Italian-inspired",
+  "name": "Tomato Basil Pasta",
+  "category": "Pasta",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1516100882582-96c3a05fe590?auto=format&fit=crop&w=800&q=75",
+  "time": 20,
+  "difficulty": "Beginner",
+  "price": 259,
+  "description": "A simple tomato and basil pasta with garlic and a generous finish of parmesan.",
+  "ingredients": [
+   {
+    "name": "Pasta",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Tomato sauce",
+    "amount": 250,
+    "unit": "g"
+   },
+   {
+    "name": "Fresh basil",
+    "amount": 15,
+    "unit": "g"
+   },
+   {
+    "name": "Garlic",
+    "amount": 20,
+    "unit": "g"
+   },
+   {
+    "name": "Vegetarian parmesan",
+    "amount": 30,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the pasta separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Chop garlic and tear basil.",
+   "Soften garlic briefly in a little oil over medium-low heat without browning. Add tomato sauce and simmer gently until hot; stir to prevent catching.",
+   "Toss drained pasta with the hot sauce and a splash of reserved cooking water. Turn off the heat, then add fresh basil and vegetarian parmesan. Serve while the sauce coats the pasta."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the pasta separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Chop garlic and tear basil.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Warm tomato sauce",
+    "text": "Soften garlic briefly in a little oil over medium-low heat without browning. Add tomato sauce and simmer gently until hot; stir to prevent catching.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     1,
+     3
+    ]
+   },
+   {
+    "title": "Toss and finish",
+    "text": "Toss drained pasta with the hot sauce and a splash of reserved cooking water. Turn off the heat, then add fresh basil and vegetarian parmesan. Serve while the sauce coats the pasta.",
+    "ingredientIndexes": [
+     0,
+     2,
+     4
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Love and Lemons — tomato sauce and fresh basil finishing",
+    "url": "https://www.loveandlemons.com/fresh-tomato-sauce/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "lemon-chicken",
+  "featured": false,
+  "cuisine": "Mediterranean-inspired",
+  "name": "Lemon Herb Chicken",
+  "category": "Healthy",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Easy",
+  "price": 359,
+  "description": "Golden chicken with a bright lemon dressing and crisp seasonal greens.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 350,
+    "unit": "g"
+   },
+   {
+    "name": "Lemon herb dressing",
+    "amount": 60,
+    "unit": "ml"
+   },
+   {
+    "name": "Mixed greens",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Cherry tomatoes",
+    "amount": 100,
+    "unit": "g"
+   },
+   {
+    "name": "Couscous",
+    "amount": 150,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Wash and cut the salad vegetables using a clean board. Reserve some dressing in a clean bowl before any touches raw meat.",
+   "Slice breast horizontally into even cutlets about 1.5 cm thick. Coat with part of the dressing. Keep any portion that touches raw chicken separate; discard it after use.",
+   "Heat a little oil over medium heat. Cook cutlets until browned, turning to cook both sides. Begin checking after about 3 minutes on the first side and 2 minutes after turning; continue as needed. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+   "Rest chicken briefly on a clean plate and slice. Serve with couscous and the uncooked mixed greens and cherry tomatoes. Use only the reserved clean dressing on the salad."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Wash and cut the salad vegetables using a clean board. Reserve some dressing in a clean bowl before any touches raw meat.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Prepare even chicken pieces",
+    "text": "Slice breast horizontally into even cutlets about 1.5 cm thick. Coat with part of the dressing. Keep any portion that touches raw chicken separate; discard it after use.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Pan-cook chicken",
+    "text": "Heat a little oil over medium heat. Cook cutlets until browned, turning to cook both sides. Begin checking after about 3 minutes on the first side and 2 minutes after turning; continue as needed. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Rest and assemble",
+    "text": "Rest chicken briefly on a clean plate and slice. Serve with couscous and the uncooked mixed greens and cherry tomatoes. Use only the reserved clean dressing on the salad.",
+    "ingredientIndexes": [
+     2,
+     3,
+     4
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — lemon-marinated chicken technique",
+    "url": "https://www.recipetineats.com/greek-chicken-gyros-with-tzatziki/"
+   },
+   {
+    "title": "Love and Lemons — couscous types and cooking",
+    "url": "https://www.loveandlemons.com/how-to-cook-couscous/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "korean-beef-bowl",
+  "name": "Korean Beef Bowl",
+  "cuisine": "Korean-inspired",
+  "category": "Rice bowls",
+  "featured": true,
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1718777791262-c66d11baaa3b?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 399,
+  "description": "Sweet, savory, and a little spicy. A comforting bowl made for your weeknight table.",
+  "ingredients": [
+   {
+    "name": "Beef strips",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Soy sesame sauce",
+    "amount": 60,
+    "unit": "ml"
+   },
+   {
+    "name": "Carrot",
+    "amount": 100,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Sesame seeds",
+    "amount": 10,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Slice beef across the grain into thin strips about 3 mm thick. Thick or tough stewing beef is not interchangeable with these quick-cooking strips.",
+   "Stir-fry carrot cut into thin matchsticks in a little oil until just tender; lift out so the beef can brown without crowding.",
+   "Heat the pan over medium-high heat. Sear beef in small batches, turning and separating the strips. Begin checking after 1 minute; add more time as needed rather than cooking every cut for the same duration.",
+   "Return vegetables and add soy sesame sauce. Toss briefly until coated. For whole-cut beef, check the thickest pieces reach 63°C and rest at least 3 minutes before eating. Small strips may finish sooner than the timer.",
+   "Serve with the prepared rice and sesame seeds."
+  ],
+  "rating": 4.8,
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Slice beef across the grain into thin strips about 3 mm thick. Thick or tough stewing beef is not interchangeable with these quick-cooking strips.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Cook the vegetables first",
+    "text": "Stir-fry carrot cut into thin matchsticks in a little oil until just tender; lift out so the beef can brown without crowding.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Sear thin beef",
+    "text": "Heat the pan over medium-high heat. Sear beef in small batches, turning and separating the strips. Begin checking after 1 minute; add more time as needed rather than cooking every cut for the same duration.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Glaze and check",
+    "text": "Return vegetables and add soy sesame sauce. Toss briefly until coated. For whole-cut beef, check the thickest pieces reach 63°C and rest at least 3 minutes before eating. Small strips may finish sooner than the timer.",
+    "ingredientIndexes": [
+     1
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared rice and sesame seeds.",
+    "ingredientIndexes": [
+     4
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Maangchi — thin-sliced beef and mushroom bulgogi",
+    "url": "https://www.maangchi.com/recipe/bulgogi"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "thai-coconut-curry",
+  "name": "Thai Coconut Curry",
+  "cuisine": "Thai-inspired",
+  "category": "Curry",
+  "featured": true,
+  "tags": [
+   "Quick Meals",
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1618449840665-9ed506d73a34?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 319,
+  "description": "Fragrant herbs, bright citrus, and generous flavor in every bite.",
+  "ingredients": [
+   {
+    "name": "Firm tofu",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Coconut milk",
+    "amount": 200,
+    "unit": "ml"
+   },
+   {
+    "name": "Vegetarian Thai curry paste",
+    "amount": 35,
+    "unit": "g"
+   },
+   {
+    "name": "Mixed vegetables",
+    "amount": 250,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain tofu and cut into cubes. Cut dense mixed vegetables smaller than soft vegetables.",
+   "Heat a little oil over medium-low heat and stir the supplied vegetarian curry paste until fragrant without scorching.",
+   "Add coconut milk and a splash of water if needed. Bring to a gentle simmer, add dense vegetables first, and cook until nearly tender. Begin checking after 5 minutes; root vegetables may need longer.",
+   "Add tofu and the quick-cooking vegetables. Simmer gently until the tofu is hot through and all vegetables are tender; avoid a hard boil. Serve with cooked rice."
+  ],
+  "rating": 4.8,
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain tofu and cut into cubes. Cut dense mixed vegetables smaller than soft vegetables.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Fry the paste",
+    "text": "Heat a little oil over medium-low heat and stir the supplied vegetarian curry paste until fragrant without scorching.",
+    "timerSeconds": 120,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Simmer dense vegetables first",
+    "text": "Add coconut milk and a splash of water if needed. Bring to a gentle simmer, add dense vegetables first, and cook until nearly tender. Begin checking after 5 minutes; root vegetables may need longer.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     1
+    ]
+   },
+   {
+    "title": "Add tofu and soft vegetables",
+    "text": "Add tofu and the quick-cooking vegetables. Simmer gently until the tofu is hot through and all vegetables are tender; avoid a hard boil. Serve with cooked rice.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — Thai red curry",
+    "url": "https://www.recipetineats.com/thai-red-curry-with-chicken/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "chicken-tacos",
+  "name": "Smoky Chicken Tacos",
+  "cuisine": "Mexican-inspired",
+  "category": "Tacos",
+  "featured": true,
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1545093149-618ce3bcf49d?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 349,
+  "description": "Big flavor and colorful toppings, ready to share around the table.",
+  "ingredients": [
+   {
+    "name": "Chicken strips",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Corn tortillas",
+    "amount": 6,
+    "unit": "pieces"
+   },
+   {
+    "name": "Smoky spice mix",
+    "amount": 15,
+    "unit": "g"
+   },
+   {
+    "name": "Tomato salsa",
+    "amount": 100,
+    "unit": "g"
+   },
+   {
+    "name": "Shredded cabbage",
+    "amount": 100,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Set out the measured ingredients. Warm the tortillas in a dry pan according to their packet just before serving; keep covered. Keep salsa and cabbage chilled until serving. Dry chicken strips and coat with the smoky spice mix.",
+   "Pan-fry chicken in a little oil over medium-high heat, in batches if crowded. Turn regularly; begin checking after about 5 minutes. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+   "Place cooked chicken in warm tortillas. Add tomato salsa and uncooked shredded cabbage immediately before serving; do not simmer the cabbage with raw chicken."
+  ],
+  "rating": 4.8,
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Set out the measured ingredients. Warm the tortillas in a dry pan according to their packet just before serving; keep covered. Keep salsa and cabbage chilled until serving. Dry chicken strips and coat with the smoky spice mix.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Cook strips",
+    "text": "Pan-fry chicken in a little oil over medium-high heat, in batches if crowded. Turn regularly; begin checking after about 5 minutes. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Fill tortillas",
+    "text": "Place cooked chicken in warm tortillas. Add tomato salsa and uncooked shredded cabbage immediately before serving; do not simmer the cabbage with raw chicken.",
+    "ingredientIndexes": [
+     3,
+     4
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — chicken tacos",
+    "url": "https://www.recipetineats.com/chicken-tacos-with-sauce/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "chickpea-masala",
+  "name": "Creamy Chickpea Masala",
+  "cuisine": "Indian-inspired",
+  "category": "Curry",
+  "featured": true,
+  "tags": [
+   "Quick Meals",
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1707448829764-9474458021ed?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 299,
+  "description": "Warm spices and a comforting sauce, with everything portioned for you.",
+  "ingredients": [
+   {
+    "name": "Cooked chickpeas",
+    "amount": 350,
+    "unit": "g"
+   },
+   {
+    "name": "Tomato masala sauce",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Coconut cream",
+    "amount": 100,
+    "unit": "ml"
+   },
+   {
+    "name": "Spinach",
+    "amount": 100,
+    "unit": "g"
+   },
+   {
+    "name": "Basmati rice",
+    "amount": 150,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+   "Warm cooked chickpeas with tomato masala sauce and coconut cream over low heat. Add a little water if too thick.",
+   "Fold in spinach only at the end and let it wilt. Serve with the prepared rice."
+  ],
+  "rating": 4.8,
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Warm the cooked legumes",
+    "text": "Warm cooked chickpeas with tomato masala sauce and coconut cream over low heat. Add a little water if too thick.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2
+    ]
+   },
+   {
+    "title": "Finish and serve",
+    "text": "Fold in spinach only at the end and let it wilt. Serve with the prepared rice.",
+    "ingredientIndexes": [
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Short methods require fully cooked legumes. The ingredient list does not specify a dry weight for these kits; do not substitute dry beans without cooking separately.",
+  "cookingSources": [
+   {
+    "title": "Good Food — cooked chickpea masala",
+    "url": "https://www.bbcgoodfood.com/recipes/chana-masala"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "sesame-tofu-bowl",
+  "name": "Sesame Tofu Bowl",
+  "cuisine": "Korean-inspired",
+  "category": "Rice bowls",
+  "featured": false,
+  "tags": [
+   "Quick Meals",
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 289,
+  "description": "Sweet, savory, and a little spicy. A comforting bowl made for your weeknight table.",
+  "ingredients": [
+   {
+    "name": "Firm tofu",
+    "amount": 350,
+    "unit": "g"
+   },
+   {
+    "name": "Sesame soy dressing",
+    "amount": 50,
+    "unit": "ml"
+   },
+   {
+    "name": "Cucumber",
+    "amount": 100,
+    "unit": "g"
+   },
+   {
+    "name": "Carrot",
+    "amount": 100,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain and press tofu for 15–20 minutes if needed, blot dry and cut into even 2 cm cubes. Pressing time is additional. Cut cucumber and carrot for a fresh topping; keep cucumber uncooked.",
+   "Pan-fry tofu with a little oil over medium-high heat, turning to brown several sides. Check after 8 minutes; wet tofu can take longer to crisp.",
+   "Turn off heat. Serve tofu over cooked rice with fresh cucumber and carrot, then drizzle the sesame soy dressing."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain and press tofu for 15–20 minutes if needed, blot dry and cut into even 2 cm cubes. Pressing time is additional. Cut cucumber and carrot for a fresh topping; keep cucumber uncooked.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Pan-fry tofu",
+    "text": "Pan-fry tofu with a little oil over medium-high heat, turning to brown several sides. Check after 8 minutes; wet tofu can take longer to crisp.",
+    "timerSeconds": 480,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Dress and assemble",
+    "text": "Turn off heat. Serve tofu over cooked rice with fresh cucumber and carrot, then drizzle the sesame soy dressing.",
+    "ingredientIndexes": [
+     1,
+     2,
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Just One Cookbook — tofu pressing and pan-frying",
+    "url": "https://www.justonecookbook.com/teriyaki-tofu/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "thai-basil-chicken",
+  "name": "Thai Basil Chicken",
+  "cuisine": "Thai-inspired",
+  "category": "Rice bowls",
+  "featured": false,
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1696906594893-e9995c4d7082?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Fragrant herbs, bright citrus, and generous flavor in every bite.",
+  "ingredients": [
+   {
+    "name": "Ground chicken",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Basil leaves",
+    "amount": 20,
+    "unit": "g"
+   },
+   {
+    "name": "Garlic chili sauce",
+    "amount": 50,
+    "unit": "ml"
+   },
+   {
+    "name": "Green beans",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Trim and slice green beans into short pieces. Reserve basil for the end.",
+   "Stir-fry beans with a little oil, then add a splash of water and cover until crisp-tender. Set aside.",
+   "Add a little oil to the hot pan and stir-fry ground chicken, breaking up clumps. Add garlic chili sauce and return beans once the chicken is nearly cooked. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+   "Turn off heat and toss through basil just until wilted. Serve immediately over cooked rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Trim and slice green beans into short pieces. Reserve basil for the end.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Cook green beans first",
+    "text": "Stir-fry beans with a little oil, then add a splash of water and cover until crisp-tender. Set aside.",
+    "timerSeconds": 240,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Cook ground chicken",
+    "text": "Add a little oil to the hot pan and stir-fry ground chicken, breaking up clumps. Add garlic chili sauce and return beans once the chicken is nearly cooked. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     2
+    ]
+   },
+   {
+    "title": "Finish with basil",
+    "text": "Turn off heat and toss through basil just until wilted. Serve immediately over cooked rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — Thai basil chicken",
+    "url": "https://www.recipetineats.com/thai-basil-chicken-stir-fry/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "black-bean-tacos",
+  "name": "Black Bean Tacos",
+  "cuisine": "Mexican-inspired",
+  "category": "Tacos",
+  "featured": false,
+  "tags": [
+   "Quick Meals",
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=75",
+  "time": 20,
+  "difficulty": "Beginner",
+  "price": 269,
+  "description": "Big flavor and colorful toppings, ready to share around the table.",
+  "ingredients": [
+   {
+    "name": "Cooked black beans",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Corn tortillas",
+    "amount": 6,
+    "unit": "pieces"
+   },
+   {
+    "name": "Tomato salsa",
+    "amount": 100,
+    "unit": "g"
+   },
+   {
+    "name": "Sweetcorn",
+    "amount": 100,
+    "unit": "g"
+   },
+   {
+    "name": "Shredded cabbage",
+    "amount": 100,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Set out the measured ingredients. Warm the tortillas in a dry pan according to their packet just before serving; keep covered. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+   "Simmer cooked black beans and sweetcorn with part of the salsa and a splash of water until steaming hot throughout; stir and check after 5 minutes.",
+   "Spoon into warm tortillas. Finish with the remaining ready-to-eat salsa and fresh uncooked cabbage."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Set out the measured ingredients. Warm the tortillas in a dry pan according to their packet just before serving; keep covered. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Heat beans and corn",
+    "text": "Simmer cooked black beans and sweetcorn with part of the salsa and a splash of water until steaming hot throughout; stir and check after 5 minutes.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     3
+    ]
+   },
+   {
+    "title": "Fill and finish",
+    "text": "Spoon into warm tortillas. Finish with the remaining ready-to-eat salsa and fresh uncooked cabbage.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Love and Lemons — cooked black bean tacos",
+    "url": "https://www.loveandlemons.com/black-bean-tacos/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "butter-chicken",
+  "name": "Butter Chicken",
+  "cuisine": "Indian-inspired",
+  "category": "Curry",
+  "featured": false,
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1772730064970-a7b2735c93b9?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 379,
+  "description": "Warm spices and a comforting sauce, with everything portioned for you.",
+  "ingredients": [
+   {
+    "name": "Chicken thigh",
+    "amount": 350,
+    "unit": "g"
+   },
+   {
+    "name": "Butter masala sauce",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Fresh cream",
+    "amount": 80,
+    "unit": "ml"
+   },
+   {
+    "name": "Basmati rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Fresh coriander",
+    "amount": 10,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut boneless thigh into even 2 cm pieces; whole or bone-in thighs require longer and are not covered by this estimate.",
+   "Brown chicken pieces in a little oil over medium-high heat, turning to colour the surfaces.",
+   "Add butter masala sauce and enough water to keep it from catching. Simmer gently, stirring occasionally. Begin checking after 8 minutes. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+   "Lower heat and stir in fresh cream just until hot. Do not boil aggressively. Finish with coriander and serve over rice. The kit supplies prepared sauce, not the raw marinade used in from-scratch recipes."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut boneless thigh into even 2 cm pieces; whole or bone-in thighs require longer and are not covered by this estimate.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "title": "Brown chicken",
+    "text": "Brown chicken pieces in a little oil over medium-high heat, turning to colour the surfaces.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Simmer in prepared sauce",
+    "text": "Add butter masala sauce and enough water to keep it from catching. Simmer gently, stirring occasionally. Begin checking after 8 minutes. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+    "timerSeconds": 480,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     1
+    ]
+   },
+   {
+    "title": "Finish with cream",
+    "text": "Lower heat and stir in fresh cream just until hot. Do not boil aggressively. Finish with coriander and serve over rice. The kit supplies prepared sauce, not the raw marinade used in from-scratch recipes.",
+    "ingredientIndexes": [
+     2
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — butter chicken technique",
+    "url": "https://www.recipetineats.com/butter-chicken/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-bbq-chicken-rice-bowl",
+  "name": "BBQ Chicken Rice Bowl",
+  "featured": false,
+  "cuisine": "American",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1679279726946-a158b8bcaa23?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken breast with bbq sauce, sweetcorn, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "BBQ sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Sweetcorn",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare sweetcorn separately from raw meat; slice dense vegetables thinly.",
+   "Cook sweetcorn in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+   "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+   "Lower heat, add bbq sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+   "Serve over the prepared base. Use a clean plate and utensils for cooked chicken."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare sweetcorn separately from raw meat; slice dense vegetables thinly.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Cook sweetcorn in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown chicken",
+    "text": "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Finish with sauce and check",
+    "text": "Lower heat, add bbq sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve over the prepared base. Use a clean plate and utensils for cooked chicken.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — honey mustard chicken",
+    "url": "https://www.recipetineats.com/honey-mustard-chicken/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-creamy-mushroom-chicken",
+  "name": "Creamy Mushroom Chicken",
+  "featured": false,
+  "cuisine": "American",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1788462612914-44793f2980f2?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken breast with mushroom cream sauce, green beans, and mashed potato mix. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Mashed potato mix",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Mushroom cream sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Green beans",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Prepare the mashed potato mix with water according to its packet; this kit does not include extra milk or butter. Cut chicken into even 2 cm pieces. Prepare green beans separately from raw meat; slice dense vegetables thinly.",
+   "Cook green beans in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+   "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+   "Lower heat, add mushroom cream sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+   "Serve over the prepared base. Use a clean plate and utensils for cooked chicken."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Prepare the mashed potato mix with water according to its packet; this kit does not include extra milk or butter. Cut chicken into even 2 cm pieces. Prepare green beans separately from raw meat; slice dense vegetables thinly.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Cook green beans in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown chicken",
+    "text": "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Finish with sauce and check",
+    "text": "Lower heat, add mushroom cream sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve over the prepared base. Use a clean plate and utensils for cooked chicken.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — honey mustard chicken",
+    "url": "https://www.recipetineats.com/honey-mustard-chicken/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-cajun-shrimp-rice",
+  "name": "Cajun Shrimp Rice",
+  "featured": false,
+  "cuisine": "American",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1723325697529-6e2679650b39?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Peeled shrimp with cajun tomato sauce, bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Peeled shrimp",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Cajun tomato sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Bell pepper",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Prepare bell pepper before starting the shrimp.",
+   "Cook bell pepper separately until softened in a little oil over medium heat. Set aside; shrimp cook much faster than dense vegetables.",
+   "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+   "Lower the heat and add cajun tomato sauce with the cooked vegetables; toss just until hot. Remove promptly once shrimp are opaque. Avoid simmering already cooked shrimp while reducing sauce.",
+   "Serve with the prepared rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Prepare bell pepper before starting the shrimp.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook vegetables first",
+    "text": "Cook bell pepper separately until softened in a little oil over medium heat. Set aside; shrimp cook much faster than dense vegetables.",
+    "timerSeconds": 240,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Cook shrimp briefly",
+    "text": "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Coat gently",
+    "text": "Lower the heat and add cajun tomato sauce with the cooked vegetables; toss just until hot. Remove promptly once shrimp are opaque. Avoid simmering already cooked shrimp while reducing sauce.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "NOAA — shrimp in garlic butter",
+    "url": "https://repository.library.noaa.gov/view/noaa/35356/noaa_35356_DS1.pdf"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-cheddar-mac-and-cheese",
+  "name": "Cheddar Mac & Cheese",
+  "featured": false,
+  "cuisine": "American",
+  "category": "Pasta",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1667499989723-c4ab9549d63c?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Broccoli with cheddar cheese sauce, sweetcorn, and macaroni. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Broccoli",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Macaroni",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Cheddar cheese sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Sweetcorn",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the macaroni separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Cut broccoli into small florets. Cook macaroni according to its packet; add broccoli to the pasta water for the last few minutes, checking for tenderness.",
+   "Warm cheddar cheese sauce and sweetcorn over low heat, stirring until hot. Add a splash of water if needed; do not boil hard.",
+   "Drain cooked macaroni and broccoli and fold into the sauce. Serve when corn and sauce are hot throughout. This kit supplies ready-made sauce; no roux or extra dairy is required."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the macaroni separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Cut broccoli into small florets. Cook macaroni according to its packet; add broccoli to the pasta water for the last few minutes, checking for tenderness.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Warm cheese sauce gently",
+    "text": "Warm cheddar cheese sauce and sweetcorn over low heat, stirring until hot. Add a splash of water if needed; do not boil hard.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Combine",
+    "text": "Drain cooked macaroni and broccoli and fold into the sauce. Serve when corn and sauce are hot throughout. This kit supplies ready-made sauce; no roux or extra dairy is required.",
+    "ingredientIndexes": [
+     0,
+     1
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — macaroni and cheese technique",
+    "url": "https://www.recipetineats.com/stovetop-macaroni-cheese/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-honey-mustard-chicken",
+  "name": "Honey Mustard Chicken",
+  "featured": false,
+  "cuisine": "American",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1670398564097-0762e1b30b3a?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken breast with honey mustard sauce, carrot, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Honey mustard sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Carrot",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare carrot separately from raw meat; slice dense vegetables thinly.",
+   "Cook carrot in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+   "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+   "Lower heat, add honey mustard sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+   "Serve over the prepared base. Use a clean plate and utensils for cooked chicken."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare carrot separately from raw meat; slice dense vegetables thinly.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Cook carrot in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown chicken",
+    "text": "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Finish with sauce and check",
+    "text": "Lower heat, add honey mustard sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve over the prepared base. Use a clean plate and utensils for cooked chicken.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — honey mustard chicken",
+    "url": "https://www.recipetineats.com/honey-mustard-chicken/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-smoky-beef-rice-bowl",
+  "name": "Smoky Beef Rice Bowl",
+  "featured": false,
+  "cuisine": "American",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1679279726937-122c49626802?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Ground beef with smoky tomato sauce, bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Ground beef",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Smoky tomato sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Bell pepper",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Dice bell pepper finely for even cooking.",
+   "Cook bell pepper in a little oil over medium heat until beginning to soften; finely diced carrot needs longer than corn.",
+   "Add ground beef and break up clumps. Cook, stirring, until browned. Begin checking after 5 minutes. Check several places reach 71°C; steak doneness settings do not apply to ground meat.",
+   "Stir in smoky tomato sauce and a splash of water if needed. Simmer gently until hot and the vegetables are tender, stirring to avoid scorching. This is a quick kit sauce, not a long-braised ragù.",
+   "Serve with the cooked rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Dice bell pepper finely for even cooking.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Soften vegetables",
+    "text": "Cook bell pepper in a little oil over medium heat until beginning to soften; finely diced carrot needs longer than corn.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown ground beef",
+    "text": "Add ground beef and break up clumps. Cook, stirring, until browned. Begin checking after 5 minutes. Check several places reach 71°C; steak doneness settings do not apply to ground meat.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Simmer prepared sauce",
+    "text": "Stir in smoky tomato sauce and a splash of water if needed. Simmer gently until hot and the vegetables are tender, stirring to avoid scorching. This is a quick kit sauce, not a long-braised ragù.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the cooked rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — ground beef stir-fry technique",
+    "url": "https://www.recipetineats.com/asian-beef-bowls/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-chicken-inasal-bowl",
+  "name": "Chicken Inasal Bowl",
+  "featured": false,
+  "cuisine": "Filipino",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken thigh with inasal marinade, cucumber, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken thigh",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Inasal marinade",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Cucumber",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use boneless thigh opened to even thickness. Reserve clean marinade for basting before adding raw chicken to the remainder. Wash and slice cucumber on a separate clean board.",
+   "Coat chicken with the remaining inasal marinade and refrigerate for 3 hours or according to the kit label; overnight is possible if the label permits. This waiting time is additional to the cooking estimate. Discard marinade that touched raw chicken.",
+   "Cook over medium heat, turning to brown both sides without burning the marinade. Begin checking after about 4 minutes per side; continue as needed. Baste only with the reserved clean portion. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+   "Rest chicken about 5 minutes on a clean plate, then serve with rice and fresh uncooked cucumber. Bone-in thighs take longer than this boneless method."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use boneless thigh opened to even thickness. Reserve clean marinade for basting before adding raw chicken to the remainder. Wash and slice cucumber on a separate clean board.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Marinate under refrigeration",
+    "text": "Coat chicken with the remaining inasal marinade and refrigerate for 3 hours or according to the kit label; overnight is possible if the label permits. This waiting time is additional to the cooking estimate. Discard marinade that touched raw chicken.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Pan-cook or grill",
+    "text": "Cook over medium heat, turning to brown both sides without burning the marinade. Begin checking after about 4 minutes per side; continue as needed. Baste only with the reserved clean portion. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+    "timerSeconds": 240,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Rest and serve",
+    "text": "Rest chicken about 5 minutes on a clean plate, then serve with rice and fresh uncooked cucumber. Bone-in thighs take longer than this boneless method.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Allow an additional 3 hours refrigerated marinating; the displayed estimate is active preparation and cooking only.",
+  "cookingSources": [
+   {
+    "title": "Panlasang Pinoy — chicken inasal",
+    "url": "https://panlasangpinoy.com/grilled-chicken-inasal-recipe/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-beef-bistek",
+  "name": "Beef Bistek",
+  "featured": false,
+  "cuisine": "Filipino",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1723893905879-0e309c2a8e06?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Beef strips with calamansi soy sauce, onion, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Beef strips",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Calamansi soy sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Onion",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Slice beef across the grain into thin strips about 3 mm thick. Thick or tough stewing beef is not interchangeable with these quick-cooking strips.",
+   "Stir-fry thinly sliced onion in a little oil until just tender; lift out so the beef can brown without crowding.",
+   "Heat the pan over medium-high heat. Sear beef in small batches, turning and separating the strips. Begin checking after 1 minute; add more time as needed rather than cooking every cut for the same duration.",
+   "Return vegetables and add calamansi soy sauce. Toss briefly until coated. For whole-cut beef, check the thickest pieces reach 63°C and rest at least 3 minutes before eating. Small strips may finish sooner than the timer.",
+   "Serve with the prepared rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Slice beef across the grain into thin strips about 3 mm thick. Thick or tough stewing beef is not interchangeable with these quick-cooking strips.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables first",
+    "text": "Stir-fry thinly sliced onion in a little oil until just tender; lift out so the beef can brown without crowding.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Sear thin beef",
+    "text": "Heat the pan over medium-high heat. Sear beef in small batches, turning and separating the strips. Begin checking after 1 minute; add more time as needed rather than cooking every cut for the same duration.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Glaze and check",
+    "text": "Return vegetables and add calamansi soy sauce. Toss briefly until coated. For whole-cut beef, check the thickest pieces reach 63°C and rest at least 3 minutes before eating. Small strips may finish sooner than the timer.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Panlasang Pinoy — bistek",
+    "url": "https://panlasangpinoy.com/bistek-tagalog-beefsteak-recipe/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-chicken-afritada",
+  "name": "Chicken Afritada",
+  "featured": false,
+  "cuisine": "Filipino",
+  "category": "Curry",
+  "tags": [],
+  "image": "https://images.unsplash.com/photo-1694579740719-0e601c5d2437?auto=format&fit=crop&w=800&q=75",
+  "time": 40,
+  "difficulty": "Easy",
+  "price": 329,
+  "description": "Chicken thigh with tomato afritada sauce, potato and carrot, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken thigh",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Tomato afritada sauce",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Potato and carrot",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use boneless chicken thigh in 2 cm pieces. Peel and cut potato and carrot into even 1 cm cubes.",
+   "Brown chicken in a little oil over medium-high heat; turn to colour the surfaces.",
+   "Add prepared sauce, potato and carrot, plus enough water to keep the pieces just covered. Simmer gently, stirring occasionally. Begin checking after 15 minutes; keep cooking until a knife slides easily into the potato.",
+   "Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Reduce uncovered briefly if the sauce is too thin; stir frequently so the prepared sauce does not catch. Serve with cooked rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use boneless chicken thigh in 2 cm pieces. Peel and cut potato and carrot into even 1 cm cubes.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Brown the chicken",
+    "text": "Brown chicken in a little oil over medium-high heat; turn to colour the surfaces.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Simmer with root vegetables",
+    "text": "Add prepared sauce, potato and carrot, plus enough water to keep the pieces just covered. Simmer gently, stirring occasionally. Begin checking after 15 minutes; keep cooking until a knife slides easily into the potato.",
+    "timerSeconds": 900,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Check and finish",
+    "text": "Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Reduce uncovered briefly if the sauce is too thin; stir frequently so the prepared sauce does not catch. Serve with cooked rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Timing assumes boneless thigh and small root-vegetable cubes. Bone-in chicken and larger potato pieces need longer.",
+  "cookingSources": [
+   {
+    "title": "Panlasang Pinoy — chicken afritada",
+    "url": "https://panlasangpinoy.com/chicken-afritada-recipe/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-pork-menudo",
+  "name": "Pork Menudo",
+  "featured": false,
+  "cuisine": "Filipino",
+  "category": "Curry",
+  "tags": [],
+  "image": "https://images.unsplash.com/photo-1579640873954-766bf0235bf3?auto=format&fit=crop&w=800&q=75",
+  "time": 65,
+  "difficulty": "Easy",
+  "price": 329,
+  "description": "Pork cubes with menudo tomato sauce, potato and bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Pork cubes",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Menudo tomato sauce",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Potato and bell pepper",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut pork into even 2 cm cubes and potato into 1 cm cubes. Keep bell pepper separate for a later addition.",
+   "Brown pork in batches in a little oil over medium-high heat.",
+   "Add menudo tomato sauce and enough water to keep the pork partly covered. Cover and simmer gently; check after 30 minutes, then continue until nearly tender. Add water as needed; shoulder can take longer.",
+   "Add potato and simmer until knife-tender, checking after 10 minutes. Add bell pepper for the final few minutes so it softens without falling apart.",
+   "Whole-cut pork must reach at least 63°C and rest at least 3 minutes before eating; a braise generally needs longer for tenderness. Serve only when both pork and potato are tender, with cooked rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut pork into even 2 cm cubes and potato into 1 cm cubes. Keep bell pepper separate for a later addition.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Brown pork",
+    "text": "Brown pork in batches in a little oil over medium-high heat.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Braise until almost tender",
+    "text": "Add menudo tomato sauce and enough water to keep the pork partly covered. Cover and simmer gently; check after 30 minutes, then continue until nearly tender. Add water as needed; shoulder can take longer.",
+    "timerSeconds": 1800,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Add vegetables",
+    "text": "Add potato and simmer until knife-tender, checking after 10 minutes. Add bell pepper for the final few minutes so it softens without falling apart.",
+    "timerSeconds": 600,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Check and serve",
+    "text": "Whole-cut pork must reach at least 63°C and rest at least 3 minutes before eating; a braise generally needs longer for tenderness. Serve only when both pork and potato are tender, with cooked rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. This simplified kit has no liver. Pork cut and cube size can extend braising; the old quick stir-fry method was unsuitable.",
+  "cookingSources": [
+   {
+    "title": "Kawaling Pinoy — pork menudo",
+    "url": "https://www.kawalingpinoy.com/pork-menudo/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-ginisang-monggo",
+  "name": "Ginisang Monggo",
+  "featured": false,
+  "cuisine": "Filipino",
+  "category": "Curry",
+  "tags": [
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1647545401750-6dd5539879ac?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Easy",
+  "price": 279,
+  "description": "Cooked mung beans with garlic ginger broth, spinach, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Cooked mung beans",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Garlic ginger broth",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Spinach",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. This kit uses fully cooked mung beans. Dry mung beans require a separate, longer cooking stage until tender.",
+   "Simmer cooked mung beans in the garlic ginger broth, stirring and adding water if too thick, until hot throughout. Check after 5 minutes; mash a few beans if a thicker texture is wanted.",
+   "Stir in spinach just until wilted, then serve with the cooked rice. Do not simmer the greens for the entire bean cooking time."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. This kit uses fully cooked mung beans. Dry mung beans require a separate, longer cooking stage until tender.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Warm beans in broth",
+    "text": "Simmer cooked mung beans in the garlic ginger broth, stirring and adding water if too thick, until hot throughout. Check after 5 minutes; mash a few beans if a thicker texture is wanted.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     2
+    ]
+   },
+   {
+    "title": "Wilt spinach",
+    "text": "Stir in spinach just until wilted, then serve with the cooked rice. Do not simmer the greens for the entire bean cooking time.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Panlasang Pinoy — mung beans and spinach",
+    "url": "https://panlasangpinoy.com/ginisang-munggo-sauteed-mung-beans/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-pesto-chicken-pasta",
+  "name": "Pesto Chicken Pasta",
+  "featured": false,
+  "cuisine": "Italian-inspired",
+  "category": "Pasta",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1612152328178-4a6c83d96429?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken breast with basil pesto, cherry tomatoes, and pasta. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Pasta",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Basil pesto",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Cherry tomatoes",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the pasta separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Halve tomatoes and cut chicken into even 2 cm pieces.",
+   "Pan-fry chicken in a little oil over medium-high heat, turning regularly. Add tomatoes once the surfaces have browned. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+   "Switch off heat before adding basil pesto and drained pasta. Toss with a little reserved pasta water until coated. Do not boil or fry the pesto; residual warmth is enough.",
+   "Serve promptly. Keep the fresh pesto colour and loosen the pasta with a little more cooking water if needed."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the pasta separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Halve tomatoes and cut chicken into even 2 cm pieces.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook chicken and tomatoes",
+    "text": "Pan-fry chicken in a little oil over medium-high heat, turning regularly. Add tomatoes once the surfaces have browned. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Toss pesto off the heat",
+    "text": "Switch off heat before adding basil pesto and drained pasta. Toss with a little reserved pasta water until coated. Do not boil or fry the pesto; residual warmth is enough.",
+    "ingredientIndexes": [
+     1,
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve promptly. Keep the fresh pesto colour and loosen the pasta with a little more cooking water if needed.",
+    "ingredientIndexes": [
+     1
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — pesto pasta, off the heat",
+    "url": "https://www.recipetineats.com/pesto-pasta/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-creamy-mushroom-penne",
+  "name": "Creamy Mushroom Penne",
+  "featured": false,
+  "cuisine": "Italian-inspired",
+  "category": "Pasta",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1673081849580-2d36a09c8a6f?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Mushrooms with parmesan cream sauce, spinach, and penne. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Mushrooms",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Penne",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Parmesan cream sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Spinach",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the penne separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Slice mushrooms evenly and rinse spinach.",
+   "Pan-fry mushrooms in a little oil over medium-high heat until they release moisture and begin to brown. Avoid crowding.",
+   "Lower heat and add parmesan cream sauce; stir gently until hot, then wilt spinach. Avoid a hard boil.",
+   "Toss drained penne with the sauce and a little reserved pasta water until coated. Serve immediately."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the penne separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Slice mushrooms evenly and rinse spinach.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Brown mushrooms",
+    "text": "Pan-fry mushrooms in a little oil over medium-high heat until they release moisture and begin to brown. Avoid crowding.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Warm sauce and greens",
+    "text": "Lower heat and add parmesan cream sauce; stir gently until hot, then wilt spinach. Avoid a hard boil.",
+    "timerSeconds": 120,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Toss pasta",
+    "text": "Toss drained penne with the sauce and a little reserved pasta water until coated. Serve immediately.",
+    "ingredientIndexes": [
+     1
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — mushroom cream pasta technique",
+    "url": "https://www.recipetineats.com/creamy-mushroom-pasta/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-garlic-shrimp-linguine",
+  "name": "Garlic Shrimp Linguine",
+  "featured": false,
+  "cuisine": "Italian-inspired",
+  "category": "Pasta",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1677681483419-e18aa1376db7?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Peeled shrimp with garlic lemon butter, cherry tomatoes, and linguine. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Peeled shrimp",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Linguine",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Garlic lemon butter",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Cherry tomatoes",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the linguine separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Prepare cherry tomatoes before starting the shrimp.",
+   "Cook cherry tomatoes separately until softened in a little oil over medium heat. Set aside; shrimp cook much faster than dense vegetables.",
+   "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+   "Lower the heat and add garlic lemon butter with the cooked vegetables; toss just until hot. Remove promptly once shrimp are opaque. Avoid simmering already cooked shrimp while reducing sauce.",
+   "Serve with the prepared linguine, adding a little reserved pasta water."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the linguine separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Prepare cherry tomatoes before starting the shrimp.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook vegetables first",
+    "text": "Cook cherry tomatoes separately until softened in a little oil over medium heat. Set aside; shrimp cook much faster than dense vegetables.",
+    "timerSeconds": 240,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Cook shrimp briefly",
+    "text": "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Coat gently",
+    "text": "Lower the heat and add garlic lemon butter with the cooked vegetables; toss just until hot. Remove promptly once shrimp are opaque. Avoid simmering already cooked shrimp while reducing sauce.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared linguine, adding a little reserved pasta water.",
+    "ingredientIndexes": [
+     1
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "NOAA — shrimp in garlic butter",
+    "url": "https://repository.library.noaa.gov/view/noaa/35356/noaa_35356_DS1.pdf"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-beef-ragu-pasta",
+  "name": "Beef Ragu Pasta",
+  "featured": false,
+  "cuisine": "Italian-inspired",
+  "category": "Pasta",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Ground beef with tomato ragu sauce, carrot, and pasta. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Ground beef",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Pasta",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Tomato ragu sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Carrot",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the pasta separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Dice carrot finely for even cooking.",
+   "Cook carrot in a little oil over medium heat until beginning to soften; finely diced carrot needs longer than corn.",
+   "Add ground beef and break up clumps. Cook, stirring, until browned. Begin checking after 5 minutes. Check several places reach 71°C; steak doneness settings do not apply to ground meat.",
+   "Stir in tomato ragu sauce and a splash of water if needed. Simmer gently until hot and the vegetables are tender, stirring to avoid scorching. This is a quick kit sauce, not a long-braised ragù.",
+   "Serve with the cooked pasta, loosening with a little reserved pasta water."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the pasta separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Dice carrot finely for even cooking.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Soften vegetables",
+    "text": "Cook carrot in a little oil over medium heat until beginning to soften; finely diced carrot needs longer than corn.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown ground beef",
+    "text": "Add ground beef and break up clumps. Cook, stirring, until browned. Begin checking after 5 minutes. Check several places reach 71°C; steak doneness settings do not apply to ground meat.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Simmer prepared sauce",
+    "text": "Stir in tomato ragu sauce and a splash of water if needed. Simmer gently until hot and the vegetables are tender, stirring to avoid scorching. This is a quick kit sauce, not a long-braised ragù.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the cooked pasta, loosening with a little reserved pasta water.",
+    "ingredientIndexes": [
+     1
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — ground beef stir-fry technique",
+    "url": "https://www.recipetineats.com/asian-beef-bowls/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-spinach-cream-fusilli",
+  "name": "Spinach Cream Fusilli",
+  "featured": false,
+  "cuisine": "Italian-inspired",
+  "category": "Pasta",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1779915148092-776a6b5e37df?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Chickpeas with parmesan cream sauce, spinach, and fusilli. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chickpeas",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Fusilli",
+    "amount": 200,
+    "unit": "g"
+   },
+   {
+    "name": "Parmesan cream sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Spinach",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the fusilli separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+   "Add the fully cooked chickpeas and parmesan cream sauce. Simmer gently, stirring until hot throughout. Add a little water if too thick.",
+   "Fold in spinach only at the end and let it wilt. Toss with cooked fusilli and a little reserved pasta water; avoid boiling the cream sauce hard."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the fusilli separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Warm the cooked legumes",
+    "text": "Add the fully cooked chickpeas and parmesan cream sauce. Simmer gently, stirring until hot throughout. Add a little water if too thick.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     2
+    ]
+   },
+   {
+    "title": "Finish and serve",
+    "text": "Fold in spinach only at the end and let it wilt. Toss with cooked fusilli and a little reserved pasta water; avoid boiling the cream sauce hard.",
+    "ingredientIndexes": [
+     1,
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Short methods require fully cooked legumes. The ingredient list does not specify a dry weight for these kits; do not substitute dry beans without cooking separately.",
+  "cookingSources": [
+   {
+    "title": "Good Food — cooked chickpea masala",
+    "url": "https://www.bbcgoodfood.com/recipes/chana-masala"
+   },
+   {
+    "title": "RecipeTin Eats — mushroom cream pasta technique",
+    "url": "https://www.recipetineats.com/creamy-mushroom-pasta/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-chicken-teriyaki-bowl",
+  "name": "Chicken Teriyaki Bowl",
+  "featured": false,
+  "cuisine": "Japanese-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1682566509568-ded8649b26bb?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken thigh with teriyaki sauce, broccoli, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken thigh",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Teriyaki sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Broccoli",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare broccoli separately from raw meat; slice dense vegetables thinly.",
+   "Cook broccoli in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+   "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+   "Lower heat, add teriyaki sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+   "Serve over the prepared base. Use a clean plate and utensils for cooked chicken."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare broccoli separately from raw meat; slice dense vegetables thinly.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Cook broccoli in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown chicken",
+    "text": "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Finish with sauce and check",
+    "text": "Lower heat, add teriyaki sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve over the prepared base. Use a clean plate and utensils for cooked chicken.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Just One Cookbook — chicken teriyaki",
+    "url": "https://www.justonecookbook.com/chicken-teriyaki/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-beef-yakiniku-bowl",
+  "name": "Beef Yakiniku Bowl",
+  "featured": false,
+  "cuisine": "Japanese-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1608855815815-4edc035e39ad?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Beef strips with yakiniku sauce, onion, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Beef strips",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Yakiniku sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Onion",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Slice beef across the grain into thin strips about 3 mm thick. Thick or tough stewing beef is not interchangeable with these quick-cooking strips.",
+   "Stir-fry thinly sliced onion in a little oil until just tender; lift out so the beef can brown without crowding.",
+   "Heat the pan over medium-high heat. Sear beef in small batches, turning and separating the strips. Begin checking after 1 minute; add more time as needed rather than cooking every cut for the same duration.",
+   "Return vegetables and add yakiniku sauce. Toss briefly until coated. For whole-cut beef, check the thickest pieces reach 63°C and rest at least 3 minutes before eating. Small strips may finish sooner than the timer.",
+   "Serve with the prepared rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Slice beef across the grain into thin strips about 3 mm thick. Thick or tough stewing beef is not interchangeable with these quick-cooking strips.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables first",
+    "text": "Stir-fry thinly sliced onion in a little oil until just tender; lift out so the beef can brown without crowding.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Sear thin beef",
+    "text": "Heat the pan over medium-high heat. Sear beef in small batches, turning and separating the strips. Begin checking after 1 minute; add more time as needed rather than cooking every cut for the same duration.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Glaze and check",
+    "text": "Return vegetables and add yakiniku sauce. Toss briefly until coated. For whole-cut beef, check the thickest pieces reach 63°C and rest at least 3 minutes before eating. Small strips may finish sooner than the timer.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Maangchi — thin-sliced beef and mushroom bulgogi",
+    "url": "https://www.maangchi.com/recipe/bulgogi"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-ginger-tofu-rice-bowl",
+  "name": "Ginger Tofu Rice Bowl",
+  "featured": false,
+  "cuisine": "Japanese-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1609770424775-39ec362f2d94?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Firm tofu with ginger soy sauce, bok choy, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Firm tofu",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Ginger soy sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Bok choy",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain and press tofu for 15–20 minutes if needed, blot dry and cut into even 2 cm cubes. Pressing time is additional. Separate bok choy stems and leaves.",
+   "Pan-fry tofu with a little oil over medium-high heat, turning to brown several sides. Check after 8 minutes; wet tofu can take longer to crisp.",
+   "Set tofu aside. Cook bok choy stems with a little water until tender, then wilt the leaves.",
+   "Lower heat, return tofu and gently warm ginger soy sauce; add a splash of water if thick. Serve over cooked rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain and press tofu for 15–20 minutes if needed, blot dry and cut into even 2 cm cubes. Pressing time is additional. Separate bok choy stems and leaves.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Pan-fry tofu",
+    "text": "Pan-fry tofu with a little oil over medium-high heat, turning to brown several sides. Check after 8 minutes; wet tofu can take longer to crisp.",
+    "timerSeconds": 480,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Set tofu aside. Cook bok choy stems with a little water until tender, then wilt the leaves.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Dress and assemble",
+    "text": "Lower heat, return tofu and gently warm ginger soy sauce; add a splash of water if thick. Serve over cooked rice.",
+    "ingredientIndexes": [
+     2
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Just One Cookbook — tofu pressing and pan-frying",
+    "url": "https://www.justonecookbook.com/teriyaki-tofu/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-japanese-chicken-curry",
+  "name": "Japanese Chicken Curry",
+  "featured": false,
+  "cuisine": "Japanese-inspired",
+  "category": "Curry",
+  "tags": [],
+  "image": "https://images.unsplash.com/photo-1679279727895-bd5c9fb9c1a0?auto=format&fit=crop&w=800&q=75",
+  "time": 40,
+  "difficulty": "Easy",
+  "price": 329,
+  "description": "Chicken thigh with japanese curry sauce, potato and carrot, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken thigh",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Japanese curry sauce",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Potato and carrot",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use boneless chicken thigh in 2 cm pieces. Peel and cut potato and carrot into even 1 cm cubes.",
+   "Brown chicken in a little oil over medium-high heat; turn to colour the surfaces.",
+   "Add prepared sauce, potato and carrot, plus enough water to keep the pieces just covered. Simmer gently, stirring occasionally. Begin checking after 15 minutes; keep cooking until a knife slides easily into the potato.",
+   "Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Reduce uncovered briefly if the sauce is too thin; stir frequently so the prepared sauce does not catch. Serve with cooked rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use boneless chicken thigh in 2 cm pieces. Peel and cut potato and carrot into even 1 cm cubes.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Brown the chicken",
+    "text": "Brown chicken in a little oil over medium-high heat; turn to colour the surfaces.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Simmer with root vegetables",
+    "text": "Add prepared sauce, potato and carrot, plus enough water to keep the pieces just covered. Simmer gently, stirring occasionally. Begin checking after 15 minutes; keep cooking until a knife slides easily into the potato.",
+    "timerSeconds": 900,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Check and finish",
+    "text": "Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Reduce uncovered briefly if the sauce is too thin; stir frequently so the prepared sauce does not catch. Serve with cooked rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Timing assumes boneless thigh and small root-vegetable cubes. Bone-in chicken and larger potato pieces need longer.",
+  "cookingSources": [
+   {
+    "title": "Just One Cookbook — Japanese chicken curry",
+    "url": "https://www.justonecookbook.com/simple-chicken-curry/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-sesame-mushroom-udon",
+  "name": "Sesame Mushroom Udon",
+  "featured": false,
+  "cuisine": "Japanese-inspired",
+  "category": "Noodles",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1689760661347-6b4d026fffae?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Mushrooms with sesame soy sauce, bok choy, and udon noodles. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Mushrooms",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Udon noodles",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Sesame soy sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Bok choy",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the udon noodles separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Frozen or ready-cooked udon may need only brief loosening in boiling water; dried udon needs its full packet cooking time. Slice mushrooms and separate bok choy stems and leaves.",
+   "Pan-fry mushrooms in oil over medium-high heat until moisture evaporates and edges brown.",
+   "Add stems and a little water; cover briefly until tender, then add leaves to wilt.",
+   "Add drained udon and sesame soy sauce. Toss until hot throughout, loosening with a little water if needed. Avoid simmering already cooked noodles until mushy."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the udon noodles separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Frozen or ready-cooked udon may need only brief loosening in boiling water; dried udon needs its full packet cooking time. Slice mushrooms and separate bok choy stems and leaves.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Brown mushrooms",
+    "text": "Pan-fry mushrooms in oil over medium-high heat until moisture evaporates and edges brown.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Cook bok choy stems",
+    "text": "Add stems and a little water; cover briefly until tender, then add leaves to wilt.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Toss noodles",
+    "text": "Add drained udon and sesame soy sauce. Toss until hot throughout, loosening with a little water if needed. Avoid simmering already cooked noodles until mushy.",
+    "timerSeconds": 120,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Just One Cookbook — yaki udon",
+    "url": "https://www.justonecookbook.com/yaki-udon/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-miso-butter-shrimp",
+  "name": "Miso Butter Shrimp",
+  "featured": false,
+  "cuisine": "Japanese-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Peeled shrimp with miso butter sauce, broccoli, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Peeled shrimp",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Miso butter sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Broccoli",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Prepare broccoli before starting the shrimp.",
+   "Cook broccoli separately until crisp-tender by steaming, then drain. Set aside; shrimp cook much faster than dense vegetables.",
+   "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+   "Lower the heat and add miso butter sauce with the cooked vegetables; toss just until hot. Remove promptly once shrimp are opaque. Avoid simmering already cooked shrimp while reducing sauce.",
+   "Serve with the prepared rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Prepare broccoli before starting the shrimp.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook vegetables first",
+    "text": "Cook broccoli separately until crisp-tender by steaming, then drain. Set aside; shrimp cook much faster than dense vegetables.",
+    "timerSeconds": 240,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Cook shrimp briefly",
+    "text": "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Coat gently",
+    "text": "Lower the heat and add miso butter sauce with the cooked vegetables; toss just until hot. Remove promptly once shrimp are opaque. Avoid simmering already cooked shrimp while reducing sauce.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "NOAA — shrimp in garlic butter",
+    "url": "https://repository.library.noaa.gov/view/noaa/35356/noaa_35356_DS1.pdf"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-greek-chicken-bowl",
+  "name": "Greek Chicken Bowl",
+  "featured": false,
+  "cuisine": "Mediterranean-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1784902540709-082442918309?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken breast with lemon oregano dressing, tomato and cucumber, and couscous. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Couscous",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Lemon oregano dressing",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Tomato and cucumber",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Wash and cut the salad vegetables using a clean board. Reserve some dressing in a clean bowl before any touches raw meat.",
+   "Slice breast horizontally into even cutlets about 1.5 cm thick. Coat with part of the dressing. Keep any portion that touches raw chicken separate; discard it after use.",
+   "Heat a little oil over medium heat. Cook cutlets until browned, turning to cook both sides. Begin checking after about 3 minutes on the first side and 2 minutes after turning; continue as needed. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+   "Rest chicken briefly on a clean plate and slice. Serve with couscous and the uncooked tomato and cucumber. Use only the reserved clean dressing on the salad."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Wash and cut the salad vegetables using a clean board. Reserve some dressing in a clean bowl before any touches raw meat.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Prepare even chicken pieces",
+    "text": "Slice breast horizontally into even cutlets about 1.5 cm thick. Coat with part of the dressing. Keep any portion that touches raw chicken separate; discard it after use.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Pan-cook chicken",
+    "text": "Heat a little oil over medium heat. Cook cutlets until browned, turning to cook both sides. Begin checking after about 3 minutes on the first side and 2 minutes after turning; continue as needed. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Rest and assemble",
+    "text": "Rest chicken briefly on a clean plate and slice. Serve with couscous and the uncooked tomato and cucumber. Use only the reserved clean dressing on the salad.",
+    "ingredientIndexes": [
+     1,
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — lemon-marinated chicken technique",
+    "url": "https://www.recipetineats.com/greek-chicken-gyros-with-tzatziki/"
+   },
+   {
+    "title": "Love and Lemons — couscous types and cooking",
+    "url": "https://www.loveandlemons.com/how-to-cook-couscous/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-lemon-chickpea-couscous",
+  "name": "Lemon Chickpea Couscous",
+  "featured": false,
+  "cuisine": "Mediterranean-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1704742205160-9ace96fbbc44?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Chickpeas with lemon herb dressing, zucchini, and couscous. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chickpeas",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Couscous",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Lemon herb dressing",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Zucchini",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+   "Sauté zucchini in a little oil over medium heat until softened; add a splash of water if needed.",
+   "Add the fully cooked chickpeas and lemon herb dressing. Toss gently off the heat with the warm zucchini. Add a little water if too thick.",
+   "Serve with the prepared couscous."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook vegetables first",
+    "text": "Sauté zucchini in a little oil over medium heat until softened; add a splash of water if needed.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Warm the cooked legumes",
+    "text": "Add the fully cooked chickpeas and lemon herb dressing. Toss gently off the heat with the warm zucchini. Add a little water if too thick.",
+    "ingredientIndexes": [
+     0,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Finish and serve",
+    "text": "Serve with the prepared couscous.",
+    "ingredientIndexes": [
+     1
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Short methods require fully cooked legumes. The ingredient list does not specify a dry weight for these kits; do not substitute dry beans without cooking separately.",
+  "cookingSources": [
+   {
+    "title": "Good Food — cooked chickpea masala",
+    "url": "https://www.bbcgoodfood.com/recipes/chana-masala"
+   },
+   {
+    "title": "Love and Lemons — couscous types and cooking",
+    "url": "https://www.loveandlemons.com/how-to-cook-couscous/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-garlic-shrimp-couscous",
+  "name": "Garlic Shrimp Couscous",
+  "featured": false,
+  "cuisine": "Mediterranean-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1726455418076-a60ccd6085c2?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Peeled shrimp with garlic lemon butter, cherry tomatoes, and couscous. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Peeled shrimp",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Couscous",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Garlic lemon butter",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Cherry tomatoes",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Prepare cherry tomatoes before starting the shrimp.",
+   "Cook cherry tomatoes separately until softened in a little oil over medium heat. Set aside; shrimp cook much faster than dense vegetables.",
+   "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+   "Lower the heat and add garlic lemon butter with the cooked vegetables; toss just until hot. Remove promptly once shrimp are opaque. Avoid simmering already cooked shrimp while reducing sauce.",
+   "Serve with the prepared couscous."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Prepare cherry tomatoes before starting the shrimp.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook vegetables first",
+    "text": "Cook cherry tomatoes separately until softened in a little oil over medium heat. Set aside; shrimp cook much faster than dense vegetables.",
+    "timerSeconds": 240,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Cook shrimp briefly",
+    "text": "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Coat gently",
+    "text": "Lower the heat and add garlic lemon butter with the cooked vegetables; toss just until hot. Remove promptly once shrimp are opaque. Avoid simmering already cooked shrimp while reducing sauce.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared couscous.",
+    "ingredientIndexes": [
+     1
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "NOAA — shrimp in garlic butter",
+    "url": "https://repository.library.noaa.gov/view/noaa/35356/noaa_35356_DS1.pdf"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   },
+   {
+    "title": "Love and Lemons — couscous types and cooking",
+    "url": "https://www.loveandlemons.com/how-to-cook-couscous/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-harissa-chicken-bowl",
+  "name": "Harissa Chicken Bowl",
+  "featured": false,
+  "cuisine": "Mediterranean-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1688431508895-4c2cab13b181?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken breast with harissa tomato sauce, bell pepper, and couscous. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Couscous",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Harissa tomato sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Bell pepper",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Cut chicken into even 2 cm pieces. Prepare bell pepper separately from raw meat; slice dense vegetables thinly.",
+   "Cook bell pepper in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+   "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+   "Lower heat, add harissa tomato sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+   "Serve over the prepared base. Use a clean plate and utensils for cooked chicken."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Cut chicken into even 2 cm pieces. Prepare bell pepper separately from raw meat; slice dense vegetables thinly.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Cook bell pepper in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown chicken",
+    "text": "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Finish with sauce and check",
+    "text": "Lower heat, add harissa tomato sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve over the prepared base. Use a clean plate and utensils for cooked chicken.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — fajita cooking sequence",
+    "url": "https://www.recipetineats.com/chicken-fajitas/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   },
+   {
+    "title": "Love and Lemons — couscous types and cooking",
+    "url": "https://www.loveandlemons.com/how-to-cook-couscous/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-herbed-mushroom-couscous",
+  "name": "Herbed Mushroom Couscous",
+  "featured": false,
+  "cuisine": "Mediterranean-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1572424075298-e17403e6f3bf?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Mushrooms with lemon herb dressing, spinach, and couscous. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Mushrooms",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Couscous",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Lemon herb dressing",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Spinach",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Slice mushrooms and wash spinach.",
+   "Cook mushrooms in a little oil over medium-high heat without crowding, stirring occasionally, until their water evaporates and they begin to brown.",
+   "Add spinach and stir just until wilted. Turn off heat and fold through lemon herb dressing.",
+   "Serve with the prepared couscous."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Prepare couscous separately according to its packet: instant couscous is covered off the heat after adding boiling water, whereas pearl couscous must simmer. Fluff before serving. Slice mushrooms and wash spinach.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Brown mushrooms",
+    "text": "Cook mushrooms in a little oil over medium-high heat without crowding, stirring occasionally, until their water evaporates and they begin to brown.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Wilt spinach",
+    "text": "Add spinach and stir just until wilted. Turn off heat and fold through lemon herb dressing.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared couscous.",
+    "ingredientIndexes": [
+     1
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — mushroom cream pasta technique",
+    "url": "https://www.recipetineats.com/creamy-mushroom-pasta/"
+   },
+   {
+    "title": "Love and Lemons — couscous types and cooking",
+    "url": "https://www.loveandlemons.com/how-to-cook-couscous/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-gochujang-chicken-bowl",
+  "name": "Gochujang Chicken Bowl",
+  "featured": false,
+  "cuisine": "Korean-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken breast with gochujang sauce, carrot, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Gochujang sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Carrot",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare carrot separately from raw meat; slice dense vegetables thinly.",
+   "Cook carrot in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+   "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+   "Lower heat, add gochujang sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+   "Serve over the prepared base. Use a clean plate and utensils for cooked chicken."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare carrot separately from raw meat; slice dense vegetables thinly.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Cook carrot in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown chicken",
+    "text": "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Finish with sauce and check",
+    "text": "Lower heat, add gochujang sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve over the prepared base. Use a clean plate and utensils for cooked chicken.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Good Food — Korean chili glaze technique",
+    "url": "https://www.bbcgoodfood.com/recipes/korean-chilli-sesame-honey-chicken"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-korean-mushroom-rice",
+  "name": "Korean Mushroom Rice",
+  "featured": false,
+  "cuisine": "Korean-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1680420574628-225def8eea0a?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Mushrooms with sesame soy sauce, spinach, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Mushrooms",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Sesame soy sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Spinach",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Slice mushrooms and wash spinach.",
+   "Cook mushrooms in a little oil over medium-high heat without crowding, stirring occasionally, until their water evaporates and they begin to brown.",
+   "Add spinach and stir just until wilted. Lower heat and toss with sesame soy sauce just until hot.",
+   "Serve with the prepared rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Slice mushrooms and wash spinach.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Brown mushrooms",
+    "text": "Cook mushrooms in a little oil over medium-high heat without crowding, stirring occasionally, until their water evaporates and they begin to brown.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Wilt spinach",
+    "text": "Add spinach and stir just until wilted. Lower heat and toss with sesame soy sauce just until hot.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — mushroom cream pasta technique",
+    "url": "https://www.recipetineats.com/creamy-mushroom-pasta/"
+   },
+   {
+    "title": "Maangchi — thin-sliced beef and mushroom bulgogi",
+    "url": "https://www.maangchi.com/recipe/bulgogi"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-spicy-pork-bulgogi",
+  "name": "Spicy Pork Bulgogi",
+  "featured": false,
+  "cuisine": "Korean-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1564836235910-c3055ca0f912?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Pork strips with spicy bulgogi sauce, onion, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Pork strips",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Spicy bulgogi sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Onion",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Slice pork across the grain into thin, even strips about 3 mm thick; slice onion thinly.",
+   "Stir-fry onion in a little oil over medium heat until softened, then set aside.",
+   "Stir-fry pork in small batches over medium-high heat, turning regularly. Start checking after 3 minutes; do not rely on colour alone.",
+   "Lower heat, add spicy bulgogi sauce and return onion. Cook until hot and coated without scorching the sugary sauce. Whole-cut pork must reach 63°C and rest at least 3 minutes before eating. Serve with cooked rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Slice pork across the grain into thin, even strips about 3 mm thick; slice onion thinly.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Soften onion",
+    "text": "Stir-fry onion in a little oil over medium heat until softened, then set aside.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Cook thin pork",
+    "text": "Stir-fry pork in small batches over medium-high heat, turning regularly. Start checking after 3 minutes; do not rely on colour alone.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Glaze and check",
+    "text": "Lower heat, add spicy bulgogi sauce and return onion. Cook until hot and coated without scorching the sugary sauce. Whole-cut pork must reach 63°C and rest at least 3 minutes before eating. Serve with cooked rice.",
+    "ingredientIndexes": [
+     2,
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Maangchi — spicy pork bulgogi",
+    "url": "https://www.maangchi.com/recipe/dwaeji-bulgogi"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-kimchi-tofu-rice",
+  "name": "Kimchi Tofu Rice",
+  "featured": false,
+  "cuisine": "Korean-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1698489857683-0d30f7f046f7?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Firm tofu with vegetarian kimchi sauce, carrot, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Firm tofu",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Vegetarian kimchi sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Carrot",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain and press tofu for 15–20 minutes if needed, blot dry and cut into even 2 cm cubes. Pressing time is additional. Slice carrot into fine matchsticks.",
+   "Pan-fry tofu with a little oil over medium-high heat, turning to brown several sides. Check after 8 minutes; wet tofu can take longer to crisp.",
+   "Set tofu aside. Stir-fry carrot matchsticks with a little water until crisp-tender.",
+   "Lower heat, return tofu and gently warm vegetarian kimchi sauce; add a splash of water if thick. Serve over cooked rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain and press tofu for 15–20 minutes if needed, blot dry and cut into even 2 cm cubes. Pressing time is additional. Slice carrot into fine matchsticks.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Pan-fry tofu",
+    "text": "Pan-fry tofu with a little oil over medium-high heat, turning to brown several sides. Check after 8 minutes; wet tofu can take longer to crisp.",
+    "timerSeconds": 480,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Set tofu aside. Stir-fry carrot matchsticks with a little water until crisp-tender.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Dress and assemble",
+    "text": "Lower heat, return tofu and gently warm vegetarian kimchi sauce; add a splash of water if thick. Serve over cooked rice.",
+    "ingredientIndexes": [
+     2
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Just One Cookbook — tofu pressing and pan-frying",
+    "url": "https://www.justonecookbook.com/teriyaki-tofu/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-sesame-beef-noodles",
+  "name": "Sesame Beef Noodles",
+  "featured": false,
+  "cuisine": "Korean-inspired",
+  "category": "Noodles",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1565976469618-061774653bee?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Beef strips with sesame soy sauce, bok choy, and wheat noodles. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Beef strips",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Wheat noodles",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Sesame soy sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Bok choy",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the wheat noodles separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Slice beef across the grain into thin strips about 3 mm thick. Thick or tough stewing beef is not interchangeable with these quick-cooking strips.",
+   "Stir-fry bok choy stems, reserving the leaves in a little oil until just tender; lift out so the beef can brown without crowding.",
+   "Heat the pan over medium-high heat. Sear beef in small batches, turning and separating the strips. Begin checking after 1 minute; add more time as needed rather than cooking every cut for the same duration.",
+   "Return vegetables and add sesame soy sauce. Toss briefly until coated and add the bok choy leaves to wilt. For whole-cut beef, check the thickest pieces reach 63°C and rest at least 3 minutes before eating. Small strips may finish sooner than the timer.",
+   "Serve with the prepared noodles."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the wheat noodles separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Slice beef across the grain into thin strips about 3 mm thick. Thick or tough stewing beef is not interchangeable with these quick-cooking strips.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables first",
+    "text": "Stir-fry bok choy stems, reserving the leaves in a little oil until just tender; lift out so the beef can brown without crowding.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Sear thin beef",
+    "text": "Heat the pan over medium-high heat. Sear beef in small batches, turning and separating the strips. Begin checking after 1 minute; add more time as needed rather than cooking every cut for the same duration.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Glaze and check",
+    "text": "Return vegetables and add sesame soy sauce. Toss briefly until coated and add the bok choy leaves to wilt. For whole-cut beef, check the thickest pieces reach 63°C and rest at least 3 minutes before eating. Small strips may finish sooner than the timer.",
+    "ingredientIndexes": [
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared noodles.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Maangchi — thin-sliced beef and mushroom bulgogi",
+    "url": "https://www.maangchi.com/recipe/bulgogi"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-thai-peanut-noodles",
+  "name": "Thai Peanut Noodles",
+  "featured": false,
+  "cuisine": "Thai-inspired",
+  "category": "Noodles",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1707546944460-dda9069b9c1e?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Firm tofu with peanut lime sauce, carrot, and rice noodles. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Firm tofu",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Rice noodles",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Peanut lime sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Carrot",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Cook the rice noodles separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Drain and press tofu for 15–20 minutes if needed, blot dry and cut into even 2 cm cubes. Pressing time is additional. Slice carrot into fine matchsticks.",
+   "Pan-fry tofu with a little oil over medium-high heat, turning to brown several sides. Check after 8 minutes; wet tofu can take longer to crisp.",
+   "Set tofu aside. Stir-fry carrot matchsticks with a little water until crisp-tender.",
+   "Lower heat, return tofu and gently warm peanut lime sauce; add a splash of water if thick. Toss with drained rice noodles just until coated."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Cook the rice noodles separately according to its packet; noodle types vary. For pasta, reserve a mug of cooking water before draining. Do not use a fixed timer for every shape. Drain and press tofu for 15–20 minutes if needed, blot dry and cut into even 2 cm cubes. Pressing time is additional. Slice carrot into fine matchsticks.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Pan-fry tofu",
+    "text": "Pan-fry tofu with a little oil over medium-high heat, turning to brown several sides. Check after 8 minutes; wet tofu can take longer to crisp.",
+    "timerSeconds": 480,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Set tofu aside. Stir-fry carrot matchsticks with a little water until crisp-tender.",
+    "timerSeconds": 180,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Dress and assemble",
+    "text": "Lower heat, return tofu and gently warm peanut lime sauce; add a splash of water if thick. Toss with drained rice noodles just until coated.",
+    "ingredientIndexes": [
+     1,
+     2
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Just One Cookbook — tofu pressing and pan-frying",
+    "url": "https://www.justonecookbook.com/teriyaki-tofu/"
+   },
+   {
+    "title": "RecipeTin Eats — peanut rice-noodle technique",
+    "url": "https://www.recipetineats.com/stir-fried-peanut-sauce-noodles/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-red-curry-chicken",
+  "name": "Red Curry Chicken",
+  "featured": false,
+  "cuisine": "Thai-inspired",
+  "category": "Curry",
+  "tags": [],
+  "image": "https://images.unsplash.com/photo-1708782344490-9026aaa5eec7?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Easy",
+  "price": 329,
+  "description": "Chicken breast with red coconut curry sauce, bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Red coconut curry sauce",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Bell pepper",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut breast into even 2 cm pieces and prepare bell pepper.",
+   "Warm red coconut curry sauce gently in a saucepan with a little water if too thick. Keep at a gentle simmer rather than a hard boil.",
+   "Add chicken and bell pepper. Simmer gently, stirring occasionally; start temperature checks after 8 minutes. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Continue until vegetables are tender, adding a splash of water if the sauce catches.",
+   "Serve with cooked rice. This method uses a prepared curry sauce; do not add the extra ingredients from a from-scratch sauce recipe."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut breast into even 2 cm pieces and prepare bell pepper.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Begin the sauce",
+    "text": "Warm red coconut curry sauce gently in a saucepan with a little water if too thick. Keep at a gentle simmer rather than a hard boil.",
+    "timerSeconds": 120,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Simmer chicken",
+    "text": "Add chicken and bell pepper. Simmer gently, stirring occasionally; start temperature checks after 8 minutes. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Continue until vegetables are tender, adding a splash of water if the sauce catches.",
+    "timerSeconds": 480,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with cooked rice. This method uses a prepared curry sauce; do not add the extra ingredients from a from-scratch sauce recipe.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — Thai red curry",
+    "url": "https://www.recipetineats.com/thai-red-curry-with-chicken/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-thai-garlic-shrimp",
+  "name": "Thai Garlic Shrimp",
+  "featured": false,
+  "cuisine": "Thai-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1599655345131-6eb73b81d8d6?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Peeled shrimp with garlic pepper sauce, green beans, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Peeled shrimp",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Garlic pepper sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Green beans",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Prepare green beans before starting the shrimp.",
+   "Cook green beans separately until crisp-tender by steaming, then drain. Set aside; shrimp cook much faster than dense vegetables.",
+   "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+   "Lower the heat and add garlic pepper sauce with the cooked vegetables; toss just until hot. Remove promptly once shrimp are opaque. Avoid simmering already cooked shrimp while reducing sauce.",
+   "Serve with the prepared rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Prepare green beans before starting the shrimp.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook vegetables first",
+    "text": "Cook green beans separately until crisp-tender by steaming, then drain. Set aside; shrimp cook much faster than dense vegetables.",
+    "timerSeconds": 240,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Cook shrimp briefly",
+    "text": "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Coat gently",
+    "text": "Lower the heat and add garlic pepper sauce with the cooked vegetables; toss just until hot. Remove promptly once shrimp are opaque. Avoid simmering already cooked shrimp while reducing sauce.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the prepared rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "NOAA — shrimp in garlic butter",
+    "url": "https://repository.library.noaa.gov/view/noaa/35356/noaa_35356_DS1.pdf"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-green-curry-tofu",
+  "name": "Green Curry Tofu",
+  "featured": false,
+  "cuisine": "Thai-inspired",
+  "category": "Curry",
+  "tags": [
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1769031240699-e15f4818224a?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Easy",
+  "price": 279,
+  "description": "Firm tofu with vegetarian green curry sauce, zucchini, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Firm tofu",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Vegetarian green curry sauce",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Zucchini",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain tofu and cut into 2 cm cubes; cut zucchini into even half-moons.",
+   "Warm green curry sauce with a little water if needed, add zucchini and simmer gently until nearly tender; begin checking after 5 minutes.",
+   "Fold in tofu and simmer gently until hot throughout and zucchini is tender without collapsing. Avoid a hard boil or over-reducing the sauce. Serve with cooked rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Drain tofu and cut into 2 cm cubes; cut zucchini into even half-moons.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Simmer zucchini",
+    "text": "Warm green curry sauce with a little water if needed, add zucchini and simmer gently until nearly tender; begin checking after 5 minutes.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Warm tofu",
+    "text": "Fold in tofu and simmer gently until hot throughout and zucchini is tender without collapsing. Avoid a hard boil or over-reducing the sauce. Serve with cooked rice.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — Thai green curry",
+    "url": "https://www.recipetineats.com/thai-green-curry/"
+   },
+   {
+    "title": "Just One Cookbook — Japanese chicken curry",
+    "url": "https://www.justonecookbook.com/simple-chicken-curry/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-sweet-chili-chicken",
+  "name": "Sweet Chili Chicken",
+  "featured": false,
+  "cuisine": "Thai-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1636401870585-a8852371e84a?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken breast with sweet chili sauce, bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Sweet chili sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Bell pepper",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare bell pepper separately from raw meat; slice dense vegetables thinly.",
+   "Cook bell pepper in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+   "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+   "Lower heat, add sweet chili sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+   "Serve over the prepared base. Use a clean plate and utensils for cooked chicken."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare bell pepper separately from raw meat; slice dense vegetables thinly.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Cook bell pepper in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown chicken",
+    "text": "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Finish with sauce and check",
+    "text": "Lower heat, add sweet chili sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve over the prepared base. Use a clean plate and utensils for cooked chicken.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — fajita cooking sequence",
+    "url": "https://www.recipetineats.com/chicken-fajitas/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-chicken-fajita-bowl",
+  "name": "Chicken Fajita Bowl",
+  "featured": false,
+  "cuisine": "Mexican-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1668665771757-4d42737d295a?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken breast with fajita tomato sauce, bell pepper and onion, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Fajita tomato sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Bell pepper and onion",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare bell pepper and onion separately from raw meat; slice dense vegetables thinly.",
+   "Cook bell pepper and onion in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+   "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+   "Lower heat, add fajita tomato sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+   "Serve over the prepared base. Use a clean plate and utensils for cooked chicken."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut chicken into even 2 cm pieces. Prepare bell pepper and onion separately from raw meat; slice dense vegetables thinly.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook the vegetables",
+    "text": "Cook bell pepper and onion in a separate pan: steam dense carrot, broccoli or green beans until crisp-tender; sauté pepper/onion until softened; heat sweetcorn until hot. Set aside.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown chicken",
+    "text": "Pan-fry chicken in a little oil over medium-high heat in an uncrowded layer, turning to colour the surfaces. Start checking after about 5 minutes; reduce heat if browning too fast.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Finish with sauce and check",
+    "text": "Lower heat, add fajita tomato sauce and the cooked vegetables. Add a splash of water if thick; stir until hot and coated. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Sugary sauces can burn, so do not sear them on high heat.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve over the prepared base. Use a clean plate and utensils for cooked chicken.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — fajita cooking sequence",
+    "url": "https://www.recipetineats.com/chicken-fajitas/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-chipotle-beef-bowl",
+  "name": "Chipotle Beef Bowl",
+  "featured": false,
+  "cuisine": "Mexican-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1707322571124-9d3a47cce941?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Ground beef with chipotle sauce, sweetcorn, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Ground beef",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Chipotle sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Sweetcorn",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Dice sweetcorn finely for even cooking.",
+   "Cook sweetcorn in a little oil over medium heat until beginning to soften; finely diced carrot needs longer than corn.",
+   "Add ground beef and break up clumps. Cook, stirring, until browned. Begin checking after 5 minutes. Check several places reach 71°C; steak doneness settings do not apply to ground meat.",
+   "Stir in chipotle sauce and a splash of water if needed. Simmer gently until hot and the vegetables are tender, stirring to avoid scorching. This is a quick kit sauce, not a long-braised ragù.",
+   "Serve with the cooked rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Dice sweetcorn finely for even cooking.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Soften vegetables",
+    "text": "Cook sweetcorn in a little oil over medium heat until beginning to soften; finely diced carrot needs longer than corn.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Brown ground beef",
+    "text": "Add ground beef and break up clumps. Cook, stirring, until browned. Begin checking after 5 minutes. Check several places reach 71°C; steak doneness settings do not apply to ground meat.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0
+    ]
+   },
+   {
+    "title": "Simmer prepared sauce",
+    "text": "Stir in chipotle sauce and a splash of water if needed. Simmer gently until hot and the vegetables are tender, stirring to avoid scorching. This is a quick kit sauce, not a long-braised ragù.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with the cooked rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — ground beef stir-fry technique",
+    "url": "https://www.recipetineats.com/asian-beef-bowls/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-smoky-bean-rice-bowl",
+  "name": "Smoky Bean Rice Bowl",
+  "featured": false,
+  "cuisine": "Mexican-inspired",
+  "category": "Rice bowls",
+  "tags": [
+   "Vegetarian",
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 279,
+  "description": "Black beans with smoky tomato salsa, bell pepper, and jasmine rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Black beans",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Jasmine rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Smoky tomato salsa",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Bell pepper",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+   "Sauté bell pepper in a little oil over medium heat until softened; add a splash of water if needed.",
+   "Add the fully cooked black beans and smoky tomato salsa. Simmer gently, stirring until hot throughout. Add a little water if too thick.",
+   "Serve with the prepared rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the jasmine rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook vegetables first",
+    "text": "Sauté bell pepper in a little oil over medium heat until softened; add a splash of water if needed.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Warm the cooked legumes",
+    "text": "Add the fully cooked black beans and smoky tomato salsa. Simmer gently, stirring until hot throughout. Add a little water if too thick.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     2
+    ]
+   },
+   {
+    "title": "Finish and serve",
+    "text": "Serve with the prepared rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Short methods require fully cooked legumes. The ingredient list does not specify a dry weight for these kits; do not substitute dry beans without cooking separately.",
+  "cookingSources": [
+   {
+    "title": "Good Food — cooked chickpea masala",
+    "url": "https://www.bbcgoodfood.com/recipes/chana-masala"
+   },
+   {
+    "title": "Love and Lemons — cooked black bean tacos",
+    "url": "https://www.loveandlemons.com/black-bean-tacos/"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-lime-shrimp-tacos",
+  "name": "Lime Shrimp Tacos",
+  "featured": false,
+  "cuisine": "Mexican-inspired",
+  "category": "Tacos",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Beginner",
+  "price": 359,
+  "description": "Peeled shrimp with lime crema, shredded cabbage, and corn tortillas. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Peeled shrimp",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Corn tortillas",
+    "amount": 6,
+    "unit": "pieces"
+   },
+   {
+    "name": "Lime crema",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Shredded cabbage",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Set out the measured ingredients. Warm the tortillas in a dry pan according to their packet just before serving; keep covered. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Keep cabbage and lime crema ready for the final topping.",
+   "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+   "Fill warm tortillas with the cooked shrimp and fresh uncooked cabbage. Spoon lime crema over the top off the heat. Do not boil the crema or cook cabbage with raw shrimp."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Set out the measured ingredients. Warm the tortillas in a dry pan according to their packet just before serving; keep covered. Thaw shrimp fully in the refrigerator if frozen, then pat dry. Keep cabbage and lime crema ready for the final topping.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook shrimp briefly",
+    "text": "Heat a little oil over medium-high heat and add shrimp in a single layer. Turn once the underside changes colour, starting checks after about 1 minute. Stop when the shrimp are pearly white and opaque right through; check a thick one, not just the pink exterior. Larger shrimp need longer.",
+    "timerSeconds": 60,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Assemble off the heat",
+    "text": "Fill warm tortillas with the cooked shrimp and fresh uncooked cabbage. Spoon lime crema over the top off the heat. Do not boil the crema or cook cabbage with raw shrimp.",
+    "ingredientIndexes": [
+     2
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "NOAA — shrimp in garlic butter",
+    "url": "https://repository.library.noaa.gov/view/noaa/35356/noaa_35356_DS1.pdf"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-chicken-tinga-tacos",
+  "name": "Chicken Tinga Tacos",
+  "featured": false,
+  "cuisine": "Mexican-inspired",
+  "category": "Tacos",
+  "tags": [
+   "Quick Meals"
+  ],
+  "image": "https://images.unsplash.com/photo-1613514785940-daed07799d9b?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Beginner",
+  "price": 329,
+  "description": "Chicken breast with tinga tomato sauce, shredded cabbage, and corn tortillas. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Corn tortillas",
+    "amount": 6,
+    "unit": "pieces"
+   },
+   {
+    "name": "Tinga tomato sauce",
+    "amount": 60,
+    "unit": "g"
+   },
+   {
+    "name": "Shredded cabbage",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Set out the measured ingredients. Warm the tortillas in a dry pan according to their packet just before serving; keep covered. Keep cabbage raw for topping; cut chicken breast into even cutlets about 1.5 cm thick.",
+   "Bring tinga tomato sauce and enough water to partly cover the chicken to a gentle simmer. Add chicken and turn occasionally. Begin checking after 10 minutes. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+   "Lift cooked chicken to a clean board. Shred with forks and return to the sauce, reducing gently only if too thin. Keep chicken moist.",
+   "Serve in warm tortillas with uncooked shredded cabbage. This kit uses prepared tinga sauce rather than a from-scratch tomato and chili base."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Set out the measured ingredients. Warm the tortillas in a dry pan according to their packet just before serving; keep covered. Keep cabbage raw for topping; cut chicken breast into even cutlets about 1.5 cm thick.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Poach in tinga sauce",
+    "text": "Bring tinga tomato sauce and enough water to partly cover the chicken to a gentle simmer. Add chicken and turn occasionally. Begin checking after 10 minutes. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test.",
+    "timerSeconds": 600,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Shred and coat",
+    "text": "Lift cooked chicken to a clean board. Shred with forks and return to the sauce, reducing gently only if too thin. Keep chicken moist.",
+    "ingredientIndexes": []
+   },
+   {
+    "title": "Fill tortillas",
+    "text": "Serve in warm tortillas with uncooked shredded cabbage. This kit uses prepared tinga sauce rather than a from-scratch tomato and chili base.",
+    "ingredientIndexes": [
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "RecipeTin Eats — chicken tacos",
+    "url": "https://www.recipetineats.com/chicken-tacos-with-sauce/"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-palak-paneer",
+  "name": "Palak Paneer",
+  "featured": false,
+  "cuisine": "Indian-inspired",
+  "category": "Curry",
+  "tags": [
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1767114915936-745dd372f1d8?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Easy",
+  "price": 279,
+  "description": "Paneer with spinach masala sauce, tomato, and basmati rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Paneer",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Basmati rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Spinach masala sauce",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Tomato",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut paneer into even 2 cm cubes and chop tomato.",
+   "Cook tomato in a little oil over medium heat until softened.",
+   "Add prepared spinach masala sauce and a splash of water if thick. Fold in paneer and simmer gently until hot through. Avoid a long boil, which toughens paneer.",
+   "Serve with cooked basmati rice. The spinach is already in the prepared sauce; no separate spinach purée or extra dairy is needed."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut paneer into even 2 cm cubes and chop tomato.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Soften tomato",
+    "text": "Cook tomato in a little oil over medium heat until softened.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Warm sauce and paneer",
+    "text": "Add prepared spinach masala sauce and a splash of water if thick. Fold in paneer and simmer gently until hot through. Avoid a long boil, which toughens paneer.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     2
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with cooked basmati rice. The spinach is already in the prepared sauce; no separate spinach purée or extra dairy is needed.",
+    "ingredientIndexes": [
+     1
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Technique adaptation for prepared spinach masala sauce and paneer, not a reproduction of a from-scratch palak recipe.",
+  "cookingSources": [
+   {
+    "title": "Tesco — palak paneer",
+    "url": "https://www.tesco.com/recipes/en-GB/recipe/palak-paneer/cooking"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-chickpea-tikka-masala",
+  "name": "Chickpea Tikka Masala",
+  "featured": false,
+  "cuisine": "Indian-inspired",
+  "category": "Curry",
+  "tags": [
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1728414862780-cdb57c0aadb1?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Easy",
+  "price": 279,
+  "description": "Chickpeas with tikka masala sauce, spinach, and basmati rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chickpeas",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Basmati rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Tikka masala sauce",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Spinach",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+   "Add the fully cooked chickpeas and tikka masala sauce. Simmer gently, stirring until hot throughout. Add a little water if too thick.",
+   "Fold in spinach only at the end and let it wilt. Serve with the prepared rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Warm the cooked legumes",
+    "text": "Add the fully cooked chickpeas and tikka masala sauce. Simmer gently, stirring until hot throughout. Add a little water if too thick.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     2
+    ]
+   },
+   {
+    "title": "Finish and serve",
+    "text": "Fold in spinach only at the end and let it wilt. Serve with the prepared rice.",
+    "ingredientIndexes": [
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Short methods require fully cooked legumes. The ingredient list does not specify a dry weight for these kits; do not substitute dry beans without cooking separately.",
+  "cookingSources": [
+   {
+    "title": "Good Food — cooked chickpea masala",
+    "url": "https://www.bbcgoodfood.com/recipes/chana-masala"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-chicken-korma",
+  "name": "Chicken Korma",
+  "featured": false,
+  "cuisine": "Indian-inspired",
+  "category": "Curry",
+  "tags": [],
+  "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=75",
+  "time": 30,
+  "difficulty": "Easy",
+  "price": 329,
+  "description": "Chicken breast with korma sauce, green beans, and basmati rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chicken breast",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Basmati rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Korma sauce",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Green beans",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut breast into even 2 cm pieces and prepare green beans.",
+   "Warm korma sauce gently in a saucepan with a little water if too thick. Keep at a gentle simmer rather than a hard boil.",
+   "Add chicken and green beans. Simmer gently, stirring occasionally; start temperature checks after 8 minutes. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Continue until vegetables are tender, adding a splash of water if the sauce catches.",
+   "Serve with cooked rice. This method uses a prepared curry sauce; do not add the extra ingredients from a from-scratch sauce recipe."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Cut breast into even 2 cm pieces and prepare green beans.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Begin the sauce",
+    "text": "Warm korma sauce gently in a saucepan with a little water if too thick. Keep at a gentle simmer rather than a hard boil.",
+    "timerSeconds": 120,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     2
+    ]
+   },
+   {
+    "title": "Simmer chicken",
+    "text": "Add chicken and green beans. Simmer gently, stirring occasionally; start temperature checks after 8 minutes. Check several thickest pieces with a food thermometer: all chicken, including ground chicken, must reach 74°C. Keep cooking if below this; colour alone is not a safety test. Continue until vegetables are tender, adding a splash of water if the sauce catches.",
+    "timerSeconds": 480,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Serve",
+    "text": "Serve with cooked rice. This method uses a prepared curry sauce; do not add the extra ingredients from a from-scratch sauce recipe.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. ",
+  "cookingSources": [
+   {
+    "title": "Good Food — bite-size chicken curry technique",
+    "url": "https://www.bbcgoodfood.com/recipes/easy-chicken-korma"
+   },
+   {
+    "title": "FoodSafety.gov — safe minimum temperatures",
+    "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-coconut-dal",
+  "name": "Coconut Dal",
+  "featured": false,
+  "cuisine": "Indian-inspired",
+  "category": "Curry",
+  "tags": [
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=75",
+  "time": 25,
+  "difficulty": "Easy",
+  "price": 279,
+  "description": "Cooked lentils with coconut curry sauce, spinach, and basmati rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Cooked lentils",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Basmati rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Coconut curry sauce",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Spinach",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use fully cooked lentils, as supplied; dry lentils need separate cooking first.",
+   "Add the fully cooked lentils and coconut curry sauce. Simmer gently, stirring until hot throughout. Add a little water if too thick.",
+   "Fold in spinach only at the end and let it wilt. Serve with the prepared rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use fully cooked lentils, as supplied; dry lentils need separate cooking first.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Warm the cooked legumes",
+    "text": "Add the fully cooked lentils and coconut curry sauce. Simmer gently, stirring until hot throughout. Add a little water if too thick.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     2
+    ]
+   },
+   {
+    "title": "Finish and serve",
+    "text": "Fold in spinach only at the end and let it wilt. Serve with the prepared rice.",
+    "ingredientIndexes": [
+     3
+    ]
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Short methods require fully cooked legumes. The ingredient list does not specify a dry weight for these kits; do not substitute dry beans without cooking separately.",
+  "cookingSources": [
+   {
+    "title": "Good Food — cooked chickpeas, spinach and coconut",
+    "url": "https://www.bbcgoodfood.com/recipes/spinach-chickpea-dahl"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ },
+ {
+  "id": "menu-aloo-chana",
+  "name": "Aloo Chana",
+  "featured": false,
+  "cuisine": "Indian-inspired",
+  "category": "Curry",
+  "tags": [
+   "Vegetarian"
+  ],
+  "image": "https://images.unsplash.com/photo-1591940597372-bd266c6eb29e?auto=format&fit=crop&w=800&q=75",
+  "time": 35,
+  "difficulty": "Easy",
+  "price": 279,
+  "description": "Chickpeas with tomato masala sauce, potato, and basmati rice. A comforting Cookly meal kit, portioned for two.",
+  "ingredients": [
+   {
+    "name": "Chickpeas",
+    "amount": 300,
+    "unit": "g"
+   },
+   {
+    "name": "Basmati rice",
+    "amount": 150,
+    "unit": "g"
+   },
+   {
+    "name": "Tomato masala sauce",
+    "amount": 160,
+    "unit": "g"
+   },
+   {
+    "name": "Potato",
+    "amount": 200,
+    "unit": "g"
+   }
+  ],
+  "steps": [
+   "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+   "Peel potato and cut into 1 cm cubes. Simmer in water until knife-tender, checking after 10 minutes, then drain.",
+   "Add the fully cooked chickpeas and tomato masala sauce. Simmer gently, stirring until hot throughout. Add a little water if too thick.",
+   "Serve with the prepared rice."
+  ],
+  "guideSteps": [
+   {
+    "title": "Prepare the base and ingredients",
+    "text": "Start the basmati rice in a separate pot or rice cooker using the selected rice variety’s packet water ratio, cooking and resting instructions. Rice is dry unless labelled ready-cooked; do not simply stir raw rice into the finished bowl. Use canned or fully cooked, drained chickpeas/beans here. Dry legumes cannot be cooked by this short method; cook them separately according to their packet first.",
+    "ingredientIndexes": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "title": "Cook vegetables first",
+    "text": "Peel potato and cut into 1 cm cubes. Simmer in water until knife-tender, checking after 10 minutes, then drain.",
+    "timerSeconds": 600,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     3
+    ]
+   },
+   {
+    "title": "Warm the cooked legumes",
+    "text": "Add the fully cooked chickpeas and tomato masala sauce. Simmer gently, stirring until hot throughout. Add a little water if too thick.",
+    "timerSeconds": 300,
+    "timerNote": "First check only. Continue or stop according to the texture and doneness checks in this step; the timer does not establish doneness.",
+    "ingredientIndexes": [
+     0,
+     2
+    ]
+   },
+   {
+    "title": "Finish and serve",
+    "text": "Serve with the prepared rice.",
+    "ingredientIndexes": []
+   }
+  ],
+  "cookingNotes": "Cookly kit adaptation using the listed ingredients and prepared sauces. Estimated time is for two servings with tasks overlapping; larger batches, equipment and cut sizes change it. Packet directions take priority for supplied sauces and dry bases. Timers prompt a check, not a guaranteed finish. Short methods require fully cooked legumes. The ingredient list does not specify a dry weight for these kits; do not substitute dry beans without cooking separately.",
+  "cookingSources": [
+   {
+    "title": "Good Food — cooked chickpea masala",
+    "url": "https://www.bbcgoodfood.com/recipes/chana-masala"
+   }
+  ],
+  "cookingReviewed": "2026-11-14"
+ }
 ];
 const recipePhotos={
  'menu-steak-rice-bowl':'photo-1682566509605-b5bb1ef7eac2',
@@ -332,18 +6473,18 @@ function renderBox(){$('#main').innerHTML=`<div class="page-title"><span class="
 // Demo orders stay on this device; a confirmed order record is required to unlock its guide.
 let purchases=load('cookly-purchases',[]).filter(x=>x&&recipes.some(r=>r.id===x.id)&&Number.isInteger(x.servings)&&x.servings>=1&&x.servings<=6);
 const steakDonenessOptions=[
- {id:'rare',label:'Rare',searMinutes:2,tempC:52},
- {id:'medium-rare',label:'Medium rare',searMinutes:3,tempC:57},
- {id:'medium',label:'Medium',searMinutes:4,tempC:63},
- {id:'medium-well',label:'Medium well',searMinutes:5,tempC:68},
- {id:'well-done',label:'Well done',searMinutes:6,tempC:71,above:true}
+ {id:'rare',label:'Rare',tempC:52},
+ {id:'medium-rare',label:'Medium rare',tempC:57},
+ {id:'medium',label:'Medium',tempC:63},
+ {id:'medium-well',label:'Medium well',tempC:68},
+ {id:'well-done',label:'Well done',tempC:71,above:true}
 ];
 let steakDoneness='medium';
 function isSteakBowl(recipe){return recipe?.name==='Steak Rice Bowl'&&recipe.tags.includes('Steak')}
 function selectedSteakDoneness(){return steakDonenessOptions.find(option=>option.id===steakDoneness)||steakDonenessOptions[2]}
 function steakTargetTemperature(option=selectedSteakDoneness()){const value=preferences.temperature==='fahrenheit'?`${Math.round(option.tempC*9/5+32)}°F`:`${option.tempC}°C`;return `about ${value}${option.above?'+':''}`}
-function steakDonenessPicker(){const choice=selectedSteakDoneness();return `<fieldset class="steak-doneness"><label for="steakDoneness">Steak doneness</label><select id="steakDoneness" name="steakDoneness">${steakDonenessOptions.map(option=>`<option value="${option.id}" ${option.id===choice.id?'selected':''}>${option.label}</option>`).join('')}</select><p class="steak-doneness-note" aria-live="polite">About ${choice.searMinutes} min per side for a 2.5 cm / 1 in steak · ${steakTargetTemperature(choice)}. Actual timing varies with thickness and pan heat.</p><p class="steak-safety-note">For food safety, the USDA recommends whole beef steaks reach at least 63°C / 145°F and rest for 3 minutes. Rare and medium-rare are below that recommended minimum; use a food thermometer.</p></fieldset>`}
-document.addEventListener('change',e=>{if(e.target.id!=='steakDoneness')return;const choice=steakDonenessOptions.find(option=>option.id===e.target.value);if(!choice)return;steakDoneness=choice.id;timerStepKey='';const note=$('.steak-doneness-note');if(note)note.textContent=`About ${choice.searMinutes} min per side for a 2.5 cm / 1 in steak · ${steakTargetTemperature(choice)}. Actual timing varies with thickness and pan heat.`});
+function steakDonenessPicker(){const choice=selectedSteakDoneness();return `<fieldset class="steak-doneness"><label for="steakDoneness">Steak doneness</label><select id="steakDoneness" name="steakDoneness">${steakDonenessOptions.map(option=>`<option value="${option.id}" ${option.id===choice.id?'selected':''}>${option.label}</option>`).join('')}</select><p class="steak-doneness-note" aria-live="polite">Target: ${steakTargetTemperature(choice)}. Check with a thermometer; thickness and heat control cooking time. The guide includes basting within second-side cooking, then resting.</p><p class="steak-safety-note">For food safety, the USDA recommends whole beef steaks reach at least 63°C / 145°F and rest for 3 minutes. Rare and medium-rare are below that recommended minimum; use a food thermometer.</p></fieldset>`}
+document.addEventListener('change',e=>{if(e.target.id!=='steakDoneness')return;const choice=steakDonenessOptions.find(option=>option.id===e.target.value);if(!choice)return;steakDoneness=choice.id;timerStepKey='';const note=$('.steak-doneness-note');if(note)note.textContent=`Target: ${steakTargetTemperature(choice)}. Check with a thermometer; thickness and heat control cooking time. The guide includes basting within second-side cooking, then resting.`});
 document.addEventListener('click',e=>{const button=e.target.closest('[data-action="cook"]');if(button&&!purchasedMeal(current.id)){e.preventDefault();e.stopImmediatePropagation();toast('Order this meal kit to unlock the cooking guide.')}},true);
 function purchasedMeal(id){return purchases.find(x=>x.id===id&&typeof x.orderId==='string'&&x.orderId.startsWith('DEMO-')&&typeof x.purchasedAt==='string')}
 function unlockPurchasedGuides(items,orderId){if(typeof orderId!=='string'||!orderId.startsWith('DEMO-'))throw new Error('A confirmed order is required to unlock cooking guides.');for(const item of items){purchases=purchases.filter(x=>x.id!==item.id);purchases.unshift({...item,orderId,purchasedAt:new Date().toISOString()})}try{localStorage.setItem(accountKey('cookly-purchases'),JSON.stringify(purchases))}catch{toast('Guides unlocked for this visit. Device storage is unavailable.')}}
@@ -421,20 +6562,11 @@ const mockStepDuration=18;
 // Detailed steps can use {{0}}, {{1}}, etc. to pull live quantities from ingredients.
 // Each recipe may define guideSteps: [{ title, text, video, ingredientIndexes }].
 // video is a different MP4 for that step; ingredientIndexes references the recipe's ingredients array.
-const detailedGuideOverrides={
- 'menu-steak-rice-bowl':[
-  {title:'Cook the rice and prepare the sauce',text:'Rinse {{4}} and cook according to the packet. Mince {{3}} and {{13}}, dice {{14}}, and slice {{15}}. Whisk together {{5}}, {{6}}, {{7}}, {{8}}, and {{9}}.',ingredientIndexes:[3,4,5,6,7,8,9,13,14,15]},
-  {title:'Season and sear the steak',text:'Pat {{0}} dry and season both sides with {{1}}. Sear in a hot pan with a little oil, then add {{2}} and {{3}} to baste. Use the doneness setting you chose and check the center with a food thermometer.',ingredientIndexes:[0,1,2,3]},
-  {title:'Finish the bowl',text:'Warm {{10}} and sauté {{13}} and {{14}} until fragrant. Fry {{11}} if using. Spoon the sauce over the cooked rice, add sliced steak and corn, then finish with {{12}} and {{15}}.',ingredientIndexes:[2,4,10,11,12,13,14,15]}
- ],
- 'beef-salpicao':[
-  {title:'Rice first, then prep',text:'Rinse {{4}} and cook according to the packet. Pat {{0}} dry. Slice {{1}} thinly and cut {{3}} into even pieces. Set {{2}} beside the stove.',ingredientIndexes:[0,1,2,3,4]},
-  {title:'Toast the garlic and sear',text:'Warm a little pantry oil in a pan. Toast {{1}} until lightly golden, then lift it out and set aside. Sear {{0}} in batches, leaving space between the pieces. Add {{3}} and cook until softened.',ingredientIndexes:[0,1,3]},
-  {title:'Coat with sauce and plate',text:'Return the toasted garlic to the pan. Add {{2}} and toss until the beef and mushrooms are coated. Finish the beef to your preferred doneness. Divide the cooked rice between the plates and spoon the beef and pan sauce on top.',ingredientIndexes:[2]}
- ]
-};
+// Each recipe now carries its researched, explicit guide steps.
+const detailedGuideOverrides={};
 function quantityForIngredient(i){return formatQuantity(i.amount*servings/2,i.unit)+' '+i.name.toLowerCase()}
-function guideStepData(){const explicit=current.guideSteps?.[guideStep]||detailedGuideOverrides[current.id]?.[guideStep],step={...explicit,title:explicit?.title||`Step ${guideStep+1}`,text:explicit?.text??current.steps[guideStep]};const searStep=current.id==='butter-steak'?6:current.id==='menu-steak-rice-bowl'?1:-1;if(isSteakBowl(current)&&guideStep===searStep){const choice=selectedSteakDoneness();return {...step,timerSeconds:choice.searMinutes*60,timerNote:`Set for about ${choice.searMinutes} minutes on this side; flip and restart. Approx. target: ${steakTargetTemperature(choice)}. Timing varies by thickness and pan heat.`,text:`For a steak about 2.5 cm (1 in) thick, sear for about ${choice.searMinutes} minutes on each side, flipping once. Use an instant-read food thermometer to check the center; ${choice.label.toLowerCase()} is approximately ${steakTargetTemperature(choice)}. The USDA recommends whole beef steaks reach at least 63 degrees Celsius / 145 degrees Fahrenheit and rest for 3 minutes; rare and medium-rare are below that recommended minimum.`}}return step}
+function guideStepData(){const explicit=current.guideSteps?.[guideStep]||detailedGuideOverrides[current.id]?.[guideStep],step={...explicit,title:explicit?.title||`Step ${guideStep+1}`,text:explicit?.text??current.steps[guideStep]};if(isSteakBowl(current)&&step.steakPhase==='baste'){const choice=selectedSteakDoneness();step.text+=` Selected ${choice.label.toLowerCase()} target: ${steakTargetTemperature(choice)}. Rare and medium-rare are below the food-safety minimum of 63°C with at least 3 minutes rest.`}return step}
+function cookingResearch(recipe){if(!recipe.cookingSources?.length)return '';return `<details class="guide-box-reference cooking-research"><summary>Cooking notes &amp; sources</summary><p>${escapeHTML(recipe.cookingNotes)}</p><ul>${recipe.cookingSources.map(source=>`<li><a href="${escapeHTML(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(source.title)}</a></li>`).join('')}</ul><p>Reviewed ${escapeHTML(recipe.cookingReviewed)} · Methods adapted for this kit; not kitchen-tested.</p></details>`}
 function detailedStepText(){const step=guideStepData();let text=step.text.replace(/\{\{(\d+)\}\}/g,(_,index)=>current.ingredients[Number(index)]?quantityForIngredient(current.ingredients[Number(index)]):'');if(current.guideSteps?.[guideStep]||detailedGuideOverrides[current.id])return text.replace(/(\d+(?:\.\d+)?)°C/g,(_,n)=>preferences.temperature==='fahrenheit'?`${Math.round(Number(n)*9/5+32)}°F`:`${n}°C`);
  // Match ingredient references in the original instructions without changing their cooking method.
  const replacements=[];current.ingredients.forEach((ingredient,index)=>{const name=ingredient.name.toLowerCase();const aliases=[name];for(const word of ['rice','pasta','chicken','beef','tofu','salmon','shrimp','mushrooms','garlic','cream','spinach','chickpeas','tortillas','couscous','potatoes','basil','parsley','onion','carrots','beans'])if(name.includes(word))aliases.push(word);for(const alias of aliases)replacements.push({alias,index})});replacements.sort((a,b)=>b.alias.length-a.alias.length);const tokens=[];text=text.replace(/\bpasta water\b/gi,value=>{const token='§'+tokens.length+'§';tokens.push(value);return token});for(const {alias,index} of replacements){const escaped=alias.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');text=text.replace(new RegExp('\\b'+escaped+'\\b','gi'),()=>{const token='§'+tokens.length+'§';tokens.push(quantityForIngredient(current.ingredients[index]));return token})}text=formatGuideText(text);return text.replace(/§(\d+)§/g,(_,n)=>tokens[Number(n)])}
@@ -447,8 +6579,8 @@ function updateStepPreview(){const film=$('#mockStepFilm');if(!film||!current)re
 function syncStepPlayer(){if(!guide)return;if(!stepVideoSource()){updateStepPreview();return}const video=$('#stepVideo');if(video)video.addEventListener('error',()=>{$('#videoFailure').hidden=false});video?.querySelector('source')?.addEventListener('error',()=>{$('#videoFailure').hidden=false})}
 document.addEventListener('click',e=>{const action=e.target.closest('[data-film]')?.dataset.film;if(!action||!guide||!purchasedMeal(current.id))return;if(action==='replay'){stopStepPlayback();stepPlayback.elapsed=0}if(stepPlayback.playing)stopStepPlayback();else{if(stepPlayback.elapsed>=mockStepDuration)stepPlayback.elapsed=0;stepPlayback.playing=true;stepPlayback.started=Date.now();stepPlaybackTimer=setInterval(()=>{if(!$('#recipeDialog').open||!guide){stopStepPlayback();return}updateStepPreview()},100)}updateStepPreview()});
 document.addEventListener('input',e=>{if(e.target.id==='filmSeek'){const playing=stepPlayback.playing;stopStepPlayback();stepPlayback.elapsed=Math.max(0,Math.min(mockStepDuration,Number(e.target.value)||0));if(playing&&stepPlayback.elapsed<mockStepDuration){stepPlayback.playing=true;stepPlayback.started=Date.now();stepPlaybackTimer=setInterval(updateStepPreview,100)}updateStepPreview()}});
-function renderDetail(){if(!guide)stopStepPlayback();if(mealView){renderMealView();return}const r=current;$('#detailContent').innerHTML=`<div class="detail-hero ${guide?'has-guide-player':''}">${guide?guidePlayer():`<img src="${r.image}" alt="${r.name}">`}<div class="detail-top"><button class="icon-button" data-action="${guide?'back-detail':'close'}" aria-label="${guide?'Back to recipe':'Back to feed'}">${icon('back')}</button>${saveButton(r)}</div></div><div class="detail-body"><span class="eyebrow">${r.category} · Cookly original</span><h1 id="detailTitle">${r.name}</h1>${guide?renderGuide():`<p>${r.description}</p><div class="detail-meta"><span>${icon('clock')}${r.time} min</span><span>${r.difficulty}</span><span>Fresh meal kit</span></div><div class="servings"><span>Servings</span><div class="stepper"><button data-action="minus" aria-label="Decrease servings" ${servings===1?'disabled':''}>−</button><strong aria-live="polite">${servings}</strong><button data-action="plus" aria-label="Increase servings" ${servings===6?'disabled':''}>+</button></div></div>${isSteakBowl(r)?steakDonenessPicker():''}<p class="guide-locked-note">No payment is collected. After confirming your order, open your guide from the confirmation screen or History.</p><div class="kit-price"><span>Meal kit · ${servings} serving${servings>1?'s':''}</span><strong>${peso(Math.round(r.price*servings/2))}</strong></div><button class="secondary" data-action="add">${icon('box')} Add to Meal Box</button><h2>Inside your Cookly box</h2><ul class="ingredients">${r.ingredients.map(i=>`<li>${formatQuantity(i.amount*servings/2,i.unit)} ${i.name}</li>`).join('')}</ul><p class="muted">Quantities are for ${servings} servings. Pantry basics: water, cooking oil, salt, and pepper.</p>${personalReview(r)}`}</div>`;syncStepPlayer()}
-function renderGuide(){return `<p class="guide-pace-note">Watch this step, pause or replay, then try it yourself. Tap Next when you’re ready.</p><p class="muted">Step ${guideStep+1} of ${current.steps.length} · Serves ${servings}</p><div class="guide-progress"><span style="width:${(guideStep+1)/current.steps.length*100}%"></span></div><section class="guide-step"><span class="eyebrow">${['Get ready','Bring it together','Make it yours'][guideStep]||'Cooking step'}</span><h2>${escapeHTML(guideStepData().title)}</h2><div class="step-instructions">${detailedStepText().split(/(?<=[.!?])\s+/).map(line=>`<p>${escapeHTML(line)}</p>`).join('')}</div></section>${guideIngredients()}${timerMarkup()}<div class="guide-controls"><button class="secondary" style="margin:0" data-action="previous" ${guideStep===0?'disabled':''}>Back</button><button class="primary" data-action="next">${guideStep===current.steps.length-1?'Finish cooking':'Next step'} ${icon('arrow')}</button></div>`}
+function renderDetail(){if(!guide)stopStepPlayback();if(mealView){renderMealView();return}const r=current;$('#detailContent').innerHTML=`<div class="detail-hero ${guide?'has-guide-player':''}">${guide?guidePlayer():`<img src="${r.image}" alt="${r.name}">`}<div class="detail-top"><button class="icon-button" data-action="${guide?'back-detail':'close'}" aria-label="${guide?'Back to recipe':'Back to feed'}">${icon('back')}</button>${saveButton(r)}</div></div><div class="detail-body"><span class="eyebrow">${r.category} · Cookly original</span><h1 id="detailTitle">${r.name}</h1>${guide?renderGuide():`<p>${r.description}</p><div class="detail-meta"><span>${icon('clock')}${r.time} min</span><span>${r.difficulty}</span><span>Fresh meal kit</span></div><div class="servings"><span>Servings</span><div class="stepper"><button data-action="minus" aria-label="Decrease servings" ${servings===1?'disabled':''}>−</button><strong aria-live="polite">${servings}</strong><button data-action="plus" aria-label="Increase servings" ${servings===6?'disabled':''}>+</button></div></div>${isSteakBowl(r)?steakDonenessPicker():''}<p class="guide-locked-note">No payment is collected. After confirming your order, open your guide from the confirmation screen or History.</p><div class="kit-price"><span>Meal kit · ${servings} serving${servings>1?'s':''}</span><strong>${peso(Math.round(r.price*servings/2))}</strong></div><button class="secondary" data-action="add">${icon('box')} Add to Meal Box</button><h2>Inside your Cookly box</h2><ul class="ingredients">${r.ingredients.map(i=>`<li>${formatQuantity(i.amount*servings/2,i.unit)} ${i.name}</li>`).join('')}</ul><p class="muted">Quantities are for ${servings} servings. Pantry basics: water, cooking oil, salt, and pepper.</p>${personalReview(r)}${cookingResearch(r)}`}</div>`;syncStepPlayer()}
+function renderGuide(){return `<p class="guide-pace-note">Watch this step, pause or replay, then try it yourself. Tap Next when you’re ready.</p><p class="muted">Step ${guideStep+1} of ${current.steps.length} · Serves ${servings}</p><div class="guide-progress"><span style="width:${(guideStep+1)/current.steps.length*100}%"></span></div><section class="guide-step"><span class="eyebrow">${['Get ready','Bring it together','Make it yours'][guideStep]||'Cooking step'}</span><h2>${escapeHTML(guideStepData().title)}</h2><div class="step-instructions">${detailedStepText().split(/(?<=[.!?])\s+/).map(line=>`<p>${escapeHTML(line)}</p>`).join('')}</div></section>${guideIngredients()}${timerMarkup()}${cookingResearch(current)}<div class="guide-controls"><button class="secondary" style="margin:0" data-action="previous" ${guideStep===0?'disabled':''}>Back</button><button class="primary" data-action="next">${guideStep===current.steps.length-1?'Finish cooking':'Next step'} ${icon('arrow')}</button></div>`}
 function openRecipe(id){if(!accessReady())return render();current=recipes.find(r=>r.id===id);if(!current){toast('This recipe is no longer available.');return}servings=preferences.servings;steakDoneness='medium';guide=false;mealView='';renderDetail();$('#recipeDialog').showModal();$('#recipeDialog').scrollTop=0}
 function updateDetail(action){const previousVideo=$('#stepVideo'),videoTime=previousVideo?.currentTime||0,videoPlaying=previousVideo&&!previousVideo.paused,previousKey=stepPlayback.key;const dialog=$('#recipeDialog'),top=dialog.scrollTop;renderDetail();dialog.scrollTop=top;dialog.querySelector(`[data-action="${action}"]`)?.focus({preventScroll:true});const video=$('#stepVideo');if(video&&previousKey===stepPlayback.key){video.addEventListener('loadedmetadata',()=>{video.currentTime=videoTime;if(videoPlaying)video.play().catch(()=>{})},{once:true})}if(action==='next'||action==='previous')dialog.scrollTop=0}
 document.addEventListener('click',e=>{const nav=e.target.closest('[data-nav]');if(nav)return navigate(nav.dataset.nav);const cat=e.target.closest('[data-category]');if(cat){const categoryScroller=page==='explore'?$('.menu-cuisines'):$('.categories');const left=categoryScroller.scrollLeft;category=cat.dataset.category;visibleMenuCount=12;document.querySelectorAll('[data-category]').forEach(b=>{b.classList.toggle('active',b.dataset.category===category);b.setAttribute('aria-pressed',b.dataset.category===category)});categoryScroller.scrollLeft=left;$('.feed-heading h2').textContent=page==='saved'?'Saved for later':category==='For You'?(page==='home'?'Featured for you':'All dishes'):category;return renderFeed()}const open=e.target.closest('[data-open]');if(open)return openRecipe(open.dataset.open);const save=e.target.closest('[data-save]');if(save){const id=save.dataset.save;saved.has(id)?saved.delete(id):saved.add(id);const isSaved=saved.has(id);persist();save.classList.toggle('saved',isSaved);save.setAttribute('aria-pressed',String(isSaved));save.setAttribute('aria-label',`${isSaved?'Unsave':'Save'} ${recipes.find(r=>r.id===id).name}`);if(page==='saved')renderFeed();if(page==='profile')renderProfile();toast(isSaved?'Saved for your next craving':'Removed from saved recipes');return}const remove=e.target.closest('[data-remove]');if(remove){box.splice(+remove.dataset.remove,1);persist();render();return}const action=e.target.closest('[data-action]')?.dataset.action;if(!action)return;if(action==='show-more'){visibleMenuCount+=12;return renderFeed()}if(action==='timer-toggle')toggleTimer();if(action==='timer-reset'){stopTimer();timerSeconds=timerDuration;updateDetail('timer-reset')}if(action==='search'){navigate('explore');$('#searchInput').focus()}if(action==='all-cuisines'){category='For You';render()}if(action==='reset')navigate(page==='home'?'home':'explore');if(action==='close')$('#recipeDialog').close();if(action==='minus'||action==='plus'){servings=Math.max(1,Math.min(6,servings+(action==='plus'?1:-1)));updateDetail(action)}if(action==='add'){box.push({id:current.id,servings});persist();renderNav();$('#recipeDialog').close();navigate('box');toast(`${current.name} added to your Meal Box`)}if(action==='cook'){guide=true;guideStep=0;renderDetail();$('#recipeDialog').scrollTop=0}if(action==='back-detail'){guide=false;renderDetail()}if(action==='previous'){guideStep=Math.max(0,guideStep-1);updateDetail('previous')}if(action==='next'){if(guideStep<current.steps.length-1){guideStep++;updateDetail('next')}else{guide=false;stopTimer();markCooked();mealView='finished';renderDetail()}}});

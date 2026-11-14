@@ -109,3 +109,13 @@ COOKLY_DELETION=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node
 
 `tests/deletion-database.sql` tests both real database functions using fixtures
 inside a rollback transaction. Never use an existing user's ID as a fixture.
+
+
+## Cooking research
+
+All 65 recipes carry explicit guide steps, timer checkpoints, preparation assumptions and linked sources visible in the app. [COOKING_RESEARCH.md](COOKING_RESEARCH.md) lists each kit adaptation. Methods use the existing ingredients and prepared sauces; estimates are not kitchen-tested. Packet directions govern supplied bases and sauces. Timers do not establish doneness.
+
+```sh
+node tests/cooking-guides.cjs
+COOKLY_COOKING=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+```
