@@ -65,6 +65,7 @@ The browser audit needs Playwright and Chrome:
 npm install --prefix /tmp/cookly-audit playwright
 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
 node tests/images.cjs
+PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/production.cjs
 ```
 
 Set `CHROME_PATH` if Chrome is installed elsewhere. The browser suite serves
@@ -78,3 +79,6 @@ Unsynced changes remain in an account-specific pending cache and are retried
 after login; the newer pending snapshot wins over an older cloud snapshot.
 This is snapshot synchronization, not conflict-free simultaneous editing.
 Demo purchases and saved addresses remain device-only, scoped to the account.
+
+`tests/production.cjs` checks the actual production welcome gate and performs one
+intentionally invalid login. It does not create accounts or submit orders.

@@ -1,0 +1,29 @@
+{
+  "deployment": "https://cookly.pages.dev/",
+  "checkedAt": "2026-11-14T13:31:37.959Z",
+  "result": "PASS",
+  "checks": [
+    "Live welcome screen",
+    "Supabase client initialized from live configuration",
+    "Main app blocked before login",
+    "Direct navigation blocked",
+    "Required email validation",
+    "Live invalid login error displayed",
+    "Navigation remains locked after invalid login",
+    "Welcome fits 390/768/1440 widths",
+    "No uncaught page errors"
+  ],
+  "responses": [
+    {
+      "path": "/api/config",
+      "status": 200
+    },
+    {
+      "path": "/auth/v1/token",
+      "status": 400
+    }
+  ],
+  "limitations": [
+    "Confirmed account login, onboarding and database row isolation require authenticated Supabase access and confirmed test accounts"
+  ]
+}

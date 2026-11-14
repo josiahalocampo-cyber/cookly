@@ -2,7 +2,9 @@
 
 ## Production follow-up — 14 November 2026
 
-Supabase startup completed during the follow-up. Live auth health and public auth settings now return HTTP 200; invalid login returns HTTP 400 `invalid_credentials`; anonymous account reads return an empty array. Test registration with the reserved example.com address was rejected as `email_address_invalid`, so no live test account was created. The historical DNS blocker below is resolved; authenticated account persistence, cross-account RLS tests and confirmation redirects still require an authenticated Supabase connection and confirmed test accounts. No administrative database change has yet been applied.
+Supabase startup completed during the follow-up. Live auth health and public auth settings now return HTTP 200; invalid login returns HTTP 400 `invalid_credentials`; anonymous account reads return an empty array. Test registration with the reserved example.com address was rejected as `email_address_invalid`, so no live test account was created. The historical DNS blocker below is resolved; authenticated account persistence, cross-account RLS tests and confirmation redirects still require an authenticated Supabase connection and confirmed test accounts. No administrative database change has yet been applied. Commit `443139e` was pushed to `main` and Cloudflare deployed it: the live `app.js` SHA-256 matches the local file (`fafae39dab435780f324991f34b266704f2a7225f4cb6083b1e63ff80a13e375`).
+
+The live browser smoke test also passed: real Supabase client initialization, mandatory login gate, blocked direct navigation, required-email validation, a real invalid-login response, responsive welcome screen and no uncaught page errors. Evidence: `tests/production-smoke.json`.
 
 ## A. Fully functional features confirmed by testing
 
@@ -48,7 +50,7 @@ Existing layout, branding, colors, palettes, recipes, ingredient values, prices 
 2. **Two Steak Rice Bowl records:** `menu-steak-rice-bowl` is ₱459 and `butter-steak` is ₱499, with different ingredients/instructions. Each record is internally consistent across details/cart, but the identical display name is ambiguous. Confirm whether these are separate products and how they should be labeled; neither price/name was changed.
 3. **Live backend (historical finding, resolved after project startup):** the public deployment at https://cookly.pages.dev returns a Supabase URL, but `vyktgqrfqwlfcsyirzes.supabase.co` did not resolve from this environment (independently checked with Node, Python and curl). Confirm/restore the Supabase project or supply its current public configuration. No database architecture migration was performed.
 4. **Real cooking videos, logo and app icons:** these assets are absent. Guides honestly label the existing animated mock previews. Provide final branded assets and verified step videos if desired; no replacement branding was fabricated.
-5. **Production deployment:** local fixes have not been deployed. The deployed app.js hash differs from the local implementation. Deployment is a separate reviewable step after the backend configuration is corrected.
+5. **Production deployment:** completed for commit `443139e`; the live app.js hash matches the reviewed local implementation. Authenticated database verification remains pending.
 
 ## D. Food-by-food verification
 
@@ -135,6 +137,6 @@ For **every row**, configured name, description, category, positive price, nonem
 
 ## F. Final application status
 
-**Partially functional; not production complete.** The local application flow and all 65 food interactions passed the documented browser integration checks, with image identity issues explicitly left unresolved. The production backend connection must be restored, actual Supabase/RLS tests completed, food imagery/data approved, and the reviewed local changes deployed before claiming a reliable live application.
+**Partially functional; not production complete.** The local application flow and all 65 food interactions passed the documented browser integration checks, with image identity issues explicitly left unresolved. The production backend now responds and the reviewed changes are deployed. Actual confirmed-account and cross-account RLS tests, plus approved food imagery/data, are still needed before claiming a complete production application.
 
 Reproduce with the commands in README.md. `tests/audit.cjs` uses a Supabase test double and local-file routing. `tests/food-audit.json` records individual food interaction results; `tests/image-audit.json` records real photo HTTP results. The browser test's downloaded-image previews live in `/tmp/cookly-audit` and are not required for behavior assertions. No passwords, auth tokens or Supabase keys are stored in the reports.
