@@ -10,5 +10,9 @@
     "No destructive test on owner account",
     "Downloaded copies, other-device caches and provider backups are not remotely erased",
     "Simultaneous multi-device edits remain snapshot synchronization"
-  ]
+  ],
+  "productionCommit": "282db30",
+  "liveConfirmationAndCancelChecks": "PASS for both data-only and account deletion",
+  "productionSourceMatchesLocal": true,
+  "ownerAccountStillSignedIn": true
 }

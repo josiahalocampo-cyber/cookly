@@ -172,3 +172,8 @@ cancellation, request failure without local data loss, retry, duplicate-submit
 protection, account logout/removal, own-cache clearing, other-account cache
 isolation, and ignoring stale onboarding drafts after a server reset. Remote
 downloaded copies and provider backups are explicitly outside instant erasure.
+
+The deletion feature is live in commit `282db30`; the production app.js hash
+matches the tested local source. Both live confirmation dialogs were opened
+and cancelled, and the owner remained signed in with their original profile.
+No destructive operation was submitted against the owner account.
