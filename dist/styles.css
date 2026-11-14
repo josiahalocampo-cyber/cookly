@@ -141,3 +141,11 @@ body{font-optical-sizing:auto}button,input,select,textarea{font-family:var(--fon
 .focus-timer-actions{display:flex;gap:16px;width:100%;max-width:560px;margin:auto 0 0}
 .focus-timer-actions button{flex:1;margin:0;min-height:64px;font-size:22px}
 @media(max-height:500px){.focus-timer-content{gap:8px}#focusTimerClock{font-size:24vh}.focus-timer-note{margin:0}}
+
+.account-delete-actions{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin-top:26px;padding-top:24px;border-top:1px solid var(--border,#333)}
+.account-delete-actions .text-button{color:#d97070;text-align:left}
+.account-deletion-page{padding:32px;max-width:520px;margin:auto}
+.account-deletion-page h1{font-size:28px}.account-deletion-page p{line-height:1.6}
+.account-deletion-page label{display:block;margin-top:24px}.account-deletion-page input{display:block;margin-top:12px;width:100%;box-sizing:border-box;padding:14px;border:1px solid var(--border,#666);border-radius:12px;background:var(--surface,#171717);color:var(--text,#fff);font:inherit}
+.account-deletion-buttons{display:grid;gap:12px;margin-top:24px}.account-deletion-buttons .secondary{margin:0}.account-danger{background:#9b3030!important;color:#fff!important}
+#accountDeletionError{color:#d97070}#accountDeletionDialog{max-width:min(580px,calc(100vw - 24px))}

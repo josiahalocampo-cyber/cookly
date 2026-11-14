@@ -1,0 +1,14 @@
+{
+  "databaseFunctionsInstalled": true,
+  "anonymousExecutionAllowed": false,
+  "callerDerivedFromAuthUID": true,
+  "liveDatabaseTransactionTests": "PASS",
+  "testFixturesRolledBack": true,
+  "ownerAccountDeleted": false,
+  "browserMockDeletionTests": "PASS",
+  "limitations": [
+    "No destructive test on owner account",
+    "Downloaded copies, other-device caches and provider backups are not remotely erased",
+    "Simultaneous multi-device edits remain snapshot synchronization"
+  ]
+}

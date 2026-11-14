@@ -150,3 +150,25 @@ For **every row**, configured name, description, category, positive price, nonem
 **Partially functional; not production complete.** The local application flow and all 65 food interactions passed the documented browser integration checks, with image identity issues explicitly left unresolved. The production backend now responds and the reviewed changes are deployed. The core production account and demo-order journey is verified. Approved food imagery/data, actual video/icon assets, and the remaining compatibility checks are still needed before claiming every requested feature is production complete.
 
 Reproduce with the commands in README.md. `tests/audit.cjs` uses a Supabase test double and local-file routing. `tests/food-audit.json` records individual food interaction results; `tests/image-audit.json` records real photo HTTP results. The browser test's downloaded-image previews live in `/tmp/cookly-audit` and are not required for behavior assertions. No passwords, auth tokens or Supabase keys are stored in the reports.
+
+## Self-service deletion addition
+
+The account card now offers two confirmed actions: delete all Cookly data while
+keeping the login, or permanently delete the account and its linked data.
+The same options are available after exiting incomplete onboarding. The
+confirmation explains the difference and requires `DELETE DATA` or
+`DELETE ACCOUNT`; Cancel performs no operation.
+
+Both narrow Supabase functions were installed through the production SQL
+Editor. They derive identity from `auth.uid()`, accept no target account ID,
+have a fixed empty search path, and deny anonymous execution. Actual database
+tests passed for owner data clearing, keeping the login, auth-identity deletion
+and cascade, anonymous denial, rejection of deleted identities, and preserving
+a second account. All test fixtures were rolled back. The owner's account was
+not deleted. See `supabase/account-deletion.sql` and `tests/deletion-database.sql`.
+
+Browser tests with disposable simulated identities verify typed confirmation,
+cancellation, request failure without local data loss, retry, duplicate-submit
+protection, account logout/removal, own-cache clearing, other-account cache
+isolation, and ignoring stale onboarding drafts after a server reset. Remote
+downloaded copies and provider backups are explicitly outside instant erasure.

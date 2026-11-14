@@ -15,7 +15,8 @@ If authentication or the initial account load fails, the main app stays locked.
    Philippines. Keep the database password private.
 2. In **Project Settings → API**, copy the project URL and the **publishable**
    (or legacy `anon`) key. Never use a `service_role` or secret key in this app.
-3. In **SQL Editor**, run [`supabase/schema.sql`](./supabase/schema.sql).
+3. In **SQL Editor**, run [`supabase/schema.sql`](./supabase/schema.sql), then
+   [`supabase/account-deletion.sql`](./supabase/account-deletion.sql).
 4. In **Authentication → URL Configuration**, set the Site URL to the
    Cloudflare Pages URL once the project has been created. Add that same URL
    under Redirect URLs.
@@ -82,3 +83,29 @@ Demo purchases and saved addresses remain device-only, scoped to the account.
 
 `tests/production.cjs` checks the actual production welcome gate and performs one
 intentionally invalid login. It does not create accounts or submit orders.
+
+## Account and data deletion
+
+Profile → Your Cookly account offers **Delete my Cookly data** and **Delete my
+account**. Each requires an explicit typed confirmation and offers Cancel.
+Data deletion clears synced personal fields but keeps the login; profile setup
+is required again. A minimal account-linked empty row remains so older cached
+onboarding drafts are not mistaken for new account data. Account deletion
+removes the Supabase auth identity and cascades to its Cookly row.
+
+The functions take no user-ID argument: identity comes from `auth.uid()`.
+Anonymous execution is revoked; the browser never receives an admin key.
+Current-browser account caches, saved addresses and demo history are cleared
+only after server success. Other open tabs receive a deletion notification.
+Downloaded copies, other devices' caches and provider backup retention remain
+outside the browser's ability to erase. Simultaneous edits on another device
+are not a conflict-free synchronization system.
+
+Deletion verification:
+
+```sh
+COOKLY_DELETION=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+```
+
+`tests/deletion-database.sql` tests both real database functions using fixtures
+inside a rollback transaction. Never use an existing user's ID as a fixture.
