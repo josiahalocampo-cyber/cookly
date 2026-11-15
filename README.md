@@ -119,3 +119,17 @@ All 65 recipes carry explicit guide steps, timer checkpoints, preparation assump
 node tests/cooking-guides.cjs
 COOKLY_COOKING=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
 ```
+
+
+## Email confirmation flow
+
+Signup requires confirming the email and then manually signing in. Supabase’s **Confirm email** setting must remain enabled. The email template body is versioned in `supabase/confirmation-email.html` (saved in the production dashboard). Keep its `{{ .ConfirmationURL }}` placeholder and the configured Cookly Site URL.
+
+Cookly validates confirmation callback tokens without importing them into a session or persisting them, removes them from the URL, and shows a confirmation message. Preferences only open after a successful password signin for a new/incomplete account. The eye icon toggles password visibility in either account mode.
+
+```sh
+COOKLY_EMAIL_CONFIRMATION=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+COOKLY_AUTH_UI=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+```
+
+Implementation references: [Supabase signup](https://supabase.com/docs/reference/javascript/auth-signup), [email templates](https://supabase.com/docs/guides/auth/auth-email-templates), and [authenticated getUser(token)](https://supabase.com/docs/reference/javascript/auth-getuser).

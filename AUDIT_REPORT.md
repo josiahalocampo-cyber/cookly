@@ -1,5 +1,16 @@
 # Cookly functionality audit — 14 November 2026
 
+## Email confirmation and password visibility — 15 November 2026
+
+Both account modes now have an accessible eye button that shows/hides the existing password without changing its value. Mode switches and successful signup clear the password and restore masking. Signup keeps the user signed out, shows confirmation instructions and presents the sign-in form. The explicit sign-in action remains necessary before new-user profile/preferences setup.
+
+Confirmation returns are captured before SDK initialization, URL credentials are removed immediately, and a separate Supabase client with URL detection, persistence and refresh disabled validates the token with `getUser(token)`. Only an authenticated response containing `email_confirmed_at` produces “Your email is confirmed! Please go back to Cookly to sign in.” The callback never imports a session, reads a stored session, saves profile data or opens preferences. A manual button returns to signin; refresh shows normal account access after the consumed callback URL is cleared. Invalid/expired links show an error. Same-tab hash callbacks are also handled; in-flight session activation is blocked while confirmation is displayed. Normal password sessions retain existing persistence.
+
+The production Supabase dashboard was inspected: Confirm email is ON. The confirmation email button already said “Confirm email address”; its surrounding text was updated to explain returning to Cookly and signing in before preferences. Saving succeeded and the edited template remained after reload. The saved body is versioned at `supabase/confirmation-email.html`. No SMTP credentials or security requirements were changed.
+
+Passed browser fixture checks: password visibility in both modes, signup staying signed out, rejection of unconfirmed signin, successful confirmation without stored tokens/session/onboarding, fresh-tab and existing-tab callbacks, callback refresh, manual signin opening preferences, expired/invalid links (even with an existing unrelated stored session), and light/dark mobile layouts. `COOKLY_EMAIL_CONFIRMATION=1` and `COOKLY_AUTH_UI=1` run these through `tests/audit.cjs`. These are local Supabase test-double checks; a new real confirmation email was not sent in this revision. Real email delivery was verified in the earlier production journey.
+
+
 ## Account-access interface — 15 November 2026
 
 Sign in and Create account now have an explicit two-option mode switch, selected-state contrast, separate headings and guidance, and one matching full-width submit action. Signup explains the eight-character password minimum and email confirmation; password autofill uses new-password for signup and current-password for signin. Switching modes preserves email, clears password and old errors, and never submits the form. Successful authentication resets the next signed-out screen to signin. Existing authenticated profile and deletion controls are unchanged.
