@@ -8,7 +8,7 @@ All 65 recipes now have individual AI-generated illustrative photographs with co
 
 Item cards now use consistent crops, readable dish descriptions and aligned prices. Herb butter / Garlic butter badges distinguish the two steak kits while keeping product names, prices and recipe ingredients unchanged. Demo checkout and labeled mock videos remain intentional as requested.
 
-Passed: all 130 food assets decode at expected dimensions; all branding/icon/social exports decode; both header wordmarks in light/dark; maskable manifest entry; responsive layouts at 320/390/768/1440; complete 65-food/276-step browser regression; all 48 main-screen/theme/width combinations; cooking controls and quantity/rice regressions. No uncaught browser errors were observed. See `tests/branding-results.json` and the updated image/food audit evidence.
+Passed: all 130 food assets decode at expected dimensions; all branding/icon/social exports decode; both header wordmarks in light/dark; maskable manifest entry; responsive layouts at 320/390/768/1440; complete 65-food/276-step browser regression; all 48 main-screen/theme/width combinations; cooking controls and quantity/rice regressions. No uncaught browser errors were observed. See `tests/branding-results.json` and the updated image/food audit evidence. Production implementation `784f9aa` is live: all 142 checked food/branding assets returned usable image data at the expected dimensions, both theme wordmarks displayed, and deployed JavaScript matched the local SHA256 `9897df2b1cff851c379bf3e8743ccc7146391f844cb0afa3d6995a35ce75b9aa`. Evidence: `tests/branding-production-results.json`.
 
 
 ## Final regression pass — 15 November 2026

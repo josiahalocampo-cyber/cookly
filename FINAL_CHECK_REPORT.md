@@ -27,12 +27,12 @@ No real account was deleted, no real password was changed, and no new confirmati
 - Checkout is explicitly a demo: it takes no payments and dispatches no deliveries. There is no live stock or fulfillment system.
 - Cooking previews are labeled animated mock walkthroughs, not recorded cooking videos. Published methods are researched kit adaptations, not physically kitchen-tested.
 - The former stock-photo mismatches are resolved with 65 reviewed AI-generated illustrative images. They represent the menu, not actual delivered-product photos or exact portion guarantees. The two steak kits retain their names/prices and show Herb butter / Garlic butter labels.
-- Final branding files are now supplied and tested. See `dist/assets/BRAND_GUIDE.md` for all masters and exports; live asset verification is recorded separately after deployment.
+- Final branding files are now supplied and tested. See `dist/assets/BRAND_GUIDE.md` for all masters and exports; all 142 food and brand assets were verified live after deployment.
 - Additional equipment choices save correctly; existing recommendation scoring specifically uses rice cooker and oven. Selecting an appliance does not create an unprovided alternative cooking method.
 
 ## Deployment
 
-The final address-feedback fix is live in implementation commit `90ccf26`. The deployed JavaScript exactly matched the local file (SHA256 `e3cf4ed5a33b02a9f503a2fe0ebc02e6f2b67e3abe8d43df049628716641ff10`), and the live account/recovery smoke checks passed after deployment.
+The final branding/food implementation is live in commit `784f9aa`. All **142** tested asset URLs (65 photos, 65 thumbnails and 12 brand/icon/share exports) returned usable images at their expected dimensions, with no failures. Both theme wordmarks displayed correctly. Deployed JavaScript matched the reviewed local SHA256 `9897df2b1cff851c379bf3e8743ccc7146391f844cb0afa3d6995a35ce75b9aa`. Evidence: `tests/branding-production-results.json`.
 
 ## Evidence
 

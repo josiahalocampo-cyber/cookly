@@ -1,0 +1,1012 @@
+{
+  "checkedAt": "2026-11-15T15:51:11.858Z",
+  "result": "PASS",
+  "sourceMatches": true,
+  "appSha256": "9897df2b1cff851c379bf3e8743ccc7146391f844cb0afa3d6995a35ce75b9aa",
+  "assets": [
+    {
+      "src": "assets/food/butter-steak-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-steak-rice-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/calamansi-pasta-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/calamansi-pasta.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/butter-steak.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/beef-salpicao-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-steak-rice-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/beef-salpicao.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/tofu-sisig-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/tofu-sisig.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/miso-salmon-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/miso-salmon.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/chicken-adobo.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/chicken-adobo-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/chickpea-masala-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/chickpea-masala.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/tomato-basil-pasta-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/tomato-basil-pasta.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/sesame-tofu-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/sesame-tofu-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/vegetable-kare-kare-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/vegetable-kare-kare.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/thai-basil-chicken.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/thai-basil-chicken-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/thai-coconut-curry-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-bbq-chicken-rice-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/thai-coconut-curry.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-bbq-chicken-rice-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/black-bean-tacos-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/korean-beef-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/black-bean-tacos.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/korean-beef-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-creamy-mushroom-chicken-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-creamy-mushroom-chicken.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/butter-chicken.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/butter-chicken-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-cajun-shrimp-rice-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-cajun-shrimp-rice.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/chicken-tacos.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/chicken-tacos-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-afritada-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-afritada.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-cheddar-mac-and-cheese.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-cheddar-mac-and-cheese-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/lemon-chicken-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/lemon-chicken.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-pork-menudo-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-pork-menudo.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-honey-mustard-chicken-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-honey-mustard-chicken.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-ginisang-monggo-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-ginisang-monggo.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-smoky-beef-rice-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-smoky-beef-rice-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-pesto-chicken-pasta.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-pesto-chicken-pasta-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-spinach-cream-fusilli.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-spinach-cream-fusilli-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-inasal-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-inasal-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-creamy-mushroom-penne-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-creamy-mushroom-penne.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-teriyaki-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-teriyaki-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-beef-bistek.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-beef-bistek-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-garlic-shrimp-linguine-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-garlic-shrimp-linguine.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-sesame-mushroom-udon.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-sesame-mushroom-udon-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-beef-yakiniku-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-beef-ragu-pasta.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-beef-yakiniku-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-beef-ragu-pasta-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-miso-butter-shrimp-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-miso-butter-shrimp.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-japanese-chicken-curry-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-ginger-tofu-rice-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-gochujang-chicken-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-ginger-tofu-rice-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-japanese-chicken-curry.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-gochujang-chicken-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-greek-chicken-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-korean-mushroom-rice.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-korean-mushroom-rice-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-greek-chicken-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-lemon-chickpea-couscous.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-lemon-chickpea-couscous-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-spicy-pork-bulgogi-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-thai-peanut-noodles-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-spicy-pork-bulgogi.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-garlic-shrimp-couscous-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-garlic-shrimp-couscous.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-thai-peanut-noodles.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-red-curry-chicken.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-red-curry-chicken-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-harissa-chicken-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-harissa-chicken-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-kimchi-tofu-rice-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-kimchi-tofu-rice.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-thai-garlic-shrimp-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-herbed-mushroom-couscous.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-herbed-mushroom-couscous-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-thai-garlic-shrimp.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-sesame-beef-noodles-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-sesame-beef-noodles.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-sweet-chili-chicken.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-palak-paneer-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-palak-paneer.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-green-curry-tofu.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-sweet-chili-chicken-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-green-curry-tofu-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-fajita-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-korma-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-korma.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chickpea-tikka-masala-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chickpea-tikka-masala.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-fajita-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chipotle-beef-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-coconut-dal-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-coconut-dal.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-smoky-bean-rice-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-smoky-bean-rice-bowl-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-lime-shrimp-tacos-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-lime-shrimp-tacos.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-aloo-chana-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chipotle-beef-bowl.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-aloo-chana.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-tinga-tacos.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 1024,
+      "ok": true
+    },
+    {
+      "src": "assets/food/menu-chicken-tinga-tacos-thumb.webp",
+      "status": 200,
+      "type": "image/webp",
+      "width": 360,
+      "ok": true
+    },
+    {
+      "src": "assets/apple-touch-icon.png",
+      "status": 200,
+      "type": "image/png",
+      "width": 180,
+      "ok": true
+    },
+    {
+      "src": "assets/icon-192.png",
+      "status": 200,
+      "type": "image/png",
+      "width": 192,
+      "ok": true
+    },
+    {
+      "src": "assets/icon-maskable-512.png",
+      "status": 200,
+      "type": "image/png",
+      "width": 512,
+      "ok": true
+    },
+    {
+      "src": "assets/cookly-logo.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "width": 292,
+      "ok": true
+    },
+    {
+      "src": "assets/cookly-logo-light.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "width": 292,
+      "ok": true
+    },
+    {
+      "src": "assets/icon-512.png",
+      "status": 200,
+      "type": "image/png",
+      "width": 512,
+      "ok": true
+    },
+    {
+      "src": "assets/brand-mark.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "width": 512,
+      "ok": true
+    },
+    {
+      "src": "assets/favicon-32.png",
+      "status": 200,
+      "type": "image/png",
+      "width": 32,
+      "ok": true
+    },
+    {
+      "src": "assets/social-card.png",
+      "status": 200,
+      "type": "image/png",
+      "width": 1200,
+      "ok": true
+    },
+    {
+      "src": "assets/cookly-logo.png",
+      "status": 200,
+      "type": "image/png",
+      "width": 584,
+      "ok": true
+    },
+    {
+      "src": "assets/social-card.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "width": 1200,
+      "ok": true
+    },
+    {
+      "src": "assets/cookly-logo-light.png",
+      "status": 200,
+      "type": "image/png",
+      "width": 584,
+      "ok": true
+    }
+  ],
+  "checks": [
+    "65 live full-size images and 65 thumbnails decode",
+    "All referenced branding/icon/social assets return real image MIME types",
+    "Icons match requested dimensions",
+    "Both header wordmarks display in matching themes",
+    "Production source matches reviewed local app"
+  ],
+  "limitations": [
+    "AI-generated illustrative menu photography; not actual delivered food"
+  ]
+}
