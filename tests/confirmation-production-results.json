@@ -1,11 +1,12 @@
 {
-  "checkedAt": "2026-11-15T15:13:47.481Z",
+  "checkedAt": "2026-11-15T16:13:55.056Z",
   "result": "PASS",
   "sourceMatches": true,
-  "appSha256": "e3cf4ed5a33b02a9f503a2fe0ebc02e6f2b67e3abe8d43df049628716641ff10",
+  "appSha256": "34cad4fbaed76b0b1483f23ea9c3c5e8aeb7eca140a82d2501ce838fac21b133",
   "checks": [
     "Live account modes and password visibility",
     "Ten equipment choices loaded in deployed app",
+    "64 active meals and one steak rice bowl",
     "Signup explains one account per email address",
     "Forgot password request screen and return",
     "Real Supabase rejection of an invalid recovery link",

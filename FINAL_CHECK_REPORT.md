@@ -1,6 +1,6 @@
-# Cookly final check — 15 November 2026
+# Cookly final check — 16 November 2026
 
-The final branding/food-imagery follow-up replaces the former missing-brand-asset and stock-photo issues. Core app flows passed the automated regression audit and the documented live smoke checks. One address-search feedback bug was found and fixed: preferences now visibly explains when no matching address is found. This is a working prototype assessment, not a certification of every production service or menu fact.
+The duplicate Herb butter Steak Rice Bowl has been retired; the Garlic butter version remains, leaving 64 active meals. Branding assets are supplied and tested. Real-photo replacement remains unfinished: current food images are AI-generated illustrations. Core app flows passed the automated regression audit and the documented live smoke checks. One address-search feedback bug was found and fixed: preferences now visibly explains when no matching address is found. This is a working prototype assessment, not a certification of every production service or menu fact.
 
 | Area | Result | What was checked |
 | --- | --- | --- |
@@ -9,7 +9,7 @@ The final branding/food-imagery follow-up replaces the former missing-brand-asse
 | Forgot password | Pass — fixtures; invalid link checked live | Email request/retry, matching new passwords, hidden/visible inputs, isolated recovery, old password rejected and new password accepted |
 | Duplicate emails | Pass — fixtures | Explicit/masked provider responses, case/space normalization, pending retries, original account/password preserved |
 | Preferences | Pass — fixtures | Mandatory profile/onboarding, resume after refresh, all 10 equipment choices and custom text saved/reloaded |
-| Menu / recipes | Pass — fixtures | All 65 searched/opened/priced/added/removed; all 276 guide steps rendered; quantities at 1/2/6 servings and C/F checked |
+| Menu / recipes | Pass — fixtures | All 64 active meals searched/opened/priced/added/removed; active guide steps rendered; quantities at 1/2/6 servings and C/F checked |
 | Cooking controls | Pass — fixtures | Doneness controls, step navigation, timer start/pause/reset, removed panels remain absent |
 | Saved items / history | Pass — fixtures | Save/review, account persistence/isolation, purchased demo guides, history |
 | Meal box / checkout | Pass — fixtures | Portions, totals, validation, demo confirmation, cart clearing and guide unlock |
@@ -26,11 +26,15 @@ No real account was deleted, no real password was changed, and no new confirmati
 
 - Checkout is explicitly a demo: it takes no payments and dispatches no deliveries. There is no live stock or fulfillment system.
 - Cooking previews are labeled animated mock walkthroughs, not recorded cooking videos. Published methods are researched kit adaptations, not physically kitchen-tested.
-- The former stock-photo mismatches are resolved with 65 reviewed AI-generated illustrative images. They represent the menu, not actual delivered-product photos or exact portion guarantees. The two steak kits retain their names/prices and show Herb butter / Garlic butter labels.
+- Food photography still needs replacement with appropriate real photographs, as requested. Current assets are AI-generated illustrations. The redundant Herb butter steak kit is excluded from browsing, search, saved meals and current carts; its past purchased guide remains accessible in History. Only the Garlic butter steak kit can be ordered.
 - Final branding files are now supplied and tested. See `dist/assets/BRAND_GUIDE.md` for all masters and exports; all 142 food and brand assets were verified live after deployment.
 - Additional equipment choices save correctly; existing recommendation scoring specifically uses rice cooker and oven. Selecting an appliance does not create an unprovided alternative cooking method.
 
-## Deployment
+## Latest catalog verification
+
+The focused catalog regression passed: 64 active dishes, one Steak Rice Bowl at ₱499, retired saved/cart cleanup, and historical guide access without reordering. The full 64-food audit and focused account/cooking checks passed for this revision. Read-only production checks verify the deployed source and active catalog; see `tests/confirmation-production-results.json`.
+
+## Earlier branding deployment
 
 The final branding/food implementation is live in commit `784f9aa`. All **142** tested asset URLs (65 photos, 65 thumbnails and 12 brand/icon/share exports) returned usable images at their expected dimensions, with no failures. Both theme wordmarks displayed correctly. Deployed JavaScript matched the reviewed local SHA256 `9897df2b1cff851c379bf3e8743ccc7146391f844cb0afa3d6995a35ce75b9aa`. Evidence: `tests/branding-production-results.json`.
 
