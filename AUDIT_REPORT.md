@@ -1,5 +1,12 @@
 # Cookly functionality audit — 14 November 2026
 
+## Equipment choices — 15 November 2026
+
+The equipment step now offers ten choices: Stovetop, Rice cooker, Oven, Air fryer, Microwave, Blender, Food processor, Grill, Steamer and Pressure cooker. The existing multi-select card layout and optional free-text equipment field remain. A shared options list drives both rendering and saved-value validation so the eight new options survive saving, cloud hydration and reload. Existing rice-cooker/oven IDs remain compatible. Descriptions explain the equipment’s general purpose; they do not promise alternative cooking instructions. Existing rice/oven recommendation scoring is unchanged.
+
+Focused browser checks passed: all ten selected and saved, restored after reload through the Supabase test double, free-text equipment retained, deselection/back navigation, invalid-value filtering and duplicate removal, preserved legacy selections, light/dark layout at 320/390/768 widths, and the reachable Continue button. Reproduce with `COOKLY_EQUIPMENT=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs`. No database migration is needed because equipment is stored in the existing preferences JSON.
+
+
 ## One email per account — 15 November 2026
 
 Supabase Auth already enforces email identity uniqueness; no public email-lookup endpoint or database permissions were added. Signup now normalizes surrounding whitespace and email case. Explicit duplicate errors (`user_already_exists` / `email_exists`) and Supabase’s masked response (no session and an empty identities array) route to signin with “This email already has a Cookly account. You can’t create another account with the same email. Please sign in or choose ‘Forgot password?’.” The email remains filled, the typed signup password is cleared, and no profile/session is created.

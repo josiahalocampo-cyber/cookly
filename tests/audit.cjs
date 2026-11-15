@@ -27,6 +27,7 @@ function fakeCloud(){
  for(let i=0;i<4;i++)await page.locator('#preferencesForm button[type=submit]').click();await page.locator('.recipe-card').first().waitFor();
  assert(await page.evaluate(()=>featuredPool().every(r=>r.tags.includes('Vegetarian'))));
  await page.evaluate(()=>navigate('explore'));
+ if(process.env.COOKLY_EQUIPMENT){await require('./equipment.cjs')({page,assert,errors});await browser.close();return}
  if(process.env.COOKLY_COOKING){await require('./cooking-ui.cjs')({page,assert,errors});await browser.close();return}
  if(process.env.COOKLY_DELETION){await require('./account-deletion.cjs')({page,assert,errors});await browser.close();return}
  if(process.env.COOKLY_SMOKE){await page.screenshot({path:'/tmp/cookly-audit/final-mobile.png'});await page.evaluate(()=>navigate('profile'));await page.locator('.palette-picker').waitFor();assert.equal(await page.locator('[name=colorTheme]').count(),8);assert.deepEqual(errors,[]);console.log('PASS: final welcome gate, profile onboarding, avatar and profile-only palette controls');await browser.close();return}
