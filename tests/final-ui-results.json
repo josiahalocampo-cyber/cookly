@@ -1,0 +1,297 @@
+{
+  "checkedAt": "2026-11-15T15:12:06.715Z",
+  "checks": [
+    {
+      "theme": "light",
+      "width": 320,
+      "page": "home",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "page": "explore",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "page": "saved",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "page": "box",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "page": "history",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "page": "profile",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "page": "home",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "page": "explore",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "page": "saved",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "page": "box",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "page": "history",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "page": "profile",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "page": "home",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "page": "explore",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "page": "saved",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "page": "box",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "page": "history",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "page": "profile",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "page": "home",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "page": "explore",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "page": "saved",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "page": "box",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "page": "history",
+      "result": "PASS"
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "page": "profile",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "page": "home",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "page": "explore",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "page": "saved",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "page": "box",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "page": "history",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "page": "profile",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "page": "home",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "page": "explore",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "page": "saved",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "page": "box",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "page": "history",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "page": "profile",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "page": "home",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "page": "explore",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "page": "saved",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "page": "box",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "page": "history",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "page": "profile",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "page": "home",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "page": "explore",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "page": "saved",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "page": "box",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "page": "history",
+      "result": "PASS"
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "page": "profile",
+      "result": "PASS"
+    }
+  ],
+  "limitations": [
+    "Local Chrome with Supabase test double",
+    "Food images use downloaded previews; exact dish identity is not certified"
+  ]
+}

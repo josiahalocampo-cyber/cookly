@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-11-15T06:55:42.403Z",
+  "checkedAt": "2026-11-15T15:07:27.684Z",
   "result": "PASS",
   "sourceMatches": true,
-  "appSha256": "f4d5a420b8d3327f1b5cc14189f68858d0316b5d3276d904d5b06439e6016025",
+  "appSha256": "4e71c48c044e2eaf08f97b9e616cda010feda553a6feced839eb11a993fcbb88",
   "checks": [
     "Live account modes and password visibility",
     "Ten equipment choices loaded in deployed app",

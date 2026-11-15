@@ -151,3 +151,14 @@ Duplicate-email signup is handled explicitly, including Supabase’s masked exis
 ```sh
 COOKLY_DUPLICATE_EMAIL=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
 ```
+
+
+## Final audit
+
+Current scope/results: [FINAL_CHECK_REPORT.md](FINAL_CHECK_REPORT.md).
+
+```sh
+PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+COOKLY_FINAL_UI=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+COOKLY_ADDRESSES=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+```

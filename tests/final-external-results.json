@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-11-15T15:10:02.764Z",
+  "checks": {
+    "anonymousAccountData": {
+      "status": 401,
+      "contentType": "application/json; charset=utf-8",
+      "blocked": true
+    },
+    "mapLibrary": {
+      "loaded": true,
+      "version": "1.9.4"
+    },
+    "addressSearch": {
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "matches": 1,
+      "philippines": true
+    },
+    "mapTile": {
+      "status": 200,
+      "contentType": "image/png"
+    },
+    "optionalBrandAssets": {
+      "cookly-logo.png": {
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "usableImage": false
+      },
+      "apple-touch-icon.png": {
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "usableImage": false
+      },
+      "icon-192.png": {
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "usableImage": false
+      },
+      "icon-512.png": {
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "usableImage": false
+      }
+    }
+  },
+  "limitations": [
+    "Read-only live checks; no real account data or password changed",
+    "Address lookup used the public city name Manila",
+    "Optional brand assets were not supplied"
+  ]
+}
