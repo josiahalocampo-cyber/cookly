@@ -29,6 +29,10 @@ No real account was deleted, no real password was changed, and no new confirmati
 - Final logo and app-icon PNGs have not been supplied. The text Cookly header works, but the listed image/icon paths currently return HTML fallback rather than usable images. Final install branding is incomplete.
 - Additional equipment choices save correctly; existing recommendation scoring specifically uses rice cooker and oven. Selecting an appliance does not create an unprovided alternative cooking method.
 
+## Deployment
+
+The final address-feedback fix is live in implementation commit `90ccf26`. The deployed JavaScript exactly matched the local file (SHA256 `e3cf4ed5a33b02a9f503a2fe0ebc02e6f2b67e3abe8d43df049628716641ff10`), and the live account/recovery smoke checks passed after deployment.
+
 ## Evidence
 
 See tests/food-audit.json, tests/image-audit.json, tests/final-ui-results.json, tests/final-external-results.json, tests/production-smoke.json and tests/confirmation-production-results.json. Reproduction commands and historical backend evidence are in README.md and AUDIT_REPORT.md.
