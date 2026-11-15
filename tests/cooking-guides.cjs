@@ -2,7 +2,7 @@ const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/st
 const source=fs.readFileSync('dist/app.js','utf8');
 const recipes=vm.runInNewContext(source.split('const icons=')[0]+';recipes');
 const baseline=vm.runInNewContext(cp.execFileSync('git',['show','HEAD:dist/app.js'],{encoding:'utf8'}).split('const icons=')[0]+';recipes');
-assert.equal(recipes.length,65);
+assert.equal(recipes.length,65);assert.equal(recipes.filter(r=>r.available!==false).length,64);
 const methods=source.slice(source.indexOf('function guideStepData()'),source.indexOf('function stepIngredientIndexes()'));
 const steakFns=source.slice(source.indexOf('const steakDonenessOptions='),source.indexOf('function steakDonenessPicker()'));
 let count=0;

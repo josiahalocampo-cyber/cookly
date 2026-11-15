@@ -1,7 +1,7 @@
 module.exports=async({page,assert,errors})=>{
  const waitSync=()=>page.waitForFunction(()=>cloudState==='ready');
  await waitSync();
- await page.evaluate(()=>{saved.add(recipes[0].id);box.push({id:recipes[0].id,servings:2});purchases=[{id:recipes[0].id,servings:2}];localStorage.setItem(accountKey('cookly-purchases'),JSON.stringify(purchases));localStorage.setItem('cookly-preferences::other-user','{"name":"Other user"}');persist();navigate('profile')});
+ await page.evaluate(()=>{saved.add('butter-steak');box.push({id:'butter-steak',servings:2});purchases=[{id:'butter-steak',servings:2}];localStorage.setItem(accountKey('cookly-purchases'),JSON.stringify(purchases));localStorage.setItem('cookly-preferences::other-user','{"name":"Other user"}');persist();navigate('profile')});
  await waitSync();
  await page.locator('[data-account-delete=data]').click();assert(await page.locator('#accountDeletionDialog').evaluate(d=>d.scrollWidth<=d.clientWidth));await page.screenshot({path:'/tmp/cookly-audit/delete-data.png'});await page.locator('[data-account-delete-cancel]').click();assert.equal(await page.evaluate(()=>testCloud.rpcCalls.length),0);
  await page.locator('[data-account-delete=data]').click();await page.locator('#accountDeletionForm button[type=submit]').click();assert.equal(await page.evaluate(()=>testCloud.rpcCalls.length),0);

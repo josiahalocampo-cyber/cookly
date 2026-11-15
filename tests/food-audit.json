@@ -1,16 +1,5 @@
 [
   {
-    "id": "menu-steak-rice-bowl",
-    "name": "Steak Rice Bowl",
-    "price": 459,
-    "image": "assets/food/menu-steak-rice-bowl.webp",
-    "data": "PASS",
-    "search": "PASS",
-    "detail": "PASS",
-    "cart": "PASS",
-    "imageVerification": "See image-audit.json for local asset validation, branding-production-results.json for live asset checks, and AUDIT_REPORT.md for visual review"
-  },
-  {
     "id": "butter-steak",
     "name": "Steak Rice Bowl",
     "price": 499,

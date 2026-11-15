@@ -1,5 +1,12 @@
 # Cookly functionality audit — 14 November 2026
 
+## Duplicate steak kit removed — 16 November 2026
+
+The Herb butter Steak Rice Bowl (`menu-steak-rice-bowl`, ₱459) is retired from the active catalog as requested. The Garlic butter version (`butter-steak`, ₱499) remains. There are now 64 active dishes. The retired item is excluded from browse/search/recommendations, saved items and current carts. It cannot be added again. Its existing historical recipe data and purchased demo guide remain accessible so old History records are not erased or substituted with a different-price kit.
+
+Passed the full 64-food browser audit and focused catalog, confirmation, password recovery, duplicate-email, equipment, cooking and deletion checks. The catalog regression explicitly verifies one active steak bowl, no retired card, retired saved/cart cleanup, and preservation of historical guide access. Real-photo replacement requested in the preceding message is being handled separately; this catalog change does not claim that photography work is complete.
+
+
 ## Final branding and food collection — 15 November 2026
 
 The previously missing logo/icon files and mismatched stock-photo collection have been replaced as authorized. Cookly now has an editable plate-C/fork brand mark, light/dark vector and PNG wordmarks, browser SVG/32px favicon, 192px/512px app icons, a 512px maskable icon, 180px Apple touch icon, and 1200×630 social preview. The header uses the correct wordmark for the chosen appearance and retains a text fallback. Manifest and sharing metadata reference the supplied files.
