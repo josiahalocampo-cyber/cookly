@@ -1,5 +1,14 @@
 # Cookly functionality audit — 14 November 2026
 
+## Forgot password — 15 November 2026
+
+Sign-in now has “Forgot password?” leading to an email-only reset request. It calls `resetPasswordForEmail` with the already configured root redirect and uses a neutral success message that does not disclose whether the email has an account. Supabase’s existing reset email/SMTP configuration supplies the reset link; no new backend configuration is needed.
+
+A `type=recovery` callback is kept separate from signup confirmation. After Auth validates the access token, an isolated client with persistence, URL detection and refresh disabled establishes the recovery session only in memory. It never activates the Cookly account, reads kit/profile data or opens preferences. The new-password form requires matching passwords of at least eight characters, supports visibility toggles, handles update failures and allows cancelling. `updateUser({password})` changes the authenticated recovery user’s password. On success the in-memory session is signed out/discarded, a success screen is shown, and manual signin is required. Refresh discards the in-memory recovery session; users can request another email if needed. Credentials are removed from callback URLs and are not written to browser storage.
+
+Passed browser fixture tests: reset email failure/retry and neutral response, redirect target, valid recovery isolation, password visibility and matching validation, update failure/retry, successful save without onboarding/login, rejection of the old password and successful manual signin with the new one, expired/invalid reset links, plus existing email-confirmation and signup/onboarding regressions. New-password screens were visually reviewed in light/dark modes. No real account password was changed in testing. Run `COOKLY_PASSWORD_RESET=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs`.
+
+
 ## Email confirmation and password visibility — 15 November 2026
 
 Both account modes now have an accessible eye button that shows/hides the existing password without changing its value. Mode switches and successful signup clear the password and restore masking. Signup keeps the user signed out, shows confirmation instructions and presents the sign-in form. The explicit sign-in action remains necessary before new-user profile/preferences setup.

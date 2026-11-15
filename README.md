@@ -133,3 +133,14 @@ COOKLY_AUTH_UI=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node 
 ```
 
 Implementation references: [Supabase signup](https://supabase.com/docs/reference/javascript/auth-signup), [email templates](https://supabase.com/docs/guides/auth/auth-email-templates), and [authenticated getUser(token)](https://supabase.com/docs/reference/javascript/auth-getuser).
+
+
+## Password recovery
+
+“Forgot password?” on Sign in sends the existing Supabase reset email. The root Site URL/redirect and configured SMTP provider are reused. Recovery links open an isolated, memory-only session for setting a new password; they do not unlock the app. After saving, users sign in manually. Matching passwords of at least eight characters and show/hide controls are provided. Refresh loses the recovery session, so finish on the open reset page or request a fresh email.
+
+```sh
+COOKLY_PASSWORD_RESET=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+```
+
+See [resetPasswordForEmail](https://supabase.com/docs/reference/javascript/auth-resetpasswordforemail) and [updateUser](https://supabase.com/docs/reference/javascript/auth-updateuser) for the provider methods used.
