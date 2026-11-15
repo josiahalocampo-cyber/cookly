@@ -1,5 +1,12 @@
 # Cookly functionality audit — 14 November 2026
 
+## Account-access interface — 15 November 2026
+
+Sign in and Create account now have an explicit two-option mode switch, selected-state contrast, separate headings and guidance, and one matching full-width submit action. Signup explains the eight-character password minimum and email confirmation; password autofill uses new-password for signup and current-password for signin. Switching modes preserves email, clears password and old errors, and never submits the form. Successful authentication resets the next signed-out screen to signin. Existing authenticated profile and deletion controls are unchanged.
+
+Passed: keyboard Enter sign-in/error feedback, mode switching, single-action submission, signup password validation, autofill semantics, email preservation/password clearing, light/dark layout at 320/390/768 widths, and signup through mandatory onboarding using the local Supabase test double. Screenshots were visually reviewed. Run `COOKLY_AUTH_UI=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs` and the existing `COOKLY_SMOKE=1` audit.
+
+
 ## Cooking-method revision — 14 November 2026
 
 All 65 kit recipes now have explicit, researched methods (276 guide steps), linked technique references and visible assumptions under “Cooking notes & sources.” See [COOKING_RESEARCH.md](COOKING_RESEARCH.md) for every dish. Instructions adapt the existing prepared sauces and kit ingredients; they do not reproduce the linked recipes or add their missing ingredients. Names, prices, images, ingredient quantities and dietary tags were preserved. Total times were revised as estimates for two servings; pressing and inasal marinating are identified separately.

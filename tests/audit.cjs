@@ -16,7 +16,8 @@ function fakeCloud(){
  const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.setDefaultTimeout(8000);
  await page.goto('http://cookly.test/');await page.locator('#cloudAuthForm').waitFor();
  assert.equal(await page.locator('.recipe-card').count(),0);assert.equal(await page.locator('.palette-picker').count(),0);await page.evaluate(()=>navigate('explore'));assert.equal(await page.locator('#searchInput').count(),0);
- async function auth(email,action='signup',password='testpass123'){await page.locator('#cloudAuthForm [name=email]').fill(email);await page.locator('#cloudAuthForm [name=password]').fill(password);await page.locator(`#cloudAuthForm [value=${action}]`).click()}
+ if(process.env.COOKLY_AUTH_UI){await require('./auth-interface.cjs')({page,assert,errors});await browser.close();return}
+ async function auth(email,action='signup',password='testpass123'){await page.locator(`.auth-mode-switch [data-auth-mode=${action}]`).click();await page.locator('#cloudAuthForm [name=email]').fill(email);await page.locator('#cloudAuthForm [name=password]').fill(password);await page.locator(`#cloudAuthForm [value=${action}]`).click()}
  await auth('audit@example.test');await page.locator('#preferencesForm').waitFor();await page.locator('#preferencesForm button[type=submit]').click();assert.equal(await page.locator('#preferencesForm [name=name]').count(),1);
  await page.locator('[name=name]').fill('Audit Cook');await page.locator('[name=username]').fill('audit');await page.locator('#preferencesForm button[type=submit]').click();
  await page.locator('[name=diet][value=vegetarian]').check();await page.locator('[name=time][value=quick]').check();await page.locator('#preferencesForm button[type=submit]').click();await page.waitForTimeout(1000);await page.reload();await page.locator('#preferencesTitle').waitFor();assert.match(await page.locator('#preferencesTitle').textContent(),/cuisines/);
