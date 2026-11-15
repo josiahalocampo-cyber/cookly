@@ -1,10 +1,12 @@
 {
-  "checkedAt": "2026-11-15T06:30:09.173Z",
+  "checkedAt": "2026-11-15T06:39:26.322Z",
   "result": "PASS",
   "sourceMatches": true,
-  "appSha256": "111792a0904fe42ca4b12f0c12eedb41394b2a2d4e758056ac50ad787a278b37",
+  "appSha256": "35b4b15bd446b7fc8f82dc949e89db35157c2471de921d60651d0b6be77fe1b1",
   "checks": [
     "Live account modes and password visibility",
+    "Forgot password request screen and return",
+    "Real Supabase rejection of an invalid recovery link",
     "Real Supabase rejection of invalid confirmation token",
     "Callback URL credentials removed",
     "No authentication session/token persisted",
@@ -12,7 +14,7 @@
     "No uncaught page errors"
   ],
   "limitations": [
-    "Valid confirmation and new-user onboarding covered by local fixtures",
+    "Valid confirmation, password recovery/updates and new-user onboarding covered by local fixtures",
     "No new real account or email delivery in this revision",
     "Production Confirm email setting and saved email template verified separately in dashboard"
   ]
