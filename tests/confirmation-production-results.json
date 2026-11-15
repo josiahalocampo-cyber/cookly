@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-15T06:30:09.173Z",
+  "result": "PASS",
+  "sourceMatches": true,
+  "appSha256": "111792a0904fe42ca4b12f0c12eedb41394b2a2d4e758056ac50ad787a278b37",
+  "checks": [
+    "Live account modes and password visibility",
+    "Real Supabase rejection of invalid confirmation token",
+    "Callback URL credentials removed",
+    "No authentication session/token persisted",
+    "Manual return presents signin without preferences",
+    "No uncaught page errors"
+  ],
+  "limitations": [
+    "Valid confirmation and new-user onboarding covered by local fixtures",
+    "No new real account or email delivery in this revision",
+    "Production Confirm email setting and saved email template verified separately in dashboard"
+  ]
+}
