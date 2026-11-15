@@ -1,10 +1,11 @@
 {
-  "checkedAt": "2026-11-15T06:46:07.620Z",
+  "checkedAt": "2026-11-15T06:55:42.403Z",
   "result": "PASS",
   "sourceMatches": true,
-  "appSha256": "b28124a93e5d9858fe99ee185613c7b0a5c1f46003feee1e2d8651aa9488d5bf",
+  "appSha256": "f4d5a420b8d3327f1b5cc14189f68858d0316b5d3276d904d5b06439e6016025",
   "checks": [
     "Live account modes and password visibility",
+    "Ten equipment choices loaded in deployed app",
     "Signup explains one account per email address",
     "Forgot password request screen and return",
     "Real Supabase rejection of an invalid recovery link",
