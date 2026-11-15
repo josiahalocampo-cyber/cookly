@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-15T15:12:06.715Z",
+  "checkedAt": "2026-11-15T15:42:26.113Z",
   "checks": [
     {
       "theme": "light",
@@ -292,6 +292,6 @@
   ],
   "limitations": [
     "Local Chrome with Supabase test double",
-    "Food images use downloaded previews; exact dish identity is not certified"
+    "Food images are local AI-generated illustrations, not delivered-product photographs"
   ]
 }

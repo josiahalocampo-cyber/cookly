@@ -71,8 +71,7 @@ PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/production.
 
 Set `CHROME_PATH` if Chrome is installed elsewhere. The browser suite serves
 local files through Playwright routing and uses a deterministic Supabase test
-double; it does not test a live database. The image script accesses existing
-remote photo URLs. Detailed findings are in [AUDIT_REPORT.md](AUDIT_REPORT.md).
+double; it does not test a live database. The image script validates the local illustrative food photos and thumbnails. Detailed findings are in [AUDIT_REPORT.md](AUDIT_REPORT.md).
 
 Account caches are namespaced by authenticated user ID. Old unscoped prototype
 data is retained on disk but is never automatically imported into an account.
@@ -161,4 +160,17 @@ Current scope/results: [FINAL_CHECK_REPORT.md](FINAL_CHECK_REPORT.md).
 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
 COOKLY_FINAL_UI=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
 COOKLY_ADDRESSES=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+```
+
+
+## Final branding and food imagery
+
+The supplied [brand guide](dist/assets/BRAND_GUIDE.md) documents the vector logo, light/dark wordmarks, browser/iPhone/Android icons, maskable icon and share preview. All branding paths now point to real assets.
+
+All 65 dishes use individually generated, dish-matched illustrative photos, hosted locally at 1024 px with 360 px thumbnails. [SOURCES.json](dist/assets/food/SOURCES.json) contains the complete built-in imagegen prompt set, checksums, sizes and review scope. They are menu illustrations, not photos of delivered products. The two steak kits retain their names/prices and now show Herb butter / Garlic butter variant labels.
+
+```sh
+node tests/images.cjs
+COOKLY_BRANDING=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/branding-production.cjs
 ```

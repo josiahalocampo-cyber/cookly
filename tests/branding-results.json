@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-15T15:49:07.128Z",
+  "result": "PASS",
+  "foodImages": 65,
+  "thumbnails": 65,
+  "uniqueImages": 65,
+  "brandAssets": 12,
+  "checks": [
+    "All local WebP photographs and thumbnails decode at expected dimensions",
+    "All app icons/favicon/social preview decode at correct sizes",
+    "Maskable icon included in manifest",
+    "Both header wordmarks visible in matching themes",
+    "Steak kit variants distinguished",
+    "Light/dark layouts fit 320/390/768/1440 widths",
+    "No uncaught page errors"
+  ],
+  "limitations": [
+    "Illustrative generated menu images, not actual delivered-product photographs"
+  ]
+}

@@ -11,6 +11,6 @@ module.exports=async({page,assert,errors})=>{
   }
  }
  await page.evaluate(()=>navigate('explore'));assert(await page.locator('#main img').evaluateAll(images=>images.length>0&&images.filter(img=>{const r=img.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0}).every(img=>img.complete&&img.naturalWidth>0)),'Visible menu images load from checked previews');assert.deepEqual(errors,[]);
- require('node:fs').writeFileSync('tests/final-ui-results.json',JSON.stringify({checkedAt:new Date().toISOString(),checks,limitations:['Local Chrome with Supabase test double','Food images use downloaded previews; exact dish identity is not certified']},null,2)+'\n');
+ require('node:fs').writeFileSync('tests/final-ui-results.json',JSON.stringify({checkedAt:new Date().toISOString(),checks,limitations:['Local Chrome with Supabase test double','Food images are local AI-generated illustrations, not delivered-product photographs']},null,2)+'\n');
  console.log('PASS: 48 screen/theme/width combinations, populated views, menu image rendering, and no uncaught browser errors.');
 };

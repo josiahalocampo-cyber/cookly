@@ -24,12 +24,12 @@
       <div class="palette-preview" id="palettePreview" data-palette="${selectedPalette}" data-theme="${root.dataset.theme || 'dark'}">
         <div class="palette-preview-bar"><strong>Cookly</strong><span class="palette-preview-menu" aria-hidden="true">•••</span></div>
         <div class="palette-preview-meal">
-          <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=800&q=80" alt="">
+          <img src="assets/food/calamansi-pasta.webp" alt="">
           <div class="palette-preview-shade"></div>
           <div class="palette-preview-copy">
             <span>TONIGHT'S INSPIRATION</span>
             <strong>Calamansi Cream Pasta</strong>
-            <small>20 min <i></i> Easy</small>
+            <small>20 min <i></i> Beginner</small>
           </div>
         </div>
         <div class="palette-preview-footer"><span>A little inspiration for dinner</span><b>View recipe <span aria-hidden="true">→</span></b></div>

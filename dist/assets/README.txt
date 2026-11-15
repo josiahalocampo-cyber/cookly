@@ -1,11 +1,15 @@
-Place the final Cookly logo here as cookly-logo.png.
-The header preserves its proportions within 115px by 38px.
-Until the image loads, the header displays the text Cookly.
+Final Cookly branding is supplied in this directory.
+See BRAND_GUIDE.md for SVG masters, light/dark wordmarks, phone/browser icons,
+social preview exports, colors, and food-image provenance.
 
-Typography preview:
-Inter is loaded for the interface and as the heading fallback.
-Headings try the installed Grab Community family first. No Grab Community font file is bundled.
-To display the actual typeface on other devices, provide its font files for a local @font-face setup.
+Food photos:
+assets/food/ contains 65 dish-matched illustrative photos and their thumbnails.
+They are AI-generated menu illustrations, not actual delivered-product photos.
+See food/SOURCES.json for all generation prompts and review details.
+
+Typography:
+The interface loads Inter; headings retain the existing installed Grab Community
+preference with Inter as fallback. The vector wordmarks are self-contained logo artwork.
 
 Step-by-step cooking videos:
 Create assets/videos/ and add your MP4 cooking clips.

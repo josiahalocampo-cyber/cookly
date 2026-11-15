@@ -4,10 +4,19 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#000000"><meta name="description" content="Discover your next favorite meal. Fresh ingredients, exact portions, and recipes made for your kitchen.">
 <title>Cookly — A little inspiration for dinner</title>
+<link rel="canonical" href="https://cookly.pages.dev/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Cookly">
+<meta property="og:title" content="Cookly — A little inspiration for dinner">
+<meta property="og:description" content="Discover your next favorite meal, build your box, and cook at your own pace.">
+<meta property="og:url" content="https://cookly.pages.dev/"><meta property="og:image" content="https://cookly.pages.dev/assets/social-card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Cookly — A little inspiration for dinner">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="apple-mobile-web-app-title" content="Cookly">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" sizes="any" href="assets/brand-mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,14 +28,13 @@
 <script>
 (()=>{const palettes=['classic','winter-whisper','prismatic','steel-emulsion','azure-scale','cotton-candy','matcha-garden','golden-hour'];let choice='classic';try{choice=localStorage.getItem('cookly-palette')||'classic'}catch{}document.documentElement.dataset.palette=palettes.includes(choice)?choice:'classic'})();
 </script>
-<link rel="stylesheet" href="styles.css?v=20261115-final-audit">
+<link rel="stylesheet" href="styles.css?v=20261115-brand-food">
 <link rel="stylesheet" href="rice-options.css">
 <link rel="stylesheet" href="themes.css">
 </head>
 <body>
 <div class="phone-app">
-<header class="topbar"><button class="brand" data-nav="home" aria-label="Cookly home"><!-- Place the final Cookly logo at dist/assets/cookly-logo.png. Text stays visible until it loads. -->
-<img src="assets/cookly-logo.png" alt="Cookly" class="brand-logo" hidden><span class="brand-fallback" aria-hidden="true">Cookly</span></button><div class="header-actions"><button class="icon-button" data-action="search" aria-label="Search recipes" id="headerSearch"></button><button class="avatar" data-nav="profile" aria-label="Your profile"><span aria-hidden="true">C</span></button></div></header>
+<header class="topbar"><button class="brand" data-nav="home" aria-label="Cookly home"><span class="brand-identity" hidden><img src="assets/cookly-logo.svg" alt="" width="146" height="38" class="brand-logo brand-for-light"><img src="assets/cookly-logo-light.svg" alt="" width="146" height="38" class="brand-logo brand-for-dark"></span><span class="brand-fallback" aria-hidden="true">Cookly</span></button><div class="header-actions"><button class="icon-button" data-action="search" aria-label="Search recipes" id="headerSearch"></button><button class="avatar" data-nav="profile" aria-label="Your profile"><span aria-hidden="true">C</span></button></div></header>
 <main id="main"></main>
 <nav class="bottom-nav" id="navigation" aria-label="Main navigation"></nav>
 </div>
@@ -34,7 +42,7 @@
 <dialog id="preferencesDialog" aria-labelledby="preferencesTitle"><div id="preferencesContent"></div></dialog>
 <dialog id="checkoutDialog" aria-labelledby="checkoutTitle"><div id="checkoutContent"></div></dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="app.js?v=20261115-final-audit"></script>
+<script defer src="app.js?v=20261115-brand-food"></script>
 <script defer src="rice-options.js?v=20261106-guide-fix"></script>
 <script defer src="themes.js?v=20261114-account-audit"></script>
 </body>

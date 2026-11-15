@@ -8,7 +8,7 @@ const steakFns=source.slice(source.indexOf('const steakDonenessOptions='),source
 let count=0;
 for(const recipe of recipes){
  const old=baseline.find(r=>r.id===recipe.id);
- for(const key of ['id','name','price','ingredients','image','category','tags'])assert.deepEqual(JSON.parse(JSON.stringify(recipe[key])),JSON.parse(JSON.stringify(old[key])),`${recipe.id}: preserve ${key}`);
+ for(const key of ['id','name','price','ingredients','category','tags'])assert.deepEqual(JSON.parse(JSON.stringify(recipe[key])),JSON.parse(JSON.stringify(old[key])),`${recipe.id}: preserve ${key}`);
  assert.equal(recipe.steps.length,recipe.guideSteps.length);
  assert(recipe.cookingSources.length&&recipe.cookingSources.every(s=>new URL(s.url).protocol==='https:'));
  const text=recipe.steps.join(' ');

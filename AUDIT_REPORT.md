@@ -1,5 +1,16 @@
 # Cookly functionality audit — 14 November 2026
 
+## Final branding and food collection — 15 November 2026
+
+The previously missing logo/icon files and mismatched stock-photo collection have been replaced as authorized. Cookly now has an editable plate-C/fork brand mark, light/dark vector and PNG wordmarks, browser SVG/32px favicon, 192px/512px app icons, a 512px maskable icon, 180px Apple touch icon, and 1200×630 social preview. The header uses the correct wordmark for the chosen appearance and retains a text fallback. Manifest and sharing metadata reference the supplied files.
+
+All 65 recipes now have individual AI-generated illustrative photographs with consistent warm ceramics, light and framing, plus local 1024px/360px WebP versions. Every dish was visually reviewed for its named food and key kit components. The old stock-photo URL overrides are gone, and the theme preview uses the same cream-pasta image as the actual recipe. No real delivered-product photography or exact portion guarantee is claimed. The complete built-in imagegen prompt set and image checksums are in `dist/assets/food/SOURCES.json`; vector masters/exports and usage are documented in `dist/assets/BRAND_GUIDE.md`.
+
+Item cards now use consistent crops, readable dish descriptions and aligned prices. Herb butter / Garlic butter badges distinguish the two steak kits while keeping product names, prices and recipe ingredients unchanged. Demo checkout and labeled mock videos remain intentional as requested.
+
+Passed: all 130 food assets decode at expected dimensions; all branding/icon/social exports decode; both header wordmarks in light/dark; maskable manifest entry; responsive layouts at 320/390/768/1440; complete 65-food/276-step browser regression; all 48 main-screen/theme/width combinations; cooking controls and quantity/rice regressions. No uncaught browser errors were observed. See `tests/branding-results.json` and the updated image/food audit evidence.
+
+
 ## Final regression pass — 15 November 2026
 
 See [FINAL_CHECK_REPORT.md](FINAL_CHECK_REPORT.md) for the current status and verification scope. All 65 menu interactions and 276 guide steps passed the full local Chrome audit, as did the focused account, email confirmation, password recovery, duplicate email, equipment, cooking and deletion suites. Address search now visibly displays its no-match message; preference/provider error/retry and saved/checkout address selection tests passed. All 48 main-screen/light-dark/width combinations passed. All 65 recipe photos plus the separate theme preview loaded over the network. Read-only live checks confirmed authentication validation, invalid callback handling, anonymous account-data rejection (401), and working map/geocoding dependencies. No real account was deleted or password changed in this pass. Implementation commit `90ccf26` is live and its source matches locally; live account/recovery checks passed after the final fix.

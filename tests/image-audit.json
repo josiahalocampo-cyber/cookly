@@ -2,456 +2,586 @@
   {
     "id": "menu-steak-rice-bowl",
     "name": "Steak Rice Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1682566509605-b5bb1ef7eac2?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-steak-rice-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 209142,
+    "thumbnailBytes": 38846
   },
   {
     "id": "butter-steak",
     "name": "Steak Rice Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/butter-steak.webp",
+    "type": "local illustrative WebP",
+    "bytes": 195318,
+    "thumbnailBytes": 35700
   },
   {
     "id": "calamansi-pasta",
     "name": "Calamansi Cream Pasta",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/calamansi-pasta.webp",
+    "type": "local illustrative WebP",
+    "bytes": 184326,
+    "thumbnailBytes": 36550
   },
   {
     "id": "beef-salpicao",
     "name": "Garlic Beef Salpicao",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1760504526069-ff0f8bf6e4ca?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/beef-salpicao.webp",
+    "type": "local illustrative WebP",
+    "bytes": 184824,
+    "thumbnailBytes": 33366
   },
   {
     "id": "tofu-sisig",
     "name": "Crispy Tofu Sisig",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1762305194201-077e7e23ccf2?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/tofu-sisig.webp",
+    "type": "local illustrative WebP",
+    "bytes": 166342,
+    "thumbnailBytes": 33078
   },
   {
     "id": "miso-salmon",
     "name": "Miso-Glazed Salmon",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1523218689796-d4c2ef4f3d72?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/miso-salmon.webp",
+    "type": "local illustrative WebP",
+    "bytes": 172198,
+    "thumbnailBytes": 34212
   },
   {
     "id": "chicken-adobo",
     "name": "Chicken Adobo",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1596699917234-1c93c61a1083?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/chicken-adobo.webp",
+    "type": "local illustrative WebP",
+    "bytes": 168318,
+    "thumbnailBytes": 30440
   },
   {
     "id": "vegetable-kare-kare",
     "name": "Vegetable Kare-Kare",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1559561723-c3f4195835db?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/vegetable-kare-kare.webp",
+    "type": "local illustrative WebP",
+    "bytes": 165064,
+    "thumbnailBytes": 32794
   },
   {
     "id": "tomato-basil-pasta",
     "name": "Tomato Basil Pasta",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1516100882582-96c3a05fe590?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/tomato-basil-pasta.webp",
+    "type": "local illustrative WebP",
+    "bytes": 220046,
+    "thumbnailBytes": 40248
   },
   {
     "id": "lemon-chicken",
     "name": "Lemon Herb Chicken",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/lemon-chicken.webp",
+    "type": "local illustrative WebP",
+    "bytes": 207456,
+    "thumbnailBytes": 39178
   },
   {
     "id": "korean-beef-bowl",
     "name": "Korean Beef Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1718777791262-c66d11baaa3b?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/korean-beef-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 180706,
+    "thumbnailBytes": 36552
   },
   {
     "id": "thai-coconut-curry",
     "name": "Thai Coconut Curry",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1618449840665-9ed506d73a34?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/thai-coconut-curry.webp",
+    "type": "local illustrative WebP",
+    "bytes": 143808,
+    "thumbnailBytes": 29114
   },
   {
     "id": "chicken-tacos",
     "name": "Smoky Chicken Tacos",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1545093149-618ce3bcf49d?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/chicken-tacos.webp",
+    "type": "local illustrative WebP",
+    "bytes": 194488,
+    "thumbnailBytes": 37434
   },
   {
     "id": "chickpea-masala",
     "name": "Creamy Chickpea Masala",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1707448829764-9474458021ed?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/chickpea-masala.webp",
+    "type": "local illustrative WebP",
+    "bytes": 193516,
+    "thumbnailBytes": 34622
   },
   {
     "id": "sesame-tofu-bowl",
     "name": "Sesame Tofu Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/sesame-tofu-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 181134,
+    "thumbnailBytes": 35272
   },
   {
     "id": "thai-basil-chicken",
     "name": "Thai Basil Chicken",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1696906594893-e9995c4d7082?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/thai-basil-chicken.webp",
+    "type": "local illustrative WebP",
+    "bytes": 167610,
+    "thumbnailBytes": 32414
   },
   {
     "id": "black-bean-tacos",
     "name": "Black Bean Tacos",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/black-bean-tacos.webp",
+    "type": "local illustrative WebP",
+    "bytes": 215838,
+    "thumbnailBytes": 40100
   },
   {
     "id": "butter-chicken",
     "name": "Butter Chicken",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1772730064970-a7b2735c93b9?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/butter-chicken.webp",
+    "type": "local illustrative WebP",
+    "bytes": 194814,
+    "thumbnailBytes": 36822
   },
   {
     "id": "menu-bbq-chicken-rice-bowl",
     "name": "BBQ Chicken Rice Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1679279726946-a158b8bcaa23?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-bbq-chicken-rice-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 187718,
+    "thumbnailBytes": 37390
   },
   {
     "id": "menu-creamy-mushroom-chicken",
     "name": "Creamy Mushroom Chicken",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1788462612914-44793f2980f2?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-creamy-mushroom-chicken.webp",
+    "type": "local illustrative WebP",
+    "bytes": 189140,
+    "thumbnailBytes": 34980
   },
   {
     "id": "menu-cajun-shrimp-rice",
     "name": "Cajun Shrimp Rice",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1723325697529-6e2679650b39?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-cajun-shrimp-rice.webp",
+    "type": "local illustrative WebP",
+    "bytes": 179588,
+    "thumbnailBytes": 33908
   },
   {
     "id": "menu-cheddar-mac-and-cheese",
     "name": "Cheddar Mac & Cheese",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1667499989723-c4ab9549d63c?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-cheddar-mac-and-cheese.webp",
+    "type": "local illustrative WebP",
+    "bytes": 148690,
+    "thumbnailBytes": 30360
   },
   {
     "id": "menu-honey-mustard-chicken",
     "name": "Honey Mustard Chicken",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1670398564097-0762e1b30b3a?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-honey-mustard-chicken.webp",
+    "type": "local illustrative WebP",
+    "bytes": 185316,
+    "thumbnailBytes": 33566
   },
   {
     "id": "menu-smoky-beef-rice-bowl",
     "name": "Smoky Beef Rice Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1679279726937-122c49626802?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-smoky-beef-rice-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 190008,
+    "thumbnailBytes": 35192
   },
   {
     "id": "menu-chicken-inasal-bowl",
     "name": "Chicken Inasal Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-chicken-inasal-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 184970,
+    "thumbnailBytes": 34412
   },
   {
     "id": "menu-beef-bistek",
     "name": "Beef Bistek",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1723893905879-0e309c2a8e06?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-beef-bistek.webp",
+    "type": "local illustrative WebP",
+    "bytes": 177834,
+    "thumbnailBytes": 31512
   },
   {
     "id": "menu-chicken-afritada",
     "name": "Chicken Afritada",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1694579740719-0e601c5d2437?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-chicken-afritada.webp",
+    "type": "local illustrative WebP",
+    "bytes": 157124,
+    "thumbnailBytes": 27472
   },
   {
     "id": "menu-pork-menudo",
     "name": "Pork Menudo",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1579640873954-766bf0235bf3?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-pork-menudo.webp",
+    "type": "local illustrative WebP",
+    "bytes": 146512,
+    "thumbnailBytes": 27660
   },
   {
     "id": "menu-ginisang-monggo",
     "name": "Ginisang Monggo",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1647545401750-6dd5539879ac?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-ginisang-monggo.webp",
+    "type": "local illustrative WebP",
+    "bytes": 165722,
+    "thumbnailBytes": 32690
   },
   {
     "id": "menu-pesto-chicken-pasta",
     "name": "Pesto Chicken Pasta",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1612152328178-4a6c83d96429?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-pesto-chicken-pasta.webp",
+    "type": "local illustrative WebP",
+    "bytes": 184076,
+    "thumbnailBytes": 33562
   },
   {
     "id": "menu-creamy-mushroom-penne",
     "name": "Creamy Mushroom Penne",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1673081849580-2d36a09c8a6f?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-creamy-mushroom-penne.webp",
+    "type": "local illustrative WebP",
+    "bytes": 158660,
+    "thumbnailBytes": 30226
   },
   {
     "id": "menu-garlic-shrimp-linguine",
     "name": "Garlic Shrimp Linguine",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1677681483419-e18aa1376db7?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-garlic-shrimp-linguine.webp",
+    "type": "local illustrative WebP",
+    "bytes": 162002,
+    "thumbnailBytes": 30204
   },
   {
     "id": "menu-beef-ragu-pasta",
     "name": "Beef Ragu Pasta",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-beef-ragu-pasta.webp",
+    "type": "local illustrative WebP",
+    "bytes": 162136,
+    "thumbnailBytes": 31852
   },
   {
     "id": "menu-spinach-cream-fusilli",
     "name": "Spinach Cream Fusilli",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1779915148092-776a6b5e37df?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-spinach-cream-fusilli.webp",
+    "type": "local illustrative WebP",
+    "bytes": 162566,
+    "thumbnailBytes": 31978
   },
   {
     "id": "menu-chicken-teriyaki-bowl",
     "name": "Chicken Teriyaki Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1682566509568-ded8649b26bb?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-chicken-teriyaki-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 183408,
+    "thumbnailBytes": 35938
   },
   {
     "id": "menu-beef-yakiniku-bowl",
     "name": "Beef Yakiniku Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1608855815815-4edc035e39ad?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-beef-yakiniku-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 162196,
+    "thumbnailBytes": 31488
   },
   {
     "id": "menu-ginger-tofu-rice-bowl",
     "name": "Ginger Tofu Rice Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1609770424775-39ec362f2d94?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-ginger-tofu-rice-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 169002,
+    "thumbnailBytes": 34170
   },
   {
     "id": "menu-japanese-chicken-curry",
     "name": "Japanese Chicken Curry",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1679279727895-bd5c9fb9c1a0?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-japanese-chicken-curry.webp",
+    "type": "local illustrative WebP",
+    "bytes": 159938,
+    "thumbnailBytes": 30398
   },
   {
     "id": "menu-sesame-mushroom-udon",
     "name": "Sesame Mushroom Udon",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1689760661347-6b4d026fffae?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-sesame-mushroom-udon.webp",
+    "type": "local illustrative WebP",
+    "bytes": 164866,
+    "thumbnailBytes": 33454
   },
   {
     "id": "menu-miso-butter-shrimp",
     "name": "Miso Butter Shrimp",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-miso-butter-shrimp.webp",
+    "type": "local illustrative WebP",
+    "bytes": 161368,
+    "thumbnailBytes": 31202
   },
   {
     "id": "menu-greek-chicken-bowl",
     "name": "Greek Chicken Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1784902540709-082442918309?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-greek-chicken-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 217192,
+    "thumbnailBytes": 41340
   },
   {
     "id": "menu-lemon-chickpea-couscous",
     "name": "Lemon Chickpea Couscous",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1704742205160-9ace96fbbc44?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-lemon-chickpea-couscous.webp",
+    "type": "local illustrative WebP",
+    "bytes": 189272,
+    "thumbnailBytes": 36470
   },
   {
     "id": "menu-garlic-shrimp-couscous",
     "name": "Garlic Shrimp Couscous",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1726455418076-a60ccd6085c2?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-garlic-shrimp-couscous.webp",
+    "type": "local illustrative WebP",
+    "bytes": 190828,
+    "thumbnailBytes": 34926
   },
   {
     "id": "menu-harissa-chicken-bowl",
     "name": "Harissa Chicken Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1688431508895-4c2cab13b181?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-harissa-chicken-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 213326,
+    "thumbnailBytes": 36852
   },
   {
     "id": "menu-herbed-mushroom-couscous",
     "name": "Herbed Mushroom Couscous",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1572424075298-e17403e6f3bf?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-herbed-mushroom-couscous.webp",
+    "type": "local illustrative WebP",
+    "bytes": 197420,
+    "thumbnailBytes": 36956
   },
   {
     "id": "menu-gochujang-chicken-bowl",
     "name": "Gochujang Chicken Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-gochujang-chicken-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 182916,
+    "thumbnailBytes": 34328
   },
   {
     "id": "menu-korean-mushroom-rice",
     "name": "Korean Mushroom Rice",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1680420574628-225def8eea0a?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-korean-mushroom-rice.webp",
+    "type": "local illustrative WebP",
+    "bytes": 210528,
+    "thumbnailBytes": 39066
   },
   {
     "id": "menu-spicy-pork-bulgogi",
     "name": "Spicy Pork Bulgogi",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1564836235910-c3055ca0f912?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-spicy-pork-bulgogi.webp",
+    "type": "local illustrative WebP",
+    "bytes": 166288,
+    "thumbnailBytes": 31784
   },
   {
     "id": "menu-kimchi-tofu-rice",
     "name": "Kimchi Tofu Rice",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1698489857683-0d30f7f046f7?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-kimchi-tofu-rice.webp",
+    "type": "local illustrative WebP",
+    "bytes": 160934,
+    "thumbnailBytes": 31936
   },
   {
     "id": "menu-sesame-beef-noodles",
     "name": "Sesame Beef Noodles",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1565976469618-061774653bee?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-sesame-beef-noodles.webp",
+    "type": "local illustrative WebP",
+    "bytes": 178230,
+    "thumbnailBytes": 35110
   },
   {
     "id": "menu-thai-peanut-noodles",
     "name": "Thai Peanut Noodles",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1707546944460-dda9069b9c1e?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-thai-peanut-noodles.webp",
+    "type": "local illustrative WebP",
+    "bytes": 170962,
+    "thumbnailBytes": 33496
   },
   {
     "id": "menu-red-curry-chicken",
     "name": "Red Curry Chicken",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1708782344490-9026aaa5eec7?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-red-curry-chicken.webp",
+    "type": "local illustrative WebP",
+    "bytes": 172528,
+    "thumbnailBytes": 31878
   },
   {
     "id": "menu-thai-garlic-shrimp",
     "name": "Thai Garlic Shrimp",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1599655345131-6eb73b81d8d6?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-thai-garlic-shrimp.webp",
+    "type": "local illustrative WebP",
+    "bytes": 181606,
+    "thumbnailBytes": 34936
   },
   {
     "id": "menu-green-curry-tofu",
     "name": "Green Curry Tofu",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1769031240699-e15f4818224a?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-green-curry-tofu.webp",
+    "type": "local illustrative WebP",
+    "bytes": 179836,
+    "thumbnailBytes": 32694
   },
   {
     "id": "menu-sweet-chili-chicken",
     "name": "Sweet Chili Chicken",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1636401870585-a8852371e84a?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-sweet-chili-chicken.webp",
+    "type": "local illustrative WebP",
+    "bytes": 162188,
+    "thumbnailBytes": 30384
   },
   {
     "id": "menu-chicken-fajita-bowl",
     "name": "Chicken Fajita Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1668665771757-4d42737d295a?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-chicken-fajita-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 214178,
+    "thumbnailBytes": 38698
   },
   {
     "id": "menu-chipotle-beef-bowl",
     "name": "Chipotle Beef Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1707322571124-9d3a47cce941?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-chipotle-beef-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 179936,
+    "thumbnailBytes": 34374
   },
   {
     "id": "menu-smoky-bean-rice-bowl",
     "name": "Smoky Bean Rice Bowl",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-smoky-bean-rice-bowl.webp",
+    "type": "local illustrative WebP",
+    "bytes": 153040,
+    "thumbnailBytes": 31516
   },
   {
     "id": "menu-lime-shrimp-tacos",
     "name": "Lime Shrimp Tacos",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-lime-shrimp-tacos.webp",
+    "type": "local illustrative WebP",
+    "bytes": 183330,
+    "thumbnailBytes": 36926
   },
   {
     "id": "menu-chicken-tinga-tacos",
     "name": "Chicken Tinga Tacos",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1613514785940-daed07799d9b?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-chicken-tinga-tacos.webp",
+    "type": "local illustrative WebP",
+    "bytes": 190934,
+    "thumbnailBytes": 36700
   },
   {
     "id": "menu-palak-paneer",
     "name": "Palak Paneer",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1767114915936-745dd372f1d8?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-palak-paneer.webp",
+    "type": "local illustrative WebP",
+    "bytes": 179986,
+    "thumbnailBytes": 34592
   },
   {
     "id": "menu-chickpea-tikka-masala",
     "name": "Chickpea Tikka Masala",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1728414862780-cdb57c0aadb1?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-chickpea-tikka-masala.webp",
+    "type": "local illustrative WebP",
+    "bytes": 203980,
+    "thumbnailBytes": 37094
   },
   {
     "id": "menu-chicken-korma",
     "name": "Chicken Korma",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-chicken-korma.webp",
+    "type": "local illustrative WebP",
+    "bytes": 156876,
+    "thumbnailBytes": 31472
   },
   {
     "id": "menu-coconut-dal",
     "name": "Coconut Dal",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-coconut-dal.webp",
+    "type": "local illustrative WebP",
+    "bytes": 172274,
+    "thumbnailBytes": 32516
   },
   {
     "id": "menu-aloo-chana",
     "name": "Aloo Chana",
-    "status": 200,
     "ok": true,
-    "image": "https://images.unsplash.com/photo-1591940597372-bd266c6eb29e?auto=format&fit=crop&w=800&q=75"
+    "image": "assets/food/menu-aloo-chana.webp",
+    "type": "local illustrative WebP",
+    "bytes": 171076,
+    "thumbnailBytes": 31834
   }
 ]

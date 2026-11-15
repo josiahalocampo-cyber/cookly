@@ -8,10 +8,10 @@
 // Additional dishes below are editable prototype menu examples.
 // Add stepVideos: ["assets/videos/dish-step-1.mp4", "assets/videos/dish-step-2.mp4", "assets/videos/dish-step-3.mp4"]
 // to any recipe to replace its animated mock walkthrough with your actual cooking clips.
-const photo = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=800&q=75`;
 const recipes = [
  {
   "id": "menu-steak-rice-bowl",
+  "variantLabel": "Herb butter",
   "name": "Steak Rice Bowl",
   "featured": false,
   "cuisine": "American",
@@ -20,7 +20,7 @@ const recipes = [
    "Quick Meals",
    "Steak"
   ],
-  "image": "https://images.unsplash.com/photo-1682566509605-b5bb1ef7eac2?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-steak-rice-bowl.webp",
   "time": 30,
   "difficulty": "Easy",
   "price": 459,
@@ -218,10 +218,12 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "butter-steak",
+  "variantLabel": "Garlic butter",
   "stepVideos": [],
   "featured": true,
   "cuisine": "American",
@@ -232,7 +234,7 @@ const recipes = [
    "Quick Meals",
    "Steak"
   ],
-  "image": "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/butter-steak.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 499,
@@ -388,7 +390,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "calamansi-pasta",
@@ -401,7 +404,7 @@ const recipes = [
    "Quick Meals",
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/calamansi-pasta.webp",
   "time": 20,
   "difficulty": "Beginner",
   "price": 289,
@@ -484,7 +487,8 @@ const recipes = [
     "url": "https://www.bbcgoodfood.com/recipes/lemon-green-bean-pasta"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "beef-salpicao",
@@ -497,7 +501,7 @@ const recipes = [
    "Steak",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1760504526069-ff0f8bf6e4ca?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/beef-salpicao.webp",
   "time": 25,
   "difficulty": "Easy",
   "price": 429,
@@ -592,7 +596,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "tofu-sisig",
@@ -605,7 +610,7 @@ const recipes = [
    "Quick Meals",
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1762305194201-077e7e23ccf2?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/tofu-sisig.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 269,
@@ -693,7 +698,8 @@ const recipes = [
     "url": "https://panlasangpinoy.com/crispy-tofu-sisig-vegan-recipe/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "miso-salmon",
@@ -705,7 +711,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1523218689796-d4c2ef4f3d72?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/miso-salmon.webp",
   "time": 30,
   "difficulty": "Easy",
   "price": 449,
@@ -791,7 +797,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "chicken-adobo",
@@ -801,7 +808,7 @@ const recipes = [
   "name": "Chicken Adobo",
   "category": "Filipino",
   "tags": [],
-  "image": "https://images.unsplash.com/photo-1596699917234-1c93c61a1083?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/chicken-adobo.webp",
   "time": 45,
   "difficulty": "Easy",
   "price": 349,
@@ -892,7 +899,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "vegetable-kare-kare",
@@ -904,7 +912,7 @@ const recipes = [
    "Vegetarian",
    "Healthy"
   ],
-  "image": "https://images.unsplash.com/photo-1559561723-c3f4195835db?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/vegetable-kare-kare.webp",
   "time": 25,
   "difficulty": "Easy",
   "price": 319,
@@ -991,7 +999,8 @@ const recipes = [
     "url": "https://panlasangpinoy.com/kare-kare-recipe/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "tomato-basil-pasta",
@@ -1003,7 +1012,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1516100882582-96c3a05fe590?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/tomato-basil-pasta.webp",
   "time": 20,
   "difficulty": "Beginner",
   "price": 259,
@@ -1079,7 +1088,8 @@ const recipes = [
     "url": "https://www.loveandlemons.com/fresh-tomato-sauce/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "lemon-chicken",
@@ -1090,7 +1100,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/lemon-chicken.webp",
   "time": 30,
   "difficulty": "Easy",
   "price": 359,
@@ -1177,7 +1187,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "korean-beef-bowl",
@@ -1188,7 +1199,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1718777791262-c66d11baaa3b?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/korean-beef-bowl.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 399,
@@ -1282,7 +1293,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "thai-coconut-curry",
@@ -1294,7 +1306,7 @@ const recipes = [
    "Quick Meals",
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1618449840665-9ed506d73a34?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/thai-coconut-curry.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 319,
@@ -1376,7 +1388,8 @@ const recipes = [
     "url": "https://www.recipetineats.com/thai-red-curry-with-chicken/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "chicken-tacos",
@@ -1387,7 +1400,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1545093149-618ce3bcf49d?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/chicken-tacos.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 349,
@@ -1464,7 +1477,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "chickpea-masala",
@@ -1476,7 +1490,7 @@ const recipes = [
    "Quick Meals",
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1707448829764-9474458021ed?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/chickpea-masala.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 299,
@@ -1552,7 +1566,8 @@ const recipes = [
     "url": "https://www.bbcgoodfood.com/recipes/chana-masala"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "sesame-tofu-bowl",
@@ -1564,7 +1579,7 @@ const recipes = [
    "Quick Meals",
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/sesame-tofu-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 289,
@@ -1637,7 +1652,8 @@ const recipes = [
     "url": "https://www.justonecookbook.com/teriyaki-tofu/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "thai-basil-chicken",
@@ -1648,7 +1664,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1696906594893-e9995c4d7082?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/thai-basil-chicken.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 329,
@@ -1732,7 +1748,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "black-bean-tacos",
@@ -1744,7 +1761,7 @@ const recipes = [
    "Quick Meals",
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/black-bean-tacos.webp",
   "time": 20,
   "difficulty": "Beginner",
   "price": 269,
@@ -1816,7 +1833,8 @@ const recipes = [
     "url": "https://www.loveandlemons.com/black-bean-tacos/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "butter-chicken",
@@ -1827,7 +1845,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1772730064970-a7b2735c93b9?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/butter-chicken.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 379,
@@ -1912,7 +1930,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-bbq-chicken-rice-bowl",
@@ -1923,7 +1942,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1679279726946-a158b8bcaa23?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-bbq-chicken-rice-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -2008,7 +2027,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-creamy-mushroom-chicken",
@@ -2019,7 +2039,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1788462612914-44793f2980f2?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-creamy-mushroom-chicken.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -2104,7 +2124,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-cajun-shrimp-rice",
@@ -2115,7 +2136,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1723325697529-6e2679650b39?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-cajun-shrimp-rice.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 359,
@@ -2200,7 +2221,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-cheddar-mac-and-cheese",
@@ -2212,7 +2234,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1667499989723-c4ab9549d63c?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-cheddar-mac-and-cheese.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 279,
@@ -2281,7 +2303,8 @@ const recipes = [
     "url": "https://www.recipetineats.com/stovetop-macaroni-cheese/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-honey-mustard-chicken",
@@ -2292,7 +2315,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1670398564097-0762e1b30b3a?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-honey-mustard-chicken.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -2377,7 +2400,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-smoky-beef-rice-bowl",
@@ -2388,7 +2412,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1679279726937-122c49626802?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-smoky-beef-rice-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 359,
@@ -2477,7 +2501,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-chicken-inasal-bowl",
@@ -2488,7 +2513,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-chicken-inasal-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -2567,7 +2592,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-beef-bistek",
@@ -2578,7 +2604,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1723893905879-0e309c2a8e06?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-beef-bistek.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 359,
@@ -2663,7 +2689,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-chicken-afritada",
@@ -2672,7 +2699,7 @@ const recipes = [
   "cuisine": "Filipino",
   "category": "Curry",
   "tags": [],
-  "image": "https://images.unsplash.com/photo-1694579740719-0e601c5d2437?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-chicken-afritada.webp",
   "time": 40,
   "difficulty": "Easy",
   "price": 329,
@@ -2749,7 +2776,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-pork-menudo",
@@ -2758,7 +2786,7 @@ const recipes = [
   "cuisine": "Filipino",
   "category": "Curry",
   "tags": [],
-  "image": "https://images.unsplash.com/photo-1579640873954-766bf0235bf3?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-pork-menudo.webp",
   "time": 65,
   "difficulty": "Easy",
   "price": 329,
@@ -2843,7 +2871,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-ginisang-monggo",
@@ -2854,7 +2883,7 @@ const recipes = [
   "tags": [
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1647545401750-6dd5539879ac?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-ginisang-monggo.webp",
   "time": 25,
   "difficulty": "Easy",
   "price": 279,
@@ -2924,7 +2953,8 @@ const recipes = [
     "url": "https://panlasangpinoy.com/ginisang-munggo-sauteed-mung-beans/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-pesto-chicken-pasta",
@@ -2935,7 +2965,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1612152328178-4a6c83d96429?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-pesto-chicken-pasta.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 329,
@@ -3013,7 +3043,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-creamy-mushroom-penne",
@@ -3025,7 +3056,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1673081849580-2d36a09c8a6f?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-creamy-mushroom-penne.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 279,
@@ -3103,7 +3134,8 @@ const recipes = [
     "url": "https://www.recipetineats.com/creamy-mushroom-pasta/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-garlic-shrimp-linguine",
@@ -3114,7 +3146,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1677681483419-e18aa1376db7?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-garlic-shrimp-linguine.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 359,
@@ -3201,7 +3233,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-beef-ragu-pasta",
@@ -3212,7 +3245,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-beef-ragu-pasta.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 359,
@@ -3303,7 +3336,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-spinach-cream-fusilli",
@@ -3315,7 +3349,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1779915148092-776a6b5e37df?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-spinach-cream-fusilli.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 279,
@@ -3388,7 +3422,8 @@ const recipes = [
     "url": "https://www.recipetineats.com/creamy-mushroom-pasta/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-chicken-teriyaki-bowl",
@@ -3399,7 +3434,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1682566509568-ded8649b26bb?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-chicken-teriyaki-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -3484,7 +3519,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-beef-yakiniku-bowl",
@@ -3495,7 +3531,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1608855815815-4edc035e39ad?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-beef-yakiniku-bowl.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 359,
@@ -3580,7 +3616,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-ginger-tofu-rice-bowl",
@@ -3592,7 +3629,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1609770424775-39ec362f2d94?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-ginger-tofu-rice-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 279,
@@ -3667,7 +3704,8 @@ const recipes = [
     "url": "https://www.justonecookbook.com/teriyaki-tofu/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-japanese-chicken-curry",
@@ -3676,7 +3714,7 @@ const recipes = [
   "cuisine": "Japanese-inspired",
   "category": "Curry",
   "tags": [],
-  "image": "https://images.unsplash.com/photo-1679279727895-bd5c9fb9c1a0?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-japanese-chicken-curry.webp",
   "time": 40,
   "difficulty": "Easy",
   "price": 329,
@@ -3753,7 +3791,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-sesame-mushroom-udon",
@@ -3765,7 +3804,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1689760661347-6b4d026fffae?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-sesame-mushroom-udon.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 279,
@@ -3842,7 +3881,8 @@ const recipes = [
     "url": "https://www.justonecookbook.com/yaki-udon/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-miso-butter-shrimp",
@@ -3853,7 +3893,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-miso-butter-shrimp.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 359,
@@ -3938,7 +3978,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-greek-chicken-bowl",
@@ -3949,7 +3990,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1784902540709-082442918309?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-greek-chicken-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -4029,7 +4070,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-lemon-chickpea-couscous",
@@ -4041,7 +4083,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1704742205160-9ace96fbbc44?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-lemon-chickpea-couscous.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 279,
@@ -4122,7 +4164,8 @@ const recipes = [
     "url": "https://www.loveandlemons.com/how-to-cook-couscous/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-garlic-shrimp-couscous",
@@ -4133,7 +4176,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1726455418076-a60ccd6085c2?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-garlic-shrimp-couscous.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 359,
@@ -4224,7 +4267,8 @@ const recipes = [
     "url": "https://www.loveandlemons.com/how-to-cook-couscous/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-harissa-chicken-bowl",
@@ -4235,7 +4279,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1688431508895-4c2cab13b181?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-harissa-chicken-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -4324,7 +4368,8 @@ const recipes = [
     "url": "https://www.loveandlemons.com/how-to-cook-couscous/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-herbed-mushroom-couscous",
@@ -4336,7 +4381,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1572424075298-e17403e6f3bf?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-herbed-mushroom-couscous.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 279,
@@ -4418,7 +4463,8 @@ const recipes = [
     "url": "https://www.loveandlemons.com/how-to-cook-couscous/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-gochujang-chicken-bowl",
@@ -4429,7 +4475,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-gochujang-chicken-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -4514,7 +4560,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-korean-mushroom-rice",
@@ -4526,7 +4573,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1680420574628-225def8eea0a?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-korean-mushroom-rice.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 279,
@@ -4606,7 +4653,8 @@ const recipes = [
     "url": "https://www.maangchi.com/recipe/bulgogi"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-spicy-pork-bulgogi",
@@ -4617,7 +4665,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1564836235910-c3055ca0f912?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-spicy-pork-bulgogi.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 329,
@@ -4697,7 +4745,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-kimchi-tofu-rice",
@@ -4709,7 +4758,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1698489857683-0d30f7f046f7?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-kimchi-tofu-rice.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 279,
@@ -4784,7 +4833,8 @@ const recipes = [
     "url": "https://www.justonecookbook.com/teriyaki-tofu/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-sesame-beef-noodles",
@@ -4795,7 +4845,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1565976469618-061774653bee?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-sesame-beef-noodles.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 359,
@@ -4881,7 +4931,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-thai-peanut-noodles",
@@ -4893,7 +4944,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1707546944460-dda9069b9c1e?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-thai-peanut-noodles.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 279,
@@ -4973,7 +5024,8 @@ const recipes = [
     "url": "https://www.recipetineats.com/stir-fried-peanut-sauce-noodles/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-red-curry-chicken",
@@ -4982,7 +5034,7 @@ const recipes = [
   "cuisine": "Thai-inspired",
   "category": "Curry",
   "tags": [],
-  "image": "https://images.unsplash.com/photo-1708782344490-9026aaa5eec7?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-red-curry-chicken.webp",
   "time": 30,
   "difficulty": "Easy",
   "price": 329,
@@ -5061,7 +5113,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-thai-garlic-shrimp",
@@ -5072,7 +5125,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1599655345131-6eb73b81d8d6?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-thai-garlic-shrimp.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 359,
@@ -5157,7 +5210,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-green-curry-tofu",
@@ -5168,7 +5222,7 @@ const recipes = [
   "tags": [
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1769031240699-e15f4818224a?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-green-curry-tofu.webp",
   "time": 25,
   "difficulty": "Easy",
   "price": 279,
@@ -5241,7 +5295,8 @@ const recipes = [
     "url": "https://www.justonecookbook.com/simple-chicken-curry/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-sweet-chili-chicken",
@@ -5252,7 +5307,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1636401870585-a8852371e84a?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-sweet-chili-chicken.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -5337,7 +5392,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-chicken-fajita-bowl",
@@ -5348,7 +5404,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1668665771757-4d42737d295a?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-chicken-fajita-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -5433,7 +5489,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-chipotle-beef-bowl",
@@ -5444,7 +5501,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1707322571124-9d3a47cce941?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-chipotle-beef-bowl.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 359,
@@ -5533,7 +5590,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-smoky-bean-rice-bowl",
@@ -5545,7 +5603,7 @@ const recipes = [
    "Vegetarian",
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-smoky-bean-rice-bowl.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 279,
@@ -5625,7 +5683,8 @@ const recipes = [
     "url": "https://www.loveandlemons.com/black-bean-tacos/"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-lime-shrimp-tacos",
@@ -5636,7 +5695,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-lime-shrimp-tacos.webp",
   "time": 25,
   "difficulty": "Beginner",
   "price": 359,
@@ -5705,7 +5764,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-chicken-tinga-tacos",
@@ -5716,7 +5776,7 @@ const recipes = [
   "tags": [
    "Quick Meals"
   ],
-  "image": "https://images.unsplash.com/photo-1613514785940-daed07799d9b?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-chicken-tinga-tacos.webp",
   "time": 30,
   "difficulty": "Beginner",
   "price": 329,
@@ -5793,7 +5853,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-palak-paneer",
@@ -5804,7 +5865,7 @@ const recipes = [
   "tags": [
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1767114915936-745dd372f1d8?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-palak-paneer.webp",
   "time": 25,
   "difficulty": "Easy",
   "price": 279,
@@ -5882,7 +5943,8 @@ const recipes = [
     "url": "https://www.tesco.com/recipes/en-GB/recipe/palak-paneer/cooking"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-chickpea-tikka-masala",
@@ -5893,7 +5955,7 @@ const recipes = [
   "tags": [
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1728414862780-cdb57c0aadb1?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-chickpea-tikka-masala.webp",
   "time": 25,
   "difficulty": "Easy",
   "price": 279,
@@ -5961,7 +6023,8 @@ const recipes = [
     "url": "https://www.bbcgoodfood.com/recipes/chana-masala"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-chicken-korma",
@@ -5970,7 +6033,7 @@ const recipes = [
   "cuisine": "Indian-inspired",
   "category": "Curry",
   "tags": [],
-  "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-chicken-korma.webp",
   "time": 30,
   "difficulty": "Easy",
   "price": 329,
@@ -6049,7 +6112,8 @@ const recipes = [
     "url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-coconut-dal",
@@ -6060,7 +6124,7 @@ const recipes = [
   "tags": [
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-coconut-dal.webp",
   "time": 25,
   "difficulty": "Easy",
   "price": 279,
@@ -6128,7 +6192,8 @@ const recipes = [
     "url": "https://www.bbcgoodfood.com/recipes/spinach-chickpea-dahl"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  },
  {
   "id": "menu-aloo-chana",
@@ -6139,7 +6204,7 @@ const recipes = [
   "tags": [
    "Vegetarian"
   ],
-  "image": "https://images.unsplash.com/photo-1591940597372-bd266c6eb29e?auto=format&fit=crop&w=800&q=75",
+  "image": "assets/food/menu-aloo-chana.webp",
   "time": 35,
   "difficulty": "Easy",
   "price": 279,
@@ -6215,83 +6280,15 @@ const recipes = [
     "url": "https://www.bbcgoodfood.com/recipes/chana-masala"
    }
   ],
-  "cookingReviewed": "2026-11-14"
+  "cookingReviewed": "2026-11-14",
+  "imageKind": "illustrative"
  }
 ];
-const recipePhotos={
- 'menu-steak-rice-bowl':'photo-1682566509605-b5bb1ef7eac2',
- 'butter-steak':'photo-1588168333986-5078d3ae3976',
- 'calamansi-pasta':'photo-1608897013039-887f21d8c804',
- 'beef-salpicao':'photo-1760504526069-ff0f8bf6e4ca',
- 'tofu-sisig':'photo-1762305194201-077e7e23ccf2',
- 'miso-salmon':'photo-1523218689796-d4c2ef4f3d72',
- 'chicken-adobo':'photo-1596699917234-1c93c61a1083',
- 'vegetable-kare-kare':'photo-1559561723-c3f4195835db',
- 'tomato-basil-pasta':'photo-1516100882582-96c3a05fe590',
- 'lemon-chicken':'photo-1532550907401-a500c9a57435',
- 'korean-beef-bowl':'photo-1718777791262-c66d11baaa3b',
- 'thai-coconut-curry':'photo-1618449840665-9ed506d73a34',
- 'chicken-tacos':'photo-1545093149-618ce3bcf49d',
- 'chickpea-masala':'photo-1707448829764-9474458021ed',
- 'sesame-tofu-bowl':'photo-1546069901-d5bfd2cbfb1f',
- 'thai-basil-chicken':'photo-1696906594893-e9995c4d7082',
- 'black-bean-tacos':'photo-1565299585323-38d6b0865b47',
- 'butter-chicken':'photo-1772730064970-a7b2735c93b9',
- 'menu-bbq-chicken-rice-bowl':'photo-1679279726946-a158b8bcaa23',
- 'menu-creamy-mushroom-chicken':'photo-1788462612914-44793f2980f2',
- 'menu-cajun-shrimp-rice':'photo-1723325697529-6e2679650b39',
- 'menu-cheddar-mac-and-cheese':'photo-1667499989723-c4ab9549d63c',
- 'menu-honey-mustard-chicken':'photo-1670398564097-0762e1b30b3a',
- 'menu-smoky-beef-rice-bowl':'photo-1679279726937-122c49626802',
- 'menu-chicken-inasal-bowl':'photo-1603496987351-f84a3ba5ec85',
- 'menu-beef-bistek':'photo-1723893905879-0e309c2a8e06',
- 'menu-chicken-afritada':'photo-1694579740719-0e601c5d2437',
- 'menu-pork-menudo':'photo-1579640873954-766bf0235bf3',
- 'menu-ginisang-monggo':'photo-1647545401750-6dd5539879ac',
- 'menu-pesto-chicken-pasta':'photo-1612152328178-4a6c83d96429',
- 'menu-creamy-mushroom-penne':'photo-1673081849580-2d36a09c8a6f',
- 'menu-garlic-shrimp-linguine':'photo-1677681483419-e18aa1376db7',
- 'menu-beef-ragu-pasta':'photo-1621996346565-e3dbc646d9a9',
- 'menu-spinach-cream-fusilli':'photo-1779915148092-776a6b5e37df',
- 'menu-chicken-teriyaki-bowl':'photo-1682566509568-ded8649b26bb',
- 'menu-beef-yakiniku-bowl':'photo-1608855815815-4edc035e39ad',
- 'menu-ginger-tofu-rice-bowl':'photo-1609770424775-39ec362f2d94',
- 'menu-japanese-chicken-curry':'photo-1679279727895-bd5c9fb9c1a0',
- 'menu-sesame-mushroom-udon':'photo-1689760661347-6b4d026fffae',
- 'menu-miso-butter-shrimp':'photo-1559742811-822873691df8',
- 'menu-greek-chicken-bowl':'photo-1784902540709-082442918309',
- 'menu-lemon-chickpea-couscous':'photo-1704742205160-9ace96fbbc44',
- 'menu-garlic-shrimp-couscous':'photo-1726455418076-a60ccd6085c2',
- 'menu-harissa-chicken-bowl':'photo-1688431508895-4c2cab13b181',
- 'menu-herbed-mushroom-couscous':'photo-1572424075298-e17403e6f3bf',
- 'menu-gochujang-chicken-bowl':'photo-1604908176997-125f25cc6f3d',
- 'menu-korean-mushroom-rice':'photo-1680420574628-225def8eea0a',
- 'menu-spicy-pork-bulgogi':'photo-1564836235910-c3055ca0f912',
- 'menu-kimchi-tofu-rice':'photo-1698489857683-0d30f7f046f7',
- 'menu-sesame-beef-noodles':'photo-1565976469618-061774653bee',
- 'menu-thai-peanut-noodles':'photo-1707546944460-dda9069b9c1e',
- 'menu-red-curry-chicken':'photo-1708782344490-9026aaa5eec7',
- 'menu-thai-garlic-shrimp':'photo-1599655345131-6eb73b81d8d6',
- 'menu-green-curry-tofu':'photo-1769031240699-e15f4818224a',
- 'menu-sweet-chili-chicken':'photo-1636401870585-a8852371e84a',
- 'menu-chicken-fajita-bowl':'photo-1668665771757-4d42737d295a',
- 'menu-chipotle-beef-bowl':'photo-1707322571124-9d3a47cce941',
- 'menu-smoky-bean-rice-bowl':'photo-1623428187969-5da2dcea5ebf',
- 'menu-lime-shrimp-tacos':'photo-1551504734-5ee1c4a1479b',
- 'menu-chicken-tinga-tacos':'photo-1613514785940-daed07799d9b',
- 'menu-palak-paneer':'photo-1767114915936-745dd372f1d8',
- 'menu-chickpea-tikka-masala':'photo-1728414862780-cdb57c0aadb1',
- 'menu-chicken-korma':'photo-1603894584373-5ac82b2ae398',
- 'menu-coconut-dal':'photo-1631452180519-c014fe946bc7',
- 'menu-aloo-chana':'photo-1591940597372-bd266c6eb29e'
-};
-if(recipes.some(recipe=>!recipePhotos[recipe.id]))throw new Error('Every recipe needs a matching food photo.');
-recipes.forEach(recipe=>{recipe.image=photo(recipePhotos[recipe.id])});
 const icons={home:'<path d="m3 10 9-7 9 7v10H14v-6h-4v6H3z"/>',explore:'<circle cx="12" cy="12" r="9"/><path d="m16 8-2 6-6 2 2-6z"/>',saved:'<path d="M6 3h12v18l-6-4-6 4z"/>',box:'<path d="M5 7h14l2 14H3L5 7zM8 8V6a4 4 0 0 1 8 0v2"/>',profile:'<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',search:'<circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/>',heart:'<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/>',arrow:'<path d="M5 12h14m-6-6 6 6-6 6"/>',back:'<path d="M19 12H5m6-6-6 6 6 6"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/>',close:'<path d="m6 6 12 12M6 18 18 6"/>'};
 icons.camera='<path d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4"/>';
 const icon=n=>`<svg viewBox="0 0 24 24" aria-hidden="true">${icons[n]||icons.arrow}</svg>`;
 const $=s=>document.querySelector(s),peso=n=>`₱${n.toLocaleString('en-PH')}`;
-function imageAt(url,width,quality=70){const image=new URL(url);image.searchParams.set('w',String(width));image.searchParams.set('q',String(quality));return image.href}
+function imageAt(url,width,quality=70){if(url.startsWith('assets/food/'))return width<=360?url.replace(/\.webp$/,'-thumb.webp'):url;const image=new URL(url,location.href);image.searchParams.set('w',String(width));image.searchParams.set('q',String(quality));return image.href}
 const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let cloudUserId='';
 function accountKey(key){return key+'::'+(cloudUserId||'signed-out')}
@@ -6501,12 +6498,12 @@ function categoryRow(){const home=page==='home';const pool=home?featuredPool():r
 function saveButton(r){return `<button class="save-button ${saved.has(r.id)?'saved':''}" data-save="${r.id}" aria-label="${saved.has(r.id)?'Unsave':'Save'} ${r.name}" aria-pressed="${saved.has(r.id)}">${icon('heart')}</button>`}
 // Keep the feed image-led: a handwritten flavor note, strong title, and quiet kit facts.
 function card(r,i){const notes={'butter-steak':'Savory & seared','calamansi-pasta':'Bright & creamy','beef-salpicao':'Garlicky goodness','tofu-sisig':'Crispy & zesty','miso-salmon':'Sweet meets savory','chicken-adobo':'Comfort, always'};return `<article class="recipe-card"><button class="card-open" data-open="${r.id}" aria-label="View recipe: ${r.name}"><img src="${r.image}" alt="${r.name}" decoding="async" ${i?'loading="lazy"':'fetchpriority="high"'}><div class="card-info"><span class="card-badge">${notes[r.id]||r.category}</span><h3>${r.name}</h3><div class="card-meta">${r.rating?`<span class="recipe-rating" aria-label="Sample rating ${r.rating.toFixed(1)} out of 5">★ ${r.rating.toFixed(1)}</span><span class="meta-dot">·</span>`:''}<span>${r.time} min</span><span class="meta-dot">·</span><span>${r.difficulty}</span><span class="meta-dot">·</span><span>from ${peso(r.price)}</span>${icon('arrow')}</div></div></button>${saveButton(r)}</article>`}
-function menuCard(r,i){return `<article class="menu-card"><button class="menu-open" data-open="${r.id}" aria-label="View recipe: ${r.name}"><div class="menu-photo"><img src="${r.image}" alt="${r.name}" ${i?'loading="lazy"':'fetchpriority="high"'} decoding="async"><span class="menu-time">${icon('clock')}${r.time} min</span></div><div class="menu-card-copy"><span class="menu-category"><span aria-hidden="true">${cuisineFlags[r.cuisine]||'🌍'}</span> ${r.cuisine.replace('-inspired','')}</span><h2>${r.name}</h2><p>${r.tags.includes('Vegetarian')?'Plant-forward':'Freshly portioned'} · ${r.difficulty}</p><div class="menu-card-bottom"><strong>${peso(r.price)}<small>kit for two</small></strong><span class="menu-recipe-arrow">${icon('arrow')}</span></div></div></button>${saveButton(r)}</article>`}
+function menuCard(r,i){return `<article class="menu-card"><button class="menu-open" data-open="${r.id}" aria-label="View recipe: ${r.name}"><div class="menu-photo"><img src="${imageAt(r.image,i?360:768)}" alt="Illustrative photo of ${r.name}" ${i?'loading="lazy"':'fetchpriority="high"'} decoding="async"><span class="menu-time">${icon('clock')}${r.time} min</span></div><div class="menu-card-copy"><div class="menu-kicker"><span class="menu-category"><span aria-hidden="true">${cuisineFlags[r.cuisine]||'🌍'}</span> ${r.cuisine.replace('-inspired','')}</span>${r.variantLabel?`<span class="kit-variant">${r.variantLabel}</span>`:''}</div><h2>${r.name}</h2><p class="menu-description">${escapeHTML(r.description)}</p><div class="menu-card-bottom"><strong>${peso(r.price)}<small>kit for two</small></strong><span class="menu-recipe-arrow">${icon('arrow')}</span></div></div></button>${saveButton(r)}</article>`}
 function feedRecipes(){const source=page==='home'?featuredRecipes():recipes;return source.filter(r=>matches(r,category)&&(page!=='saved'||saved.has(r.id))&&(r.name+' '+r.ingredients.map(i=>i.name).join(' ')).toLowerCase().includes(query.trim().toLowerCase()))}
 function renderFeed(){const list=feedRecipes(),visible=page==='explore'?list.slice(0,visibleMenuCount):list,remaining=list.length-visible.length;$('#feed').className=page==='explore'?'menu-grid':'';$('#feed').innerHTML=list.length?(page==='explore'?visible.map(menuCard).join('')+(remaining?`<button class="primary menu-load-more" data-action="show-more">Show ${Math.min(12,remaining)} more dishes</button>`:''):list.map(card).join('')):`<div class="empty">${icon(page==='saved'?'saved':'search')}<h2>${page==='saved'?'A little inspiration, saved.':'Nothing simmering here yet.'}</h2><p class="muted">${page==='saved'?'Tap a heart on any recipe to keep it here.':'Try another cuisine or search.'}</p><button class="primary" data-action="reset">Browse the menu</button></div>`;const count=$('#menuCount');if(count)count.textContent=`${list.length} ${list.length===1?'dish':'dishes'}`}
 function render(){if(!accessReady())return renderWelcome();$('.header-actions').hidden=false;$('.avatar').textContent=preferences.name.trim().split(/\s+/).map(part=>part[0]).slice(0,2).join('').toUpperCase();$('#navigation').hidden=false;renderNav();const main=$('#main');main.className=page==='home'?'home-view':page==='explore'?'menu-view':'';if(['home','explore','saved'].includes(page)){main.innerHTML=(page==='home'?`<div class="featured-heading"><h1>${preferences.name?escapeHTML(preferences.name.charAt(0).toLocaleUpperCase()+preferences.name.split(/\s+/)[0].slice(1))+', here are your featured tastes.':'Here are your featured tastes.'}</h1></div>`:`<div class="page-title"><h1>${page==='saved'?'Your saved recipes':'Find your next favorite.'}</h1>${page==='saved'?'<p>Good things are worth coming back to.</p>':''}</div>`)+(page==='explore'?`<label class="search-field">${icon('search')}<input id="searchInput" type="search" placeholder="Search dishes or ingredients" aria-label="Search dishes or ingredients" value="${escapeHTML(query)}"></label>`:'')+categoryRow()+`<div class="feed-heading"><h2>${page==='saved'?'Saved for later':category==='For You'?(page==='home'?'Featured for you':'All dishes'):category}</h2>${page==='explore'?'<span class="menu-count" id="menuCount"></span>':''}</div><div id="feed"></div>`;renderFeed()}else if(page==='box')renderBox();else if(page==='history')renderHistory();else renderProfile()}
 function navigate(next){if(!accessReady())return render();revealNavigation();if($('#recipeDialog').open)$('#recipeDialog').close();page=next;category='For You';query='';visibleMenuCount=12;render();window.scrollTo({top:0,behavior:'smooth'})}
-function renderBox(){$('#main').innerHTML=`<div class="page-title"><span class="eyebrow">From scroll to stove</span><h1>Your Meal Box</h1><p>Review your dishes and total before checkout.</p></div>`+(box.length?`<div class="box-list">${box.map((x,i)=>{const r=recipes.find(r=>r.id===x.id);return `<article class="box-item"><button class="icon-button" style="width:64px;height:78px" data-open="${r.id}" aria-label="View ${r.name}"><img src="${r.image}" alt="${r.name}"></button><div><h2>${r.name}</h2><p>Serves ${x.servings} · ${r.time} min</p><div class="stepper"><button data-box-step="${i}" data-delta="-1" aria-label="Decrease servings for ${r.name}" ${x.servings===1?'disabled':''}>−</button><strong>${x.servings}</strong><button data-box-step="${i}" data-delta="1" aria-label="Increase servings for ${r.name}" ${x.servings===6?'disabled':''}>+</button></div>${x.doneness?`<p>${escapeHTML(steakDonenessOptions.find(option=>option.id===x.doneness)?.label||'Medium')} steak</p>`:''}<strong>${peso(Math.round(r.price*x.servings/2))}</strong></div><button class="icon-button" data-remove="${i}" aria-label="Remove ${r.name}">${icon('close')}</button></article>`}).join('')}</div><div class="box-total"><div class="total-row"><span>Subtotal · ${box.length} ${box.length===1?'meal kit':'meal kits'}</span><strong>${peso(boxSubtotal(box))}</strong></div><div class="total-row"><span>Delivery</span><strong>Included</strong></div><div class="total-row box-grand-total"><strong>Total</strong><strong>${peso(boxSubtotal(box))}</strong></div>${freshnessReminder()}<button class="primary" data-checkout="open">Continue to checkout · ${peso(boxSubtotal(box))} ${icon('arrow')}</button><button class="secondary" data-nav="explore">Add another dish</button><p class="checkout-demo-note">Prototype only: no payment is collected and no food is delivered.</p></div>`:`<div class="empty">${icon('box')}<h2>A delicious possibility.</h2><p class="muted">Your box is waiting for its first recipe.</p><button class="primary" data-nav="explore">Find something to cook ${icon('arrow')}</button></div>`)}
+function renderBox(){$('#main').innerHTML=`<div class="page-title"><span class="eyebrow">From scroll to stove</span><h1>Your Meal Box</h1><p>Review your dishes and total before checkout.</p></div>`+(box.length?`<div class="box-list">${box.map((x,i)=>{const r=recipes.find(r=>r.id===x.id);return `<article class="box-item"><button class="icon-button" style="width:64px;height:78px" data-open="${r.id}" aria-label="View ${r.name}"><img src="${r.image}" alt="${r.name}"></button><div><h2>${r.name}</h2><p>${r.variantLabel?r.variantLabel+' · ':''}Serves ${x.servings} · ${r.time} min</p><div class="stepper"><button data-box-step="${i}" data-delta="-1" aria-label="Decrease servings for ${r.name}" ${x.servings===1?'disabled':''}>−</button><strong>${x.servings}</strong><button data-box-step="${i}" data-delta="1" aria-label="Increase servings for ${r.name}" ${x.servings===6?'disabled':''}>+</button></div>${x.doneness?`<p>${escapeHTML(steakDonenessOptions.find(option=>option.id===x.doneness)?.label||'Medium')} steak</p>`:''}<strong>${peso(Math.round(r.price*x.servings/2))}</strong></div><button class="icon-button" data-remove="${i}" aria-label="Remove ${r.name}">${icon('close')}</button></article>`}).join('')}</div><div class="box-total"><div class="total-row"><span>Subtotal · ${box.length} ${box.length===1?'meal kit':'meal kits'}</span><strong>${peso(boxSubtotal(box))}</strong></div><div class="total-row"><span>Delivery</span><strong>Included</strong></div><div class="total-row box-grand-total"><strong>Total</strong><strong>${peso(boxSubtotal(box))}</strong></div>${freshnessReminder()}<button class="primary" data-checkout="open">Continue to checkout · ${peso(boxSubtotal(box))} ${icon('arrow')}</button><button class="secondary" data-nav="explore">Add another dish</button><p class="checkout-demo-note">Prototype only: no payment is collected and no food is delivered.</p></div>`:`<div class="empty">${icon('box')}<h2>A delicious possibility.</h2><p class="muted">Your box is waiting for its first recipe.</p><button class="primary" data-nav="explore">Find something to cook ${icon('arrow')}</button></div>`)}
 // Checkout is a local demo: delivery details stay in memory and no payment is collected.
 // Demo orders stay on this device; a confirmed order record is required to unlock its guide.
 let purchases=load('cookly-purchases',[]).filter(x=>x&&recipes.some(r=>r.id===x.id)&&Number.isInteger(x.servings)&&x.servings>=1&&x.servings<=6);
@@ -6526,7 +6523,7 @@ document.addEventListener('change',e=>{if(e.target.id!=='steakDoneness')return;c
 document.addEventListener('click',e=>{const button=e.target.closest('[data-action="cook"]');if(button&&!purchasedMeal(current.id)){e.preventDefault();e.stopImmediatePropagation();toast('Order this meal kit to unlock the cooking guide.')}},true);
 function purchasedMeal(id){return purchases.find(x=>x.id===id&&typeof x.orderId==='string'&&x.orderId.startsWith('DEMO-')&&typeof x.purchasedAt==='string')}
 function unlockPurchasedGuides(items,orderId){if(typeof orderId!=='string'||!orderId.startsWith('DEMO-'))throw new Error('A confirmed order is required to unlock cooking guides.');for(const item of items){purchases=purchases.filter(x=>x.id!==item.id);purchases.unshift({...item,orderId,purchasedAt:new Date().toISOString()})}try{localStorage.setItem(accountKey('cookly-purchases'),JSON.stringify(purchases))}catch{toast('Guides unlocked for this visit. Device storage is unavailable.')}}
-function purchasedMeals(){const ordered=purchases.filter(item=>purchasedMeal(item.id));return `<section class="cooked-meals"><h2>Purchased Meals</h2><p class="muted">${ordered.length?'Your guides are ready. Cook, enjoy, then tell us how it tasted.':'Your purchased meal kits will appear here after checkout.'}</p>${ordered.map(x=>{const r=recipes.find(r=>r.id===x.id),review=mealHistory[r.id];return `<article class="history-meal"><button class="cooked-meal" data-guide="${r.id}"><img src="${r.image}" alt=""><span><strong>${r.name}</strong><small>Serves ${x.servings} · Open cooking guide</small></span>${icon('arrow')}</button><button class="history-rate" data-rate="${r.id}">${review?.stars?'★ '+review.stars+'/5 · Edit your rating':'Cooked & tasted it? Rate this meal'}</button></article>`}).join('')}${!ordered.length?'<button class="secondary" data-nav="explore">Find your next meal</button>':''}</section>`}
+function purchasedMeals(){const ordered=purchases.filter(item=>purchasedMeal(item.id));return `<section class="cooked-meals"><h2>Purchased Meals</h2><p class="muted">${ordered.length?'Your guides are ready. Cook, enjoy, then tell us how it tasted.':'Your purchased meal kits will appear here after checkout.'}</p>${ordered.map(x=>{const r=recipes.find(r=>r.id===x.id),review=mealHistory[r.id];return `<article class="history-meal"><button class="cooked-meal" data-guide="${r.id}"><img src="${r.image}" alt=""><span><strong>${r.name}</strong><small>${r.variantLabel?r.variantLabel+' · ':''}Serves ${x.servings} · Open cooking guide</small></span>${icon('arrow')}</button><button class="history-rate" data-rate="${r.id}">${review?.stars?'★ '+review.stars+'/5 · Edit your rating':'Cooked & tasted it? Rate this meal'}</button></article>`}).join('')}${!ordered.length?'<button class="secondary" data-nav="explore">Find your next meal</button>':''}</section>`}
 function renderHistory(){$('#main').innerHTML=`<div class="page-title"><h1>Your kitchen history</h1><p>From your first box to your next favorite.</p></div>${purchasedMeals()}${cookedMeals()||'<section class="cooked-meals"><h2>Cooking journal</h2><p class="muted">Finish a cooking guide to keep your meals and ratings here.</p></section>'}`}
 document.addEventListener('click',e=>{const button=e.target.closest('[data-rate]');if(!button)return;openRecipe(button.dataset.rate);markCooked();mealView='rating';renderDetail()});
 function openPurchasedGuide(id){const purchase=purchasedMeal(id),recipe=recipes.find(item=>item.id===id);if(!purchase||!recipe){toast('This cooking guide is unavailable. Check your Purchased Meals list.');return}if(guide&&current?.id===id&&$('#recipeDialog').open)return;if($('#checkoutDialog').open)$('#checkoutDialog').close();current=recipe;servings=purchase.servings;steakDoneness=steakDonenessOptions.some(option=>option.id===purchase.doneness)?purchase.doneness:'medium';guide=true;guideStep=0;mealView='';timerStepKey='';renderDetail();if(!$('#recipeDialog').open)$('#recipeDialog').showModal();$('#recipeDialog').scrollTop=0;$('#detailTitle').focus({preventScroll:true});requestAnimationFrame(()=>{const step=$('#detailContent .guide-step');if(step&&$('#recipeDialog').open)step.scrollIntoView({block:'start'})})}
@@ -6539,7 +6536,7 @@ function deliveryClock(now=new Date()){const parts=Object.fromEntries(new Intl.D
 function earliestDeliveryDate(now=new Date()){const clock=deliveryClock(now);if(clock.minutes<15*60)return clock.date;const [y,m,d]=clock.date.split('-').map(Number);return new Date(Date.UTC(y,m-1,d+1)).toISOString().slice(0,10)}
 function deliverySlots(date,now=new Date()){const clock=deliveryClock(now);return ['09:00–12:00','12:00–15:00','15:00–18:00'].filter(slot=>date!==clock.date||Number(slot.slice(0,2))*60>clock.minutes)}
 function freshnessReminder(){return '<aside class="freshness-reminder"><strong>Freshness comes first.</strong><p>Orders placed from 3 PM are delivered the next day, so your ingredients arrive fresh. You can also choose a later delivery date. Cutoff follows Philippine time.</p></aside>'}
-function checkoutSummary(){return `<section class="checkout-summary"><h2>Order summary</h2>${checkoutItems.map(x=>{const r=recipes.find(r=>r.id===x.id);return `<div class="checkout-kit"><img src="${r.image}" alt=""><span><strong>${r.name}</strong><small>Serves ${x.servings}${isSteakBowl(r)?` · ${escapeHTML(steakDonenessOptions.find(option=>option.id===x.doneness)?.label||'Medium')} steak`:''}</small></span><b>${peso(Math.round(r.price*x.servings/2))}</b></div>`}).join('')}<div class="checkout-total-line"><span>Meal kits</span><strong>${peso(boxSubtotal(checkoutItems))}</strong></div><div class="checkout-total-line muted"><span>Delivery</span><span>Included</span></div><div class="checkout-total-line checkout-grand"><strong>Total to confirm</strong><strong>${peso(boxSubtotal(checkoutItems))}</strong></div></section>`}
+function checkoutSummary(){return `<section class="checkout-summary"><h2>Order summary</h2>${checkoutItems.map(x=>{const r=recipes.find(r=>r.id===x.id);return `<div class="checkout-kit"><img src="${r.image}" alt=""><span><strong>${r.name}</strong><small>${r.variantLabel?r.variantLabel+' · ':''}Serves ${x.servings}${isSteakBowl(r)?` · ${escapeHTML(steakDonenessOptions.find(option=>option.id===x.doneness)?.label||'Medium')} steak`:''}</small></span><b>${peso(Math.round(r.price*x.servings/2))}</b></div>`}).join('')}<div class="checkout-total-line"><span>Meal kits</span><strong>${peso(boxSubtotal(checkoutItems))}</strong></div><div class="checkout-total-line muted"><span>Delivery</span><span>Included</span></div><div class="checkout-total-line checkout-grand"><strong>Total to confirm</strong><strong>${peso(boxSubtotal(checkoutItems))}</strong></div></section>`}
 function checkoutField(key,label,type,autocomplete,extra=''){return `<label class="checkout-field">${label}<span class="required-mark" aria-hidden="true">*</span><input name="${key}" type="${type}" autocomplete="${autocomplete}" value="${escapeHTML(checkoutDraft[key]||'')}" required ${extra}></label>`}
 function checkoutStatus(message,error=false){const status=$('#checkoutLocationStatus');if(status){status.textContent=message;status.classList.toggle('is-error',error)}}
 function loadLeaflet(){if(window.L)return Promise.resolve(window.L);if(leafletLoadPromise)return leafletLoadPromise;leafletLoadPromise=new Promise((resolve,reject)=>{if(!document.querySelector('#leafletStyles')){const link=document.createElement('link');link.id='leafletStyles';link.rel='stylesheet';link.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';document.head.append(link)}const script=document.createElement('script');script.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';script.onload=()=>{if(window.L)resolve(window.L);else{leafletLoadPromise=null;reject(new Error('The map library did not initialize.'))}};script.onerror=()=>{leafletLoadPromise=null;reject(new Error('The map could not be loaded. Check your connection and try again.'))};document.head.append(script)});return leafletLoadPromise}
@@ -6575,7 +6572,7 @@ let themeChoice='dark';
 // Theme is stored as plain text for the early, pre-paint script in index.html.
 try{themeChoice=localStorage.getItem('cookly-theme')||'dark'}catch{}
 if(!['light','dark','system'].includes(themeChoice))themeChoice='dark';
-function applyTheme(){const dark=themeChoice==='dark'||(themeChoice==='system'&&systemTheme.matches);document.documentElement.dataset.theme=dark?'dark':'light';$('meta[name="theme-color"]').content=dark?'#000000':'#FFFFFF'}
+function applyTheme(){const dark=themeChoice==='dark'||(themeChoice==='system'&&systemTheme.matches);document.documentElement.dataset.theme=dark?'dark':'light';$('meta[name="theme-color"]').content=dark?'#000000':'#FFFFFF';updateBrandImage()}
 function selectTheme(choice){if(!['light','dark','system'].includes(choice))return;themeChoice=choice;applyTheme();try{localStorage.setItem('cookly-theme',choice)}catch{toast('Appearance will last for this visit; storage is unavailable.')}}
 systemTheme.addEventListener('change',()=>{if(themeChoice==='system')applyTheme()});
 function renderProfile(){$('#main').innerHTML=`<div class="page-title"><button class="profile-back" data-nav="home">${icon('back')} Back to home</button><h1>Profile</h1><p>Your kitchen, your way.</p></div><section class="profile-card"><h2>${preferences.name?'Hi, '+escapeHTML(preferences.name)+'.':'Make yourself at home.'}</h2><p class="muted">Keep your favorites and choose how Cookly looks on this device.</p><fieldset class="appearance"><legend>Appearance</legend><div class="theme-options">${['light','dark','system'].map(t=>`<label class="theme-option"><input type="radio" name="appearance" value="${t}" ${themeChoice===t?'checked':''}><span>${t[0].toUpperCase()+t.slice(1)}</span></label>`).join('')}</div><p class="muted">System follows your device’s light or dark appearance.</p></fieldset><div class="profile-links"><button data-preference="open"><span>Preferences<small class="profile-link-note">Personal details, cooking, equipment, units & delivery address</small></span>${icon('arrow')}</button><button data-nav="history">Purchased meals & cooking journal ${icon('arrow')}</button><button data-nav="saved">Saved recipes <strong>${saved.size} →</strong></button><button data-nav="box">Your Meal Box <strong>${box.length} →</strong></button><button data-nav="explore">Browse the menu ${icon('arrow')}</button></div></section>${cloudSyncMarkup()}`}
@@ -6616,7 +6613,7 @@ function updateStepPreview(){const film=$('#mockStepFilm');if(!film||!current)re
 function syncStepPlayer(){if(!guide)return;if(!stepVideoSource()){updateStepPreview();return}const video=$('#stepVideo');if(video)video.addEventListener('error',()=>{$('#videoFailure').hidden=false});video?.querySelector('source')?.addEventListener('error',()=>{$('#videoFailure').hidden=false})}
 document.addEventListener('click',e=>{const action=e.target.closest('[data-film]')?.dataset.film;if(!action||!guide||!purchasedMeal(current.id))return;if(action==='replay'){stopStepPlayback();stepPlayback.elapsed=0}if(stepPlayback.playing)stopStepPlayback();else{if(stepPlayback.elapsed>=mockStepDuration)stepPlayback.elapsed=0;stepPlayback.playing=true;stepPlayback.started=Date.now();stepPlaybackTimer=setInterval(()=>{if(!$('#recipeDialog').open||!guide){stopStepPlayback();return}updateStepPreview()},100)}updateStepPreview()});
 document.addEventListener('input',e=>{if(e.target.id==='filmSeek'){const playing=stepPlayback.playing;stopStepPlayback();stepPlayback.elapsed=Math.max(0,Math.min(mockStepDuration,Number(e.target.value)||0));if(playing&&stepPlayback.elapsed<mockStepDuration){stepPlayback.playing=true;stepPlayback.started=Date.now();stepPlaybackTimer=setInterval(updateStepPreview,100)}updateStepPreview()}});
-function renderDetail(){if(!guide)stopStepPlayback();if(mealView){renderMealView();return}const r=current;$('#detailContent').innerHTML=`<div class="detail-hero ${guide?'has-guide-player':''}">${guide?guidePlayer():`<img src="${r.image}" alt="${r.name}">`}<div class="detail-top"><button class="icon-button" data-action="${guide?'back-detail':'close'}" aria-label="${guide?'Back to recipe':'Back to feed'}">${icon('back')}</button>${saveButton(r)}</div></div><div class="detail-body"><span class="eyebrow">${r.category} · Cookly original</span><h1 id="detailTitle">${r.name}</h1>${guide?renderGuide():`<p>${r.description}</p><div class="detail-meta"><span>${icon('clock')}${r.time} min</span><span>${r.difficulty}</span><span>Fresh meal kit</span></div><div class="servings"><span>Servings</span><div class="stepper"><button data-action="minus" aria-label="Decrease servings" ${servings===1?'disabled':''}>−</button><strong aria-live="polite">${servings}</strong><button data-action="plus" aria-label="Increase servings" ${servings===6?'disabled':''}>+</button></div></div>${isSteakBowl(r)?steakDonenessPicker():''}<p class="guide-locked-note">No payment is collected. After confirming your order, open your guide from the confirmation screen or History.</p><div class="kit-price"><span>Meal kit · ${servings} serving${servings>1?'s':''}</span><strong>${peso(Math.round(r.price*servings/2))}</strong></div><button class="secondary" data-action="add">${icon('box')} Add to Meal Box</button><h2>Inside your Cookly box</h2><ul class="ingredients">${r.ingredients.map(i=>`<li>${formatQuantity(i.amount*servings/2,i.unit)} ${i.name}</li>`).join('')}</ul><p class="muted">Quantities are for ${servings} servings. Pantry basics: water, cooking oil, salt, and pepper.</p>${personalReview(r)}`}</div>`;syncStepPlayer()}
+function renderDetail(){if(!guide)stopStepPlayback();if(mealView){renderMealView();return}const r=current;$('#detailContent').innerHTML=`<div class="detail-hero ${guide?'has-guide-player':''}">${guide?guidePlayer():`<img src="${r.image}" alt="${r.name}">`}<div class="detail-top"><button class="icon-button" data-action="${guide?'back-detail':'close'}" aria-label="${guide?'Back to recipe':'Back to feed'}">${icon('back')}</button>${saveButton(r)}</div></div><div class="detail-body"><span class="eyebrow">${r.category} · Cookly original</span><h1 id="detailTitle">${r.name}</h1>${r.variantLabel?`<span class="kit-variant detail-variant">${r.variantLabel}</span>`:''}${guide?renderGuide():`<p>${r.description}</p><div class="detail-meta"><span>${icon('clock')}${r.time} min</span><span>${r.difficulty}</span><span>Fresh meal kit</span></div><div class="servings"><span>Servings</span><div class="stepper"><button data-action="minus" aria-label="Decrease servings" ${servings===1?'disabled':''}>−</button><strong aria-live="polite">${servings}</strong><button data-action="plus" aria-label="Increase servings" ${servings===6?'disabled':''}>+</button></div></div>${isSteakBowl(r)?steakDonenessPicker():''}<p class="guide-locked-note">No payment is collected. After confirming your order, open your guide from the confirmation screen or History.</p><div class="kit-price"><span>Meal kit · ${servings} serving${servings>1?'s':''}</span><strong>${peso(Math.round(r.price*servings/2))}</strong></div><button class="secondary" data-action="add">${icon('box')} Add to Meal Box</button><h2>Inside your Cookly box</h2><ul class="ingredients">${r.ingredients.map(i=>`<li>${formatQuantity(i.amount*servings/2,i.unit)} ${i.name}</li>`).join('')}</ul><p class="muted">Quantities are for ${servings} servings. Pantry basics: water, cooking oil, salt, and pepper.</p>${personalReview(r)}`}</div>`;syncStepPlayer()}
 function renderGuide(){return `<p class="guide-pace-note">Watch this step, pause or replay, then try it yourself. Tap Next when you’re ready.</p><p class="muted">Step ${guideStep+1} of ${current.steps.length} · Serves ${servings}</p><div class="guide-progress"><span style="width:${(guideStep+1)/current.steps.length*100}%"></span></div><section class="guide-step"><span class="eyebrow">${['Get ready','Bring it together','Make it yours'][guideStep]||'Cooking step'}</span><h2>${escapeHTML(guideStepData().title)}</h2><div class="step-instructions">${detailedStepText().split(/(?<=[.!?])\s+/).map(line=>`<p>${escapeHTML(line)}</p>`).join('')}</div></section>${guideIngredients()}${timerMarkup()}<div class="guide-controls"><button class="secondary" style="margin:0" data-action="previous" ${guideStep===0?'disabled':''}>Back</button><button class="primary" data-action="next">${guideStep===current.steps.length-1?'Finish cooking':'Next step'} ${icon('arrow')}</button></div>`}
 function openRecipe(id){if(!accessReady())return render();current=recipes.find(r=>r.id===id);if(!current){toast('This recipe is no longer available.');return}servings=preferences.servings;steakDoneness='medium';guide=false;mealView='';renderDetail();$('#recipeDialog').showModal();$('#recipeDialog').scrollTop=0}
 function updateDetail(action){const previousVideo=$('#stepVideo'),videoTime=previousVideo?.currentTime||0,videoPlaying=previousVideo&&!previousVideo.paused,previousKey=stepPlayback.key;const dialog=$('#recipeDialog'),top=dialog.scrollTop;renderDetail();dialog.scrollTop=top;dialog.querySelector(`[data-action="${action}"]`)?.focus({preventScroll:true});const video=$('#stepVideo');if(video&&previousKey===stepPlayback.key){video.addEventListener('loadedmetadata',()=>{video.currentTime=videoTime;if(videoPlaying)video.play().catch(()=>{})},{once:true})}if(action==='next'||action==='previous')dialog.scrollTop=0}
@@ -6627,12 +6624,11 @@ document.addEventListener('change',e=>{
  if(e.target.id==='timerMinutes'){const minutes=Number(e.target.value);if(Number.isFinite(minutes)&&minutes>=0.5&&minutes<=180&&Number.isInteger(minutes*2)){timerDuration=Math.round(minutes*60);timerSeconds=timerDuration;updateTimer()}else{e.target.value=timerDuration/60;toast('Choose a timer between 0.5 and 180 minutes in 0.5-minute increments.')}}
 
 });
-// The image stays hidden until successfully decoded, preventing a broken-image icon.
-const brandLogo=$('.brand-logo'),brandFallback=$('.brand-fallback');
-function showLogo(){brandLogo.hidden=false;brandFallback.hidden=true}
-function hideLogo(){brandLogo.hidden=true;brandFallback.hidden=false}
-brandLogo.addEventListener('load',showLogo);brandLogo.addEventListener('error',hideLogo);
-if(brandLogo.complete&&brandLogo.naturalWidth>0)showLogo();else hideLogo();
+// Use the matching wordmark for the chosen appearance, with text as a network fallback.
+const brandIdentity=$('.brand-identity'),brandFallback=$('.brand-fallback');
+function updateBrandImage(){if(!brandIdentity||!brandFallback)return;const active=$('.brand-for-'+(document.documentElement.dataset.theme==='dark'?'dark':'light')),ready=active?.complete&&active.naturalWidth>0;brandIdentity.hidden=!ready;brandFallback.hidden=!!ready}
+for(const image of document.querySelectorAll('.brand-logo')){image.addEventListener('load',updateBrandImage);image.addEventListener('error',updateBrandImage)}
+updateBrandImage();
 $('#preferencesDialog').addEventListener('cancel',e=>{e.preventDefault();closePreferences()});
 applyTheme();$('#headerSearch').innerHTML=icon('search');
 render();void initializeCloud().finally(render);
