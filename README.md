@@ -144,3 +144,10 @@ COOKLY_PASSWORD_RESET=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwrigh
 ```
 
 See [resetPasswordForEmail](https://supabase.com/docs/reference/javascript/auth-resetpasswordforemail) and [updateUser](https://supabase.com/docs/reference/javascript/auth-updateuser) for the provider methods used.
+
+
+Duplicate-email signup is handled explicitly, including Supabase’s masked existing-user response. Emails are trimmed and lowercased; duplicate users are directed to signin or password recovery. Pending repeats in the same visit are blocked before another signup request; cross-device uniqueness remains enforced by Supabase Auth.
+
+```sh
+COOKLY_DUPLICATE_EMAIL=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs
+```

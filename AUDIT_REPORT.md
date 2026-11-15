@@ -1,5 +1,14 @@
 # Cookly functionality audit — 14 November 2026
 
+## One email per account — 15 November 2026
+
+Supabase Auth already enforces email identity uniqueness; no public email-lookup endpoint or database permissions were added. Signup now normalizes surrounding whitespace and email case. Explicit duplicate errors (`user_already_exists` / `email_exists`) and Supabase’s masked response (no session and an empty identities array) route to signin with “This email already has a Cookly account. You can’t create another account with the same email. Please sign in or choose ‘Forgot password?’.” The email remains filled, the typed signup password is cleared, and no profile/session is created.
+
+After a successful pending signup, repeat attempts for the same normalized email in the current visit are blocked before another signup request, with instructions to confirm the existing account. This memory-only reminder clears for that email after successful signin. Across visits/devices, Supabase remains authoritative: an unconfirmed retry can resend confirmation for the same account rather than create another account. No Gmail alias/dot rewriting is performed.
+
+Browser fixture checks passed for explicit and masked duplicates, case/space variants, pending retry suppression without an additional signup/email request, retention of one fixture account, an unchanged original password, original-account signin, and signup/email-confirmation regressions. `COOKLY_DUPLICATE_EMAIL=1 PLAYWRIGHT_PATH=/tmp/cookly-audit/node_modules/playwright node tests/audit.cjs` reproduces the focused checks. No production account was altered for duplicate testing. Provider behavior reference: [Supabase Auth signup source](https://github.com/supabase/auth/blob/master/internal/api/signup.go).
+
+
 ## Forgot password — 15 November 2026
 
 Sign-in now has “Forgot password?” leading to an email-only reset request. It calls `resetPasswordForEmail` with the already configured root redirect and uses a neutral success message that does not disclose whether the email has an account. Supabase’s existing reset email/SMTP configuration supplies the reset link; no new backend configuration is needed.
