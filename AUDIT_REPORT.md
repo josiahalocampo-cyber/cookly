@@ -1,5 +1,10 @@
 # Cookly functionality audit — 14 November 2026
 
+## Simplified recipe screens — 15 November 2026
+
+Removed the “Cooking notes & sources” panel from recipe details and guides, and removed the repeated “Check all box quantities” panel from guides as requested. The main recipe ingredient list, step-specific ingredients, instructions, doneness checks and timers remain. Research references remain in the source data and `COOKING_RESEARCH.md`. Passed the updated cooking UI checks: both panels absent from details/guides, step ingredients present, doneness controls and timer working, and 320/390/768/1440 layouts. JavaScript syntax, diff checks and the pasta-water quantity regression also passed.
+
+
 ## Equipment choices — 15 November 2026
 
 The equipment step now offers ten choices: Stovetop, Rice cooker, Oven, Air fryer, Microwave, Blender, Food processor, Grill, Steamer and Pressure cooker. The existing multi-select card layout and optional free-text equipment field remain. A shared options list drives both rendering and saved-value validation so the eight new options survive saving, cloud hydration and reload. Existing rice-cooker/oven IDs remain compatible. Descriptions explain the equipment’s general purpose; they do not promise alternative cooking instructions. Existing rice/oven recommendation scoring is unchanged.
