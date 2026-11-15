@@ -1,10 +1,11 @@
 {
-  "checkedAt": "2026-11-15T06:39:26.322Z",
+  "checkedAt": "2026-11-15T06:46:07.620Z",
   "result": "PASS",
   "sourceMatches": true,
-  "appSha256": "35b4b15bd446b7fc8f82dc949e89db35157c2471de921d60651d0b6be77fe1b1",
+  "appSha256": "b28124a93e5d9858fe99ee185613c7b0a5c1f46003feee1e2d8651aa9488d5bf",
   "checks": [
     "Live account modes and password visibility",
+    "Signup explains one account per email address",
     "Forgot password request screen and return",
     "Real Supabase rejection of an invalid recovery link",
     "Real Supabase rejection of invalid confirmation token",
